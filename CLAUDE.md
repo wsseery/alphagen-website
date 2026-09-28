@@ -17,8 +17,11 @@ Pages. Rebuilt from WordPress/Bluehost in Sep 2026 on the same stack as `savings
 ## Compliance
 
 - **Insurance content only.** Never mix ventures — nothing here may imply real-estate advice,
-  link to real-estate listings, or touch DialRidge product claims. The two old real-estate URLs
-  301 to savingsre.com and that is the only place that domain may appear.
+  link to real-estate listings, or touch DialRidge product claims. savingsre.com may appear in
+  exactly three places: the two real-estate redirect stubs, and the single "See our affiliate
+  site" cross-marketing link on `/relocation-and-insurance-guide/` (restored 2026-09-28 at Bill's
+  direction). No other real-estate links, listings or documents. The relocation guide PDF that
+  gate delivers is hosted on savingsre.com, not here.
 - FL insurance licence **G164863** (2-20 General Lines) is the **only** licence that may appear
   on this site. **Never cite 3333692** (the real-estate licence) anywhere in this repo.
 - Every page footer carries the Insurance block from `00_Global/LEGAL_DISCLAIMERS.md`, verbatim.
