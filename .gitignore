@@ -1,0 +1,10 @@
+# local-only helpers — the repo holds hand-authored HTML only
+generate-pages.py
+verify-site.py
+*.mbox
+*.json.bak
+alphagen-wp-export.json
+.playwright/
+__pycache__/
+Thumbs.db
+.DS_Store
