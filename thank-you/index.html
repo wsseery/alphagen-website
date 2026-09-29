@@ -75,7 +75,13 @@ gtag('js',new Date());gtag('config','G-RG0E11KB0Q');
   </div>
 </section>
 <script>
-gtag('event','generate_lead',{currency:'USD',value:1.0,form_line:(new URLSearchParams(location.search).get('line')||'unknown')});
+(function () {
+  var q = new URLSearchParams(location.search);
+  // The native form fires generate_lead itself, before sending the visitor here
+  // with src=ag. Firing again would double-count every lead in GA4.
+  if (q.get('src') === 'ag') return;
+  gtag('event', 'generate_lead', { currency: 'USD', value: 1.0, form_line: (q.get('line') || 'unknown') });
+})();
 </script>
 </main>
 

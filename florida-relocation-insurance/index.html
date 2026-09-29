@@ -31,6 +31,7 @@ gtag('js',new Date());gtag('config','G-RG0E11KB0Q');
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css?v=20260928">
 <script defer src="/assets/js/site.js?v=20260928"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
 <header class="site-header" id="site-header">
@@ -104,11 +105,47 @@ gtag('js',new Date());gtag('config','G-RG0E11KB0Q');
 <section class="band-tint">
   <div class="container">
     <h3 class="center">Request Your Personal Relocation Quote</h3>
-<div class="alphagen-form-embed">
-<iframe id="JotFormIFrame-261565339575064" title="Florida Relocation Insurance — Personal Quote Request" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen" src="https://form.jotform.com/261565339575064" frameborder="0" style="min-width:100%;max-width:100%;height:780px;border:none;" scrolling="no"></iframe>
-<script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
-<script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-261565339575064']", "https://form.jotform.com/")</script>
-</div>
+<form class="ag-form" method="POST" action="/api/quote" novalidate>
+  <input type="hidden" name="line" value="relocation">
+  <fieldset>
+    <legend class="visually-hidden">Request a personal Florida relocation insurance quote</legend>
+
+    <div class="ag-field">
+      <label for="ag-relocation-name">Full name<span class="ag-req" aria-hidden="true">*</span></label>
+      <input id="ag-relocation-name" name="name" type="text" required autocomplete="name" maxlength="120" autocapitalize="words">
+    </div>
+
+    <div class="ag-field">
+      <label for="ag-relocation-email">Email<span class="ag-req" aria-hidden="true">*</span></label>
+      <input id="ag-relocation-email" name="email" type="email" required autocomplete="email" maxlength="200" inputmode="email" spellcheck="false">
+    </div>
+
+    <div class="ag-field">
+      <label for="ag-relocation-phone">Phone<span class="ag-req" aria-hidden="true">*</span></label>
+      <input id="ag-relocation-phone" name="phone" type="tel" required autocomplete="tel" maxlength="40" inputmode="tel" placeholder="(561) 555-0100">
+    </div>
+
+    <div class="ag-field">
+      <label for="ag-relocation-notes">Anything else we should know?</label>
+      <textarea id="ag-relocation-notes" name="notes" rows="4" maxlength="4000"></textarea>
+      <p class="ag-hint">Where you are moving from, your timeline, and what you need covered.</p>
+    </div>
+
+    <!-- Hidden from people and from screen readers. Bots fill it; the server then
+         answers as though it succeeded and stores nothing. -->
+    <div class="ag-hp" aria-hidden="true">
+      <label for="ag-relocation-website">Leave this field empty</label>
+      <input id="ag-relocation-website" name="website" type="text" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAAFJE_EDJ9yD3WxUQ" data-theme="light"></div>
+
+    <button type="submit" class="btn btn-primary btn-block">Request my quote</button>
+
+    <p class="ag-privacy">We use your details only to prepare your quote. See our
+      <a href="/privacy-policy/">privacy policy</a>.</p>
+  </fieldset>
+</form>
   </div>
 </section>
 
@@ -132,10 +169,52 @@ gtag('js',new Date());gtag('config','G-RG0E11KB0Q');
 <section class="band-tint">
   <div class="container">
     <h3 class="center">Request Your Business Relocation Quote</h3>
-<div class="alphagen-form-embed">
-<iframe id="JotFormIFrame-261564721833055" title="Florida Business Relocation Insurance — Quote Request" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen" src="https://form.jotform.com/261564721833055" frameborder="0" style="min-width:100%;max-width:100%;height:900px;border:none;" scrolling="no"></iframe>
-<script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-261564721833055']", "https://form.jotform.com/")</script>
-</div>
+<form class="ag-form" method="POST" action="/api/quote" novalidate>
+  <input type="hidden" name="line" value="relocation-business">
+  <fieldset>
+    <legend class="visually-hidden">Request a business Florida relocation insurance quote</legend>
+
+    <div class="ag-field">
+      <label for="ag-relocation-business-name">Full name<span class="ag-req" aria-hidden="true">*</span></label>
+      <input id="ag-relocation-business-name" name="name" type="text" required autocomplete="name" maxlength="120" autocapitalize="words">
+    </div>
+
+    <div class="ag-field">
+      <label for="ag-relocation-business-company">Company / business name<span class="ag-req" aria-hidden="true">*</span></label>
+      <input id="ag-relocation-business-company" name="company" type="text" required autocomplete="organization" maxlength="160">
+    </div>
+
+    <div class="ag-field">
+      <label for="ag-relocation-business-email">Email<span class="ag-req" aria-hidden="true">*</span></label>
+      <input id="ag-relocation-business-email" name="email" type="email" required autocomplete="email" maxlength="200" inputmode="email" spellcheck="false">
+    </div>
+
+    <div class="ag-field">
+      <label for="ag-relocation-business-phone">Phone<span class="ag-req" aria-hidden="true">*</span></label>
+      <input id="ag-relocation-business-phone" name="phone" type="tel" required autocomplete="tel" maxlength="40" inputmode="tel" placeholder="(561) 555-0100">
+    </div>
+
+    <div class="ag-field">
+      <label for="ag-relocation-business-notes">Anything else we should know?</label>
+      <textarea id="ag-relocation-business-notes" name="notes" rows="4" maxlength="4000"></textarea>
+      <p class="ag-hint">Headcount, what the business does, your target move date, and which lines you carry today.</p>
+    </div>
+
+    <!-- Hidden from people and from screen readers. Bots fill it; the server then
+         answers as though it succeeded and stores nothing. -->
+    <div class="ag-hp" aria-hidden="true">
+      <label for="ag-relocation-business-website">Leave this field empty</label>
+      <input id="ag-relocation-business-website" name="website" type="text" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAAFJE_EDJ9yD3WxUQ" data-theme="light"></div>
+
+    <button type="submit" class="btn btn-primary btn-block">Request my quote</button>
+
+    <p class="ag-privacy">We use your details only to prepare your quote. See our
+      <a href="/privacy-policy/">privacy policy</a>.</p>
+  </fieldset>
+</form>
   </div>
 </section>
 

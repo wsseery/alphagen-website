@@ -246,13 +246,68 @@ section, .band { padding: clamp(3rem, 6vw, 5rem) 0; }
 .notice p, .notice li { color: var(--navy); }
 .notice a { color: var(--link); font-weight: 600; }
 
-/* ── Forms (JotForm iframes) ───────────────────────────── */
-.alphagen-form-embed {
-  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-  padding: 0.5rem; margin: 0 auto 1.5rem; max-width: 900px; min-height: 480px;
-}
-.alphagen-form-embed iframe { display: block; width: 100%; border-radius: 10px; }
+/* ── Forms ─────────────────────────────────────────────
+   Native quote forms posting to the Cloudflare Worker at /api/quote.
+   Replaced the JotForm iframe embeds on 2026-09-29; the old
+   .alphagen-form-embed rules went with them. */
 .form-help { text-align: center; color: var(--text-muted); font-size: 0.95rem; }
+
+.ag-form {
+  display: grid; gap: 1.15rem;
+  max-width: 34rem; margin: 0 auto 1.5rem; padding: 1.75rem;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+}
+.ag-form fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 1.15rem; }
+.ag-form .ag-field { display: grid; gap: 0.35rem; }
+.ag-form label {
+  font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; color: var(--text);
+}
+.ag-form .ag-req { color: var(--gold-deep); margin-left: 0.15rem; }
+.ag-form input[type="text"],
+.ag-form input[type="email"],
+.ag-form input[type="tel"],
+.ag-form textarea {
+  width: 100%; padding: 0.7rem 0.85rem;
+  font-family: var(--font-body);
+  font-size: 1rem;              /* 16px — stops iOS zooming the page on focus */
+  line-height: 1.4; color: var(--text); background: var(--bg);
+  border: 1px solid var(--border); border-radius: 8px;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.ag-form textarea { resize: vertical; min-height: 6.5rem; }
+.ag-form input:focus-visible,
+.ag-form textarea:focus-visible {
+  outline: none; border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(44, 92, 122, 0.2);
+}
+.ag-form .ag-hint { font-size: 0.8rem; color: var(--text-muted); margin: 0; }
+
+/* Per-field error, only present when that field actually failed */
+.ag-form .ag-error { font-size: 0.82rem; font-weight: 600; color: #9B1C1C; margin: 0; }
+.ag-form [aria-invalid="true"] { border-color: #9B1C1C; }
+
+/* Form-level message */
+.ag-form .ag-message {
+  padding: 0.8rem 1rem; border-radius: 8px; font-size: 0.92rem; margin: 0;
+  background: #FDECEC; color: #9B1C1C; border: 1px solid #F5C6C6;
+}
+
+/* Honeypot — never shown, never announced, never tab-reachable */
+.ag-form .ag-hp {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+.ag-form button[type="submit"] { width: 100%; }
+.ag-form button[type="submit"][aria-busy="true"] { opacity: 0.7; cursor: progress; }
+.ag-form .ag-privacy { font-size: 0.8rem; color: var(--text-muted); text-align: center; margin: 0; }
+.ag-form .ag-privacy a { color: var(--link); }
+.ag-form .ag-privacy a:hover { color: var(--link-hover); }
+
+@media (max-width: 480px) { .ag-form { padding: 1.25rem; border-radius: 10px; } }
+@media (prefers-reduced-motion: reduce) {
+  .ag-form input, .ag-form textarea { transition: none; }
+}
 
 /* Ebook gate placeholder — replaced by a JotForm embed once the form exists */
 .gate-placeholder {
@@ -312,7 +367,6 @@ section, .band { padding: clamp(3rem, 6vw, 5rem) 0; }
   .btn-row .btn { width: 100%; }
   .brand img { height: 2.2rem; }
   .card { padding: 1.4rem; }
-  .alphagen-form-embed { padding: 0.25rem; border-radius: 8px; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
