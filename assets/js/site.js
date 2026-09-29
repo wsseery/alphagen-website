@@ -84,3 +84,139 @@
     });
   });
 })();
+
+/* ── Native quote forms — progressive enhancement ──────────────────────
+   Added 2026-09-29 with the move off JotForm.
+
+   Without JavaScript the form still works: it is a plain POST to /api/quote
+   and the Worker answers with a 302 to /thank-you/?line=…  This only makes it
+   nicer — inline errors, no page flash, and a chance to fire generate_lead
+   BEFORE navigating away.
+
+   The redirect carries &src=ag so /thank-you/ knows not to fire the event a
+   second time. Change one without the other and every lead double-counts.
+   ──────────────────────────────────────────────────────────────────── */
+(function () {
+  'use strict';
+
+  function ready(fn) {
+    if (document.readyState !== 'loading') fn();
+    else document.addEventListener('DOMContentLoaded', fn);
+  }
+
+  ready(function () {
+    var forms = document.querySelectorAll('form.ag-form');
+    if (!forms.length) return;
+
+    Array.prototype.forEach.call(forms, function (form) {
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        if (form.getAttribute('data-busy') === '1') return;
+
+        clearMessages(form);
+
+        var button = form.querySelector('button[type="submit"]');
+        var label = button ? button.textContent : '';
+        busy(form, button, true, 'Sending…');
+
+        var data = new FormData(form);
+        data.append('page', location.pathname);
+        var line = (data.get('line') || '').toString();
+
+        fetch(form.getAttribute('action'), {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' },
+          credentials: 'same-origin'
+        })
+          .then(function (res) {
+            return res.json().then(function (b) { return b; }, function () { return null; });
+          })
+          .then(function (body) {
+            if (body && body.ok) {
+              // Fire the conversion here, while we still control the page.
+              if (typeof window.agTrack === 'function') {
+                window.agTrack('generate_lead', { currency: 'USD', value: 1.0, form_line: line });
+              }
+              var to = body.redirect || ('/thank-you/?line=' + encodeURIComponent(line));
+              to += (to.indexOf('?') === -1 ? '?' : '&') + 'src=ag';
+              // Give the analytics beacon a moment before navigating.
+              setTimeout(function () { location.href = to; }, 250);
+              return;
+            }
+            showMessages(form, (body && body.errors) || {
+              form: 'Something went wrong. Please try again, or call (561) 220-0402.'
+            });
+            resetTurnstile(form);
+            busy(form, button, false, label);
+          })
+          .catch(function () {
+            showMessages(form, {
+              form: 'We could not reach the server. Please check your connection, or call (561) 220-0402.'
+            });
+            resetTurnstile(form);
+            busy(form, button, false, label);
+          });
+      });
+    });
+
+    function busy(form, button, on, label) {
+      form.setAttribute('data-busy', on ? '1' : '0');
+      if (!button) return;
+      button.disabled = on;
+      button.setAttribute('aria-busy', on ? 'true' : 'false');
+      button.textContent = label;
+    }
+
+    function clearMessages(form) {
+      form.querySelectorAll('.ag-error, .ag-message').forEach(function (el) {
+        el.parentNode.removeChild(el);
+      });
+      form.querySelectorAll('[aria-invalid="true"]').forEach(function (el) {
+        el.removeAttribute('aria-invalid');
+        el.removeAttribute('aria-describedby');
+      });
+    }
+
+    function showMessages(form, errors) {
+      var first = null;
+      var general = [];
+
+      Object.keys(errors).forEach(function (key) {
+        var fieldEl = form.querySelector('[name="' + key + '"]');
+        if (!fieldEl) { general.push(errors[key]); return; }
+        var id = (fieldEl.id || key) + '-error';
+        var note = document.createElement('p');
+        note.className = 'ag-error';
+        note.id = id;
+        note.textContent = errors[key];
+        fieldEl.setAttribute('aria-invalid', 'true');
+        fieldEl.setAttribute('aria-describedby', id);
+        fieldEl.parentNode.appendChild(note);
+        if (!first) first = fieldEl;
+      });
+
+      if (general.length) {
+        var box = document.createElement('p');
+        box.className = 'ag-message';
+        box.setAttribute('role', 'alert');
+        box.textContent = general.join(' ');
+        var set = form.querySelector('fieldset') || form;
+        set.insertBefore(box, set.firstChild);
+        if (!first) first = box;
+      }
+
+      if (first && typeof first.focus === 'function') first.focus();
+      else if (first && first.scrollIntoView) first.scrollIntoView({ block: 'center' });
+    }
+
+    // A Turnstile token is single-use. Without this, a visitor who fixes a typo
+    // and resubmits is rejected for a stale token rather than for anything they did.
+    function resetTurnstile(form) {
+      var widget = form.querySelector('.cf-turnstile');
+      if (widget && window.turnstile && typeof window.turnstile.reset === 'function') {
+        try { window.turnstile.reset(widget); } catch (e) { /* not fatal */ }
+      }
+    }
+  });
+})();
