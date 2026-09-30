@@ -31,6 +31,7 @@ gtag('js',new Date());gtag('config','G-RG0E11KB0Q');
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css?v=20260928">
 <script defer src="/assets/js/site.js?v=20260928"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
 <header class="site-header" id="site-header">
@@ -76,18 +77,44 @@ gtag('js',new Date());gtag('config','G-RG0E11KB0Q');
 <section>
   <div class="container">
     <img class="ebook-preview" src="/assets/img/relocation-guide-preview.png" alt="Preview of the first two pages of the AlphaGen Relocation and Insurance Guide" width="1000" height="520">
-<!-- JOTFORM-GATE: relocation-ebook -->
-<!-- TODO (Bill/Cowork): create the "Relocation & Insurance Guide" JotForm, then replace this
-     placeholder block with its embed markup. On submit, redirect to /thank-you/?line=relocation-guide
-     and deliver https://savingsre.com/assets/florida-relocation-acquisition-guide.pdf (hosted on the
-     real-estate venture per Bill 2026-09-28; savingsre-website PR "Host the Florida Relocation
-     Acquisition Guide PDF"). Do not add the PDF to this repo. -->
-<div class="gate-placeholder" id="relocation-ebook-gate">
-  <h3>Request the free guide</h3>
-  <p>The request form for this guide is being moved to our new form provider and will appear here shortly.</p>
-  <p>In the meantime, call <a href="tel:5612200402" data-label="relocation_gate">(561) 220-0402</a> or email <a href="mailto:bill@alphageninsurance.com">bill@alphageninsurance.com</a> and we&#8217;ll send it to you directly.</p>
-</div>
-<!-- /JOTFORM-GATE: relocation-ebook -->
+<form class="ag-form" method="POST" action="/api/quote" novalidate>
+  <input type="hidden" name="line" value="relocation-guide">
+  <fieldset>
+    <legend class="visually-hidden">Request the free Relocation and Insurance Guide</legend>
+
+    <div class="ag-field">
+      <label for="ag-relocation-guide-name">Full name<span class="ag-req" aria-hidden="true">*</span></label>
+      <input id="ag-relocation-guide-name" name="name" type="text" required autocomplete="name" maxlength="120" autocapitalize="words">
+    </div>
+
+    <div class="ag-field">
+      <label for="ag-relocation-guide-email">Email<span class="ag-req" aria-hidden="true">*</span></label>
+      <input id="ag-relocation-guide-email" name="email" type="email" required autocomplete="email" maxlength="200" inputmode="email" spellcheck="false">
+    </div>
+
+    <div class="ag-field">
+      <label for="ag-relocation-guide-phone">Phone <span class="ag-optional">(optional)</span></label>
+      <input id="ag-relocation-guide-phone" name="phone" type="tel" autocomplete="tel" maxlength="40" inputmode="tel" placeholder="(561) 555-0100">
+    </div>
+
+    <p class="ag-hint">The download opens on the next page — no waiting for an email.</p>
+
+    <!-- Hidden from people and from screen readers. Bots fill it; the server then
+         answers as though it succeeded and stores nothing. -->
+    <div class="ag-hp" aria-hidden="true">
+      <label for="ag-relocation-guide-website">Leave this field empty</label>
+      <input id="ag-relocation-guide-website" name="website" type="text" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAAFJE_EDJ9yD3WxUQ" data-theme="light"></div>
+
+    <button type="submit" class="btn btn-primary btn-block">Get the free guide</button>
+
+    <p class="ag-privacy">We use your details only to send you this download and to
+      follow up about your insurance. See our
+      <a href="/privacy-policy/">privacy policy</a>.</p>
+  </fieldset>
+</form>
     <p class="form-help" style="margin-top:1.5rem">Already relocating? <a href="/florida-relocation-insurance/">Request a Florida relocation insurance quote</a>.</p>
   </div>
 </section>

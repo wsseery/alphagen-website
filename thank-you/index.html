@@ -69,7 +69,7 @@ gtag('js',new Date());gtag('config','G-RG0E11KB0Q');
   <div class="container center narrow" style="padding:3rem 1.5rem">
     <h1>Thank you — we&#39;ve received your request</h1>
     <p class="lead">Our team is reviewing your details and will follow up shortly. If your request is urgent, call <a href="tel:5612200402" data-label="thank_you">(561) 220-0402</a> or email <a href="mailto:bill@alphageninsurance.com">bill@alphageninsurance.com</a>.</p>
-    <div class="btn-row center">
+    <div class="btn-row center" id="ty-actions">
       <a href="/" class="btn btn-primary" data-cta="thank_you_home">Return to homepage</a>
     </div>
   </div>
@@ -83,6 +83,82 @@ gtag('js',new Date());gtag('config','G-RG0E11KB0Q');
   gtag('event', 'generate_lead', { currency: 'USD', value: 1.0, form_line: (q.get('line') || 'unknown') });
 })();
 </script>
+
+<!-- Ebook / guide delivery. Shown only for the two gate lines; hidden for every
+     other value of ?line=, which is every quote form on the site. -->
+<section class="band-surface" id="ag-download" hidden>
+  <div class="container center narrow">
+    <h2 id="ag-download-title">Your download is ready</h2>
+    <p class="lead" id="ag-download-note"></p>
+    <div class="btn-row center">
+      <a class="btn btn-primary" id="ag-download-link" href="#" data-cta="ebook_download">Download the PDF</a>
+    </div>
+    <p class="muted">Trouble opening it? Call <a href="tel:5612200402" data-label="download_help">(561) 220-0402</a> or email <a href="mailto:bill@alphageninsurance.com">bill@alphageninsurance.com</a> and we&#8217;ll send it over.</p>
+  </div>
+</section>
+<script>
+/* Deliberately a SEPARATE function from the generate_lead block above. That one
+   returns early when the URL carries src=ag — which is exactly the case a gate
+   submission produces — so download logic placed inside it would never run. */
+(function () {
+  var DOWNLOADS = {
+    'commercial-ebook': {
+      href: '/assets/downloads/commercial-insurance-ebook.pdf',
+      label: 'Download the ebook (PDF)',
+      title: 'Your ebook is ready',
+      note: 'The Commercial Insurance Ebook is yours to keep. It opens in a new tab.',
+      local: true
+    },
+    'relocation-guide': {
+      /* Hosted on savingsre.com on purpose: it is SavingsRE content and must not be
+         copied under alphageninsurance.com. Do not "fix" this to a local path. */
+      href: 'https://savingsre.com/assets/florida-relocation-acquisition-guide.pdf',
+      label: 'Download the guide (PDF)',
+      title: 'Your guide is ready',
+      note: 'The Relocation and Insurance Guide is yours to keep. It opens in a new tab on savingsre.com, our affiliate real estate site.',
+      local: false
+    }
+  };
+
+  var line = new URLSearchParams(location.search).get('line');
+  var item = Object.prototype.hasOwnProperty.call(DOWNLOADS, line) ? DOWNLOADS[line] : null;
+  if (!item) return;
+
+  var box = document.getElementById('ag-download');
+  var link = document.getElementById('ag-download-link');
+  if (!box || !link) return;
+
+  document.getElementById('ag-download-title').textContent = item.title;
+  document.getElementById('ag-download-note').textContent = item.note;
+  link.href = item.href;
+  link.textContent = item.label;
+  link.target = '_blank';
+  link.rel = 'noopener';
+  /* The download attribute is ignored cross-origin, so only set it where it works. */
+  if (item.local) link.setAttribute('download', '');
+  box.hidden = false;
+
+  var actions = document.getElementById('ty-actions');
+  if (actions) actions.hidden = true;
+
+  link.addEventListener('click', function () {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'file_download', { file_name: item.href, form_line: line });
+    }
+  });
+})();
+</script>
+<noscript>
+  <!-- With JavaScript off the form posts natively and the Worker 302s here without
+       src=ag, so the visitor still lands on this page and still needs the file. -->
+  <section class="band-surface">
+    <div class="container center narrow">
+      <h2>Your download</h2>
+      <p>Requested the <strong>Commercial Insurance Ebook</strong>? <a href="/assets/downloads/commercial-insurance-ebook.pdf">Download it here</a>.</p>
+      <p>Requested the <strong>Relocation and Insurance Guide</strong>? <a href="https://savingsre.com/assets/florida-relocation-acquisition-guide.pdf" rel="noopener">Download it here</a>.</p>
+    </div>
+  </section>
+</noscript>
 </main>
 
 <footer class="site-footer">

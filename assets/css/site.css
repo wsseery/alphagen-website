@@ -263,6 +263,7 @@ section, .band { padding: clamp(3rem, 6vw, 5rem) 0; }
   font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; color: var(--text);
 }
 .ag-form .ag-req { color: var(--gold-deep); margin-left: 0.15rem; }
+.ag-form .ag-optional { font-weight: 400; color: var(--text-muted); }
 .ag-form input[type="text"],
 .ag-form input[type="email"],
 .ag-form input[type="tel"],
@@ -309,13 +310,7 @@ section, .band { padding: clamp(3rem, 6vw, 5rem) 0; }
   .ag-form input, .ag-form textarea { transition: none; }
 }
 
-/* Ebook gate placeholder — replaced by a JotForm embed once the form exists */
-.gate-placeholder {
-  border: 2px dashed var(--teal); border-radius: var(--radius); background: var(--surface);
-  min-height: 420px; display: flex; flex-direction: column; align-items: center; justify-content: center;
-  text-align: center; padding: 2rem; max-width: 720px; margin: 0 auto;
-}
-.gate-placeholder p { color: var(--text-muted); max-width: 460px; }
+/* Ebook / guide cover image on the two gate pages */
 .ebook-preview { width: 100%; max-width: 720px; margin: 0 auto 2rem; border-radius: var(--radius); box-shadow: var(--shadow); }
 
 /* ── Blog ──────────────────────────────────────────────── */

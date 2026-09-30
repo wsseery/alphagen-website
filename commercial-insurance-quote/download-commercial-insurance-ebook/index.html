@@ -31,6 +31,7 @@ gtag('js',new Date());gtag('config','G-RG0E11KB0Q');
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css?v=20260928">
 <script defer src="/assets/js/site.js?v=20260928"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
 <header class="site-header" id="site-header">
@@ -75,16 +76,44 @@ gtag('js',new Date());gtag('config','G-RG0E11KB0Q');
 
 <section>
   <div class="container">
-<!-- JOTFORM-GATE: commercial-ebook -->
-<!-- TODO (Bill/Cowork): create the "Commercial Insurance Ebook" JotForm, then replace this
-     placeholder block with its embed markup. On submit, redirect to /thank-you/?line=commercial-ebook
-     and deliver /assets/downloads/commercial-insurance-ebook.pdf (staged in this repo, 24 pp). -->
-<div class="gate-placeholder" id="commercial-ebook-gate">
-  <h3>Request the free ebook</h3>
-  <p>The request form for this ebook is being moved to our new form provider and will appear here shortly.</p>
-  <p>In the meantime, call <a href="tel:5612200402" data-label="commercial_gate">(561) 220-0402</a> or email <a href="mailto:bill@alphageninsurance.com">bill@alphageninsurance.com</a> and we&#8217;ll send it to you directly.</p>
-</div>
-<!-- /JOTFORM-GATE: commercial-ebook -->
+<form class="ag-form" method="POST" action="/api/quote" novalidate>
+  <input type="hidden" name="line" value="commercial-ebook">
+  <fieldset>
+    <legend class="visually-hidden">Request the free Commercial Insurance Ebook</legend>
+
+    <div class="ag-field">
+      <label for="ag-commercial-ebook-name">Full name<span class="ag-req" aria-hidden="true">*</span></label>
+      <input id="ag-commercial-ebook-name" name="name" type="text" required autocomplete="name" maxlength="120" autocapitalize="words">
+    </div>
+
+    <div class="ag-field">
+      <label for="ag-commercial-ebook-email">Email<span class="ag-req" aria-hidden="true">*</span></label>
+      <input id="ag-commercial-ebook-email" name="email" type="email" required autocomplete="email" maxlength="200" inputmode="email" spellcheck="false">
+    </div>
+
+    <div class="ag-field">
+      <label for="ag-commercial-ebook-phone">Phone <span class="ag-optional">(optional)</span></label>
+      <input id="ag-commercial-ebook-phone" name="phone" type="tel" autocomplete="tel" maxlength="40" inputmode="tel" placeholder="(561) 555-0100">
+    </div>
+
+    <p class="ag-hint">The download opens on the next page — no waiting for an email.</p>
+
+    <!-- Hidden from people and from screen readers. Bots fill it; the server then
+         answers as though it succeeded and stores nothing. -->
+    <div class="ag-hp" aria-hidden="true">
+      <label for="ag-commercial-ebook-website">Leave this field empty</label>
+      <input id="ag-commercial-ebook-website" name="website" type="text" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAAFJE_EDJ9yD3WxUQ" data-theme="light"></div>
+
+    <button type="submit" class="btn btn-primary btn-block">Get the free ebook</button>
+
+    <p class="ag-privacy">We use your details only to send you this download and to
+      follow up about your insurance. See our
+      <a href="/privacy-policy/">privacy policy</a>.</p>
+  </fieldset>
+</form>
     <p class="form-help" style="margin-top:1.5rem">Ready for a quote instead? <a href="/commercial-insurance-quote/">Start a commercial property quote</a>.</p>
   </div>
 </section>
