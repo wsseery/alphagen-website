@@ -1,0 +1,131 @@
+# Compliance review on every PR.
+#
+# The rules below are MIRRORED, by hand, from §6 of GLOBAL_INSTRUCTIONS.md, the
+# Insurance block of 00_Global/LEGAL_DISCLAIMERS.md and the compliance section
+# of the AlphaGen blog build prompt. Those live on G:\My Drive\ and are NOT
+# readable from the Actions runner, so editing them does not update this
+# workflow -- change the prompt here too.
+#
+# Last reconciled: 2026-10-01.
+#
+# Review only -- it never edits code and never blocks a merge. It runs before
+# Bill's "ship it" gate, not around it.
+#
+# This repo is PUBLIC. Never set show_full_output: it prints Claude's full
+# output into world-readable Actions logs.
+#
+# Requires the CLAUDE_CODE_OAUTH_TOKEN repository secret.
+
+name: Claude Compliance Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+# Cost guard: a rapid series of pushes to a PR branch should leave one review
+# running, not one per push.
+concurrency:
+  group: compliance-review-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # Forces tag mode, so the action builds real PR context and posts
+          # through its own comment server instead of a raw `gh pr comment`.
+          track_progress: true
+          # --allowedTools replaces the mode defaults, so every tool the review
+          # needs is listed. The git write tools are deliberately left out:
+          # this job is review-only. Bash(git diff:*) is the one that matters --
+          # without it the review cannot see the diff. fetch-depth: 0 above
+          # keeps origin/main present to diff against.
+          #
+          # --max-turns 10 is the figure in the 2026-10-01 fix prompt. The same
+          # gate on dialridge hit its cap of 12 on every sizeable PR and was
+          # raised to 30; if runs here end with subtype error_max_turns, raise
+          # this rather than ignore the red check.
+          claude_args: >-
+            --max-turns 10
+            --allowedTools "Glob,Grep,LS,Read,mcp__github_comment__update_claude_comment,Bash(git diff:*),Bash(git log:*),Bash(git show:*)"
+          prompt: |
+            Review ONLY the files changed in this pull request against the
+            compliance rules below. Do not modify any code. Post one comment
+            with your findings.
+
+            Get the changed files with `git diff --stat origin/main...HEAD`,
+            then read the diff or the files themselves as needed. Rules apply
+            to consumer-facing pages (the *.html files). Skip the content
+            rules for workflow files, CLAUDE.md, README.md and other non-page
+            files, but rules 4 and 8 apply to every file.
+
+            This is the website of AlphaGen Insurance Agency, a Florida
+            independent insurance agency. Insurance content only. Read the
+            repo's CLAUDE.md for the standing exceptions it records.
+
+            BLOCKING issues -- flag each with file and line:
+            1. Coverage promises. Any statement that a policy covers a
+               specific loss: "your policy covers", "we cover", "you're
+               covered", "fully protected", "will pay for", or the same idea
+               in other words. The approved construction is "most {line}
+               policies address X -- check your exclusions page."
+            2. Price promises. Any price, rate or saving promised: "save up
+               to", "starting at", "as low as", "lowest rate", or similar.
+            3. Unsourced figures. Every statistic, count, percentage or
+               dollar figure in changed page copy must carry an inline source
+               link. A bare number is a finding. Also flag any carrier count,
+               years in business, policy count, client count or "all 50
+               states" claim. (Addresses, phone numbers, dates, licence
+               numbers and copyright years are not statistics.)
+            4. Licence 3333692 anywhere, in any file. It is a real-estate
+               licence and must never appear in this repo.
+            5. Venture mixing. Real-estate advice, listings or documents;
+               "dialridge" or "flexmls" anywhere; "savingsre" anywhere except
+               the places CLAUDE.md allows (the two real-estate redirect
+               stubs, the single affiliate link on
+               /relocation-and-insurance-guide/, and the relocation-guide PDF
+               link on /thank-you/).
+            6. Missing licence. A consumer-facing page that carries the
+               agency name but not FL insurance licence G164863.
+            7. Missing disclaimer. A consumer-facing page whose footer does
+               not carry this block, verbatim:
+               "AlphaGen Insurance Agency is licensed in the State of Florida
+               (2-20 General Lines, License G164863). This content is for
+               general informational purposes only and is not a contract of
+               insurance. Coverage is subject to eligibility, underwriting,
+               and the terms, conditions, and exclusions of the issued
+               policy. Rates and availability vary by state and are subject
+               to change."
+            8. Client names, policy numbers, dates of birth, SSNs, financial
+               account numbers or any other PII, in any file -- including
+               inside an anonymised example. Also secrets, tokens or API
+               keys.
+            9. A carrier, wholesaler or quoting platform named on a
+               consumer-facing page. Carrier-branded material requires an
+               active appointment.
+            10. Calls to action. In the body of a new or changed blog post or
+                class-by-city landing page (inside <main>, not the shared
+                site header and footer, which link to /get-a-quote/ on every
+                page), there must be exactly one call to action, and no link
+                to /get-a-quote/ -- the CTA goes to a specific quote form.
+            11. Analytics. Any tag other than GA4 G-RG0E11KB0Q: flag
+                GTM-K4HVBNM or a Google Ads tag.
+
+            Also note (non-blocking): line-ending churn -- if a file shows as
+            fully rewritten with symmetric insert/delete counts, say so; and
+            any renamed or flattened <slug>/index.html path.
+
+            If nothing is wrong, reply with a single short line saying the
+            diff is clean. Be specific and brief; do not restate the rules
+            back.
