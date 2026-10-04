@@ -1,0 +1,35 @@
+# content-rules: the third required check behind content auto-merge
+# (GLOBAL_INSTRUCTIONS.md §8a). On every new page: exactly one call to action,
+# the Insurance disclaimer block verbatim, licence G164863. On every new or
+# changed page: no figure that is not in the PR body's "Sourced figures" table.
+#
+# Re-runs when the PR body is edited, so fixing the table fixes the check.
+# This repo is PUBLIC: never add show_full_output anywhere.
+
+name: Content rules
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+
+concurrency:
+  group: content-rules-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  content-rules:
+    name: content-rules
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 2
+      # The body goes in through env, never interpolated into the script, so
+      # nothing in a PR body can run as shell.
+      - env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: python3 .github/checks/content_checks.py rules HEAD^1

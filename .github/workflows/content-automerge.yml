@@ -1,0 +1,86 @@
+# content-classification: decides whether a PR is content-only under
+# GLOBAL_INSTRUCTIONS.md §8a, and turns GitHub auto-merge on or off to match.
+#
+# It never merges anything. Auto-merge asks GitHub to merge once every
+# required check on main has passed; branch protection enforces that. This
+# job only flips the switch, and only when ALL of these hold:
+#
+#   - every changed file is content (a mixed PR is code; unknown paths are code);
+#   - the PR comes from a branch in this repo, not a fork (this repo is public);
+#   - the PR is not a draft;
+#   - branch protection on main requires all four gate checks. A check that
+#     does not exist has not passed, so a missing one keeps auto-merge off.
+#
+# In every other case it turns auto-merge OFF, so a push that adds a code file
+# to a PR that was content cancels the earlier switch.
+#
+# `pull_request_target` runs THIS file and the classifier as they are on main,
+# never the PR's copy, so a PR cannot rewrite the rules it is judged by. It
+# never checks out or executes PR code: it reads the PR's files through the API.
+#
+# This repo is PUBLIC: never add show_full_output anywhere.
+
+name: Content auto-merge
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review, converted_to_draft]
+
+concurrency:
+  group: content-automerge-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  content-classification:
+    name: content-classification
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      # Base branch only. Do not add `ref:` pointing at the PR head.
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Classify
+        id: classify
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: python3 .github/checks/classify.py --pr ${{ github.event.pull_request.number }}
+
+      - name: Set auto-merge to match
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR_ID: ${{ github.event.pull_request.node_id }}
+          VERDICT: ${{ steps.classify.outputs.verdict }}
+          HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
+          DRAFT: ${{ github.event.pull_request.draft }}
+        run: |
+          reason=""
+          [ "$VERDICT" = "content" ] || reason="classified as code"
+          [ -n "$reason" ] || [ "$HEAD_REPO" = "$REPO" ] || reason="PR comes from a fork"
+          [ -n "$reason" ] || [ "$DRAFT" != "true" ] || reason="PR is a draft"
+          if [ -z "$reason" ]; then
+            required=$(gh api "repos/$REPO/branches/main" --jq '.protection.required_status_checks.contexts[]?' || true)
+            for check in playwright compliance-grep content-rules content-classification; do
+              grep -qx "$check" <<< "$required" || reason="branch protection on main does not require '$check'"
+            done
+          fi
+
+          if [ -n "$reason" ]; then
+            echo "Auto-merge OFF: $reason" | tee -a "$GITHUB_STEP_SUMMARY"
+            gh api graphql -f query='mutation($id:ID!){disablePullRequestAutoMerge(input:{pullRequestId:$id}){clientMutationId}}' \
+              -f id="$PR_ID" >/dev/null 2>&1 || true
+            exit 0
+          fi
+
+          # enablePullRequestAutoMerge only ever queues the merge behind the
+          # required checks. Never `gh pr merge` without --auto, never --admin.
+          gh api graphql -f query='mutation($id:ID!){enablePullRequestAutoMerge(input:{pullRequestId:$id,mergeMethod:SQUASH}){clientMutationId}}' \
+            -f id="$PR_ID" >/dev/null
+          echo "Auto-merge ON: GitHub will squash-merge once every required check passes." | tee -a "$GITHUB_STEP_SUMMARY"
