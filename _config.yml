@@ -1,0 +1,8 @@
+# GitHub Pages builds this repo with Jekyll, which publishes every file it
+# finds. These are repo-internal and must not be served on
+# alphageninsurance.com. CLAUDE.md names licence 3333692, which this site must
+# never show; redirects.csv is the Cloudflare import list, not a page.
+exclude:
+  - CLAUDE.md
+  - README.md
+  - redirects.csv
