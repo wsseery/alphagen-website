@@ -60,6 +60,12 @@ Pages. Rebuilt from WordPress/Bluehost in Sep 2026 on the same stack as `savings
 
 ## Working agreement
 
-Draft, do not ship. Commits, pushes and PRs are fine without asking; **merging to `main` is a
-release and needs Bill's explicit "ship it."** Never touch DNS, Cloudflare, Bluehost, JotForm or
-Google accounts from here.
+Draft, do not ship. Commits, pushes and PRs are fine without asking. **Merging to `main` is a
+release.** Who may merge is set by GLOBAL_INSTRUCTIONS §8a: a content-only PR merges itself once
+its required checks pass; every other PR needs Bill's explicit "ship it." Never merge by hand,
+never use `--admin`. Never touch DNS, Cloudflare, Bluehost, JotForm or Google accounts from here.
+
+The §8a gate is `.github/workflows/content-automerge.yml` (classification and the auto-merge
+switch), `content-gate.yml` (`playwright`, `compliance-grep`) and `content-rules.yml`, with the
+logic in `.github/checks/`. `python .github/checks/classify.py --git main HEAD` shows how a branch
+would be classified.

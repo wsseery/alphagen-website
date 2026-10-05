@@ -69,7 +69,7 @@ Use the copy exactly as written. It has been through a compliance pass: reword n
 - Match the existing page pattern exactly: same stylesheet, same header and footer markup, same GA4 `G-RG0E11KB0Q` gtag.js block, root-relative links, no build step.
 - `<title>` and `<meta name="description">` come from each file's SEO-fields table, not the H1. Add `og:title`, `og:description`, `og:url` and `og:image`.
 - Blog post: H1 and H2s as in the copy, in order. Source links are external, `rel="nofollow"`, same tab. Exactly one CTA, at the end, to the CTA target in section 3.
-- Class-by-city page: reuse the native quote form for the line in section 1, copied from that line's quote page, with the same hidden `line` value. That form is the page's only CTA. Add `InsuranceAgency` JSON-LD consistent with the site-wide block, using facts already on the site only.
+- Class-by-city page: reuse the native quote form for the line in section 1, copied from that line's quote page, with the same hidden `line` value. That form is the page's only CTA. Copy the `InsuranceAgency` JSON-LD block from `index.html` verbatim, and copy the `<head>` scripts and stylesheet links from that line's quote page verbatim. Any script, form or schema block that is not an exact copy of one already on the site makes the PR a code PR, and Bill has to merge it.
 - Address is "5550 Glades Road, Boca Raton" with no suite number.
 - If an OG image is referenced but the file does not exist, keep the tag and say so in the PR body. Do not generate a placeholder image.
 
@@ -98,4 +98,6 @@ Confirm each new page has exactly one CTA, carries licence G164863, and carries 
 
 **Open a PR, do not merge**
 
-Branch `content/{{BRANCH_SLUG}}` into `main`. The PR body states both new URLs, the CTA target on each, the sourced figures with their links, and any referenced-but-missing image. Do not merge: `main` deploys the live site, and the release is Bill's.
+Branch `content/{{BRANCH_SLUG}}` into `main`. The PR body states both new URLs, the CTA target on each, and any referenced-but-missing image. It must also carry a `## Sourced figures` heading followed by the table from section 4, keeping its `Figure` column. The `content-rules` check reads that table, and any number on a page that is not in it fails the check.
+
+Change only the two new pages, `sitemap.xml` and `blog/index.html`, plus copy inside `<main>` on the page that lists class pages. Do not merge it yourself. A PR that changes only content merges itself once every required check passes (GLOBAL_INSTRUCTIONS §8a). Anything else waits for Bill.
