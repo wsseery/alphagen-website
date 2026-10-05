@@ -57,6 +57,32 @@ Pages. Rebuilt from WordPress/Bluehost in Sep 2026 on the same stack as `savings
   `raw.githubusercontent.com/wsseery/alphagen-website/main/<path>?t=<ts>` first.
 - Blog posts live at `blog/<slug>/index.html` and are listed by hand in `blog/index.html` and
   `sitemap.xml`.
+- **Phone is always (561) 220-0402.** If drafted copy carries any other number (Week 04 had
+  `917-805-4262`), use the 561 number instead. Never drop the phone line to dodge the question.
+- **Unverified numbers are illustrative examples** (Bill, 2026-10-05). Any number in the copy that
+  is not in the brief's sourced figures stays as written and goes in the PR body's sourced-figures
+  table as "Illustrative example — not a statistic". Never invent a source for it.
+
+## Weekly content builds (`@claude` on an issue)
+
+Learned from Weeks 03–04 (issues #12, #13, #17, #18). Each of these cost a failed run.
+
+- **Stay in the repo root for the whole run.** Never `cd`, never create a working folder such as
+  `.scratch/`. Week 04's first run built every page from inside `.scratch/`, after which `git`,
+  `cd` and `rm` were refused and the work was lost.
+- **Commit early.** Once the pages, `sitemap.xml`, `blog/index.html` and images exist, commit and
+  push straight away with plain `git add <paths>`, `git commit -m`, `git push` — no `-C`, no `&&`
+  chains. Run checks after the push, not before.
+- **OG cards:** if the issue carries an "OG IMAGES" section, run its `make_og.py` from the repo
+  root, commit only the JPEGs, and put the "Font face in use" line in the PR body. `make_og.py`
+  and `.fonts/` are gitignored.
+- **You cannot open the PR.** Post the full PR body in your final comment; the PR is opened from
+  Claude Code or by Bill from the "Create PR" link, which is what starts the required checks.
+- **Sourced-figures table:** keep the columns `# | Figure | Source | Link`. The `content-rules`
+  check reads numbers from both Figure and Source, so statute sections cited on the page belong in
+  Source. Any other number on a page needs its own row.
+- **Two weekly PRs open at once conflict** in `blog/index.html` and `sitemap.xml`. After the first
+  merges, merge `main` into the second and keep both sets of entries, newest first.
 
 ## Working agreement
 

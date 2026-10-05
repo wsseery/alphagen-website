@@ -56,8 +56,11 @@ jobs:
           # gate on dialridge hit its cap of 12 on every sizeable PR and was
           # raised to 30; if runs here end with subtype error_max_turns, raise
           # this rather than ignore the red check.
+          # Raised to 25 on 2026-10-05: the Week 04 PR (#20, four pages) ended
+          # "after 13 turns, exceeding the configured maximum of 10" with no
+          # finding.
           claude_args: >-
-            --max-turns 10
+            --max-turns 25
             --allowedTools "Glob,Grep,LS,Read,mcp__github_comment__update_claude_comment,Bash(git diff:*),Bash(git log:*),Bash(git show:*)"
           prompt: |
             Review ONLY the files changed in this pull request against the

@@ -71,7 +71,13 @@ Use the copy exactly as written. It has been through a compliance pass: reword n
 - Blog post: H1 and H2s as in the copy, in order. Source links are external, `rel="nofollow"`, same tab. Exactly one CTA, at the end, to the CTA target in section 3.
 - Class-by-city page: reuse the native quote form for the line in section 1, copied from that line's quote page, with the same hidden `line` value. That form is the page's only CTA. Copy the `InsuranceAgency` JSON-LD block from `index.html` verbatim, and copy the `<head>` scripts and stylesheet links from that line's quote page verbatim. Any script, form or schema block that is not an exact copy of one already on the site makes the PR a code PR, and Bill has to merge it.
 - Address is "5550 Glades Road, Boca Raton" with no suite number.
-- If an OG image is referenced but the file does not exist, keep the tag and say so in the PR body. Do not generate a placeholder image.
+- OG image: if this issue carries an "OG IMAGES" section, generate the card with its `make_og.py` from the repo root, commit only the JPEG, and put the script's "Font face in use" line in the PR body. Without that section, keep the `og:image` tag and say in the PR body that the file is missing; never make a placeholder.
+- Phone is always (561) 220-0402, whatever number the copy carries.
+
+**Working rules for this run** (see `CLAUDE.md`, "Weekly content builds")
+
+- Stay in the repo root. Never `cd`, never create a working folder.
+- Commit and push as soon as the files exist, with plain `git add` / `git commit` / `git push`. Check after pushing.
 
 **Wire in**
 
@@ -94,10 +100,10 @@ dialridge
 savingsre
 ```
 
-Confirm each new page has exactly one CTA, carries licence G164863, and carries the footer insurance disclaimer block used site-wide. Confirm every number on both pages is one of the figures in section 4, with its source link.
+Confirm each new page has exactly one CTA, carries licence G164863, and carries the footer insurance disclaimer block used site-wide. Confirm every number on both pages is one of the figures in section 4, with its source link. Any other number in the copy is an illustrative example: leave it as written and add it to the table as "Illustrative example — not a statistic".
 
-**Open a PR, do not merge**
+**Post the PR body, do not merge**
 
-Branch `content/{{BRANCH_SLUG}}` into `main`. The PR body states both new URLs, the CTA target on each, and any referenced-but-missing image. It must also carry a `## Sourced figures` heading followed by the table from section 4, keeping its `Figure` column. The `content-rules` check reads that table, and any number on a page that is not in it fails the check.
+You cannot open the PR yourself. Push the branch and post the full PR body in your final comment; Claude Code or Bill opens the PR, which starts the required checks. The PR body states both new URLs, the CTA target on each, and the OG image status. It must also carry a `## Sourced figures` heading followed by the table from section 4, keeping its `Figure` and `Source` columns, plus a row for every illustrative example. The `content-rules` check reads numbers from both columns, and any number on a page that is not in the table fails the check.
 
-Change only the two new pages, `sitemap.xml` and `blog/index.html`, plus copy inside `<main>` on the page that lists class pages. Do not merge it yourself. A PR that changes only content merges itself once every required check passes (GLOBAL_INSTRUCTIONS §8a). Anything else waits for Bill.
+Change only the two new pages, `sitemap.xml` and `blog/index.html`, plus copy inside `<main>` on the page that lists class pages. Do not merge it yourself. A PR that changes only content merges itself once every required check passes (GLOBAL_INSTRUCTIONS §8a). Anything else waits for Bill — and a new JSON-LD block (FAQPage, BlogPosting) not already on the site counts as a schema change, so a post that carries one is a code PR.
