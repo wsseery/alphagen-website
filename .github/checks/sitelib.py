@@ -10,6 +10,7 @@ Pure standard library, so it runs on a bare runner with no install step.
 """
 
 import html
+import json
 import re
 
 # --- §8a path lists -------------------------------------------------------
@@ -109,6 +110,47 @@ ACTIVE_BLOCK_RES = [
     # Any tag carrying an inline event handler or a javascript: URL.
     re.compile(r"<[a-z][^>]*\s(?:on[a-z]+\s*=|href\s*=\s*[\"']?\s*javascript:)[^>]*>", re.I),
 ]
+
+
+FAQ_JSONLD_RE = re.compile(
+    r"^<script\s+type=[\"']application/ld\+json[\"']\s*>(.*)</script\s*>$", re.S | re.I)
+
+
+def is_faq_jsonld(block):
+    """True only for a pure FAQPage JSON-LD block (GLOBAL §8a, FAQ amendment
+    2026-10-05). Every weekly post carries one with its own questions, so it
+    can never be a verbatim copy of a block already on the site. The shape is
+    held tight: FAQPage -> Question(name) -> Answer(text), plain strings, no
+    other keys, no URLs, no markup. Anything else stays code."""
+    m = FAQ_JSONLD_RE.match(block)
+    if not m:
+        return False
+    try:
+        data = json.loads(m.group(1))
+    except ValueError:
+        return False
+
+    def plain(v):
+        return isinstance(v, str) and v.strip() and not re.search(r"[<>]|https?:|javascript:", v, re.I)
+
+    if not isinstance(data, dict) or set(data) != {"@context", "@type", "mainEntity"}:
+        return False
+    if data["@type"] != "FAQPage" or data["@context"] not in ("https://schema.org", "http://schema.org"):
+        return False
+    qs = data["mainEntity"]
+    if not isinstance(qs, list) or not qs:
+        return False
+    for q in qs:
+        if not isinstance(q, dict) or set(q) != {"@type", "name", "acceptedAnswer"}:
+            return False
+        a = q["acceptedAnswer"]
+        if q["@type"] != "Question" or not plain(q["name"]):
+            return False
+        if not isinstance(a, dict) or set(a) != {"@type", "text"}:
+            return False
+        if a["@type"] != "Answer" or not plain(a["text"]):
+            return False
+    return True
 
 
 def active_blocks(text):
