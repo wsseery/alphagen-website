@@ -81,6 +81,10 @@ Learned from Weeks 03–04 (issues #12, #13, #17, #18). Each of these cost a fai
 - **Sourced-figures table:** keep the columns `# | Figure | Source | Link`. The `content-rules`
   check reads numbers from both Figure and Source, so statute sections cited on the page belong in
   Source. Any other number on a page needs its own row.
+- **Schema blocks:** a post may carry its FAQPage JSON-LD (classified content, if it holds only
+  Question/Answer text). Add no BlogPosting or other new JSON-LD, and copy the `InsuranceAgency`
+  block from `index.html` byte-for-byte; an edited copy makes the PR code. Week 04 (#20) went to
+  Bill's merge for exactly these two reasons.
 - **Two weekly PRs open at once conflict** in `blog/index.html` and `sitemap.xml`. After the first
   merges, merge `main` into the second and keep both sets of entries, newest first.
 

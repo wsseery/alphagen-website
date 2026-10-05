@@ -69,10 +69,11 @@ Use the copy exactly as written. It has been through a compliance pass: reword n
 - Match the existing page pattern exactly: same stylesheet, same header and footer markup, same GA4 `G-RG0E11KB0Q` gtag.js block, root-relative links, no build step.
 - `<title>` and `<meta name="description">` come from each file's SEO-fields table, not the H1. Add `og:title`, `og:description`, `og:url` and `og:image`.
 - Blog post: H1 and H2s as in the copy, in order. Source links are external, `rel="nofollow"`, same tab. Exactly one CTA, at the end, to the CTA target in section 3.
-- Class-by-city page: reuse the native quote form for the line in section 1, copied from that line's quote page, with the same hidden `line` value. That form is the page's only CTA. Copy the `InsuranceAgency` JSON-LD block from `index.html` verbatim, and copy the `<head>` scripts and stylesheet links from that line's quote page verbatim. Any script, form or schema block that is not an exact copy of one already on the site makes the PR a code PR, and Bill has to merge it.
+- Class-by-city page: reuse the native quote form for the line in section 1, copied from that line's quote page, with the same hidden `line` value. That form is the page's only CTA. Copy the `InsuranceAgency` JSON-LD block from `index.html` verbatim (byte-for-byte; do not localise it), and copy the `<head>` scripts and stylesheet links from that line's quote page verbatim. Any script, form or schema block that is not an exact copy of one already on the site makes the PR a code PR, and Bill has to merge it.
 - Address is "5550 Glades Road, Boca Raton" with no suite number.
 - OG image: if this issue carries an "OG IMAGES" section, generate the card with its `make_og.py` from the repo root, commit only the JPEG, and put the script's "Font face in use" line in the PR body. Without that section, keep the `og:image` tag and say in the PR body that the file is missing; never make a placeholder.
 - Phone is always (561) 220-0402, whatever number the copy carries.
+- Schema: the blog post carries only the FAQPage JSON-LD from the brief. Add no BlogPosting or other JSON-LD block.
 
 **Working rules for this run** (see `CLAUDE.md`, "Weekly content builds")
 
