@@ -1,0 +1,73 @@
+# Content gate: two of the four required checks behind content auto-merge
+# (GLOBAL_INSTRUCTIONS.md §8a). They run on EVERY PR, code or content, and
+# branch protection on main requires both to pass before anything merges.
+#
+#   playwright       every changed page (plus the homepage) at desktop and
+#                    390px: 200, no console errors, no broken links or images,
+#                    no contrast failure, no horizontal overflow.
+#   compliance-grep  banned terms added by the PR.
+#
+# content-rules lives in its own workflow because it must re-run when the PR
+# body (its sourced-figures table) is edited; these two must not, or an
+# `edited` run could replace a real result.
+#
+# Runs on `pull_request`, so the PR's own copy of this file runs. That is safe
+# here: a PR that edits it touches .github/, is classified as code, and is
+# never auto-merged. This repo is PUBLIC: never add show_full_output anywhere.
+
+name: Content gate
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+concurrency:
+  group: content-gate-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  playwright:
+    name: playwright
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 2
+
+      # The checkout is GitHub's merge of the PR into main, so HEAD^1 is main.
+      - name: Pages this PR adds or changes
+        id: pages
+        run: |
+          pages=$(git diff --name-only --diff-filter=AMR HEAD^1 HEAD -- '*.html' | grep -v '^\.github/' | tr '\n' ' ' || true)
+          echo "list=$pages" >> "$GITHUB_OUTPUT"
+          echo "Changed pages: ${pages:-none (homepage smoke test only)}"
+
+      - name: Install Playwright
+        working-directory: .github/checks
+        run: |
+          npm install --no-save --no-package-lock playwright@1.63.0 @axe-core/playwright@4.13.0
+          npx playwright install --with-deps chromium
+
+      # Paths go in through env, not ${{ }} in the script: a file name is
+      # PR-controlled text and must never be pasted into shell source.
+      - name: Check pages
+        env:
+          PAGES: ${{ steps.pages.outputs.list }}
+        run: |
+          python3 -m http.server 8080 --bind 127.0.0.1 >/dev/null 2>&1 &
+          sleep 1
+          node .github/checks/site-check.mjs 8080 $PAGES
+
+  compliance-grep:
+    name: compliance-grep
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 2
+      - run: python3 .github/checks/content_checks.py grep HEAD^1
