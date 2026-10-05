@@ -50,4 +50,18 @@ jobs:
           # Cost guard: caps how much work a single run can do. Do NOT add
           # show_full_output -- this repo is public, and that flag prints
           # Claude's full output into world-readable Actions logs.
-          claude_args: "--max-turns 15"
+          #
+          # 15 -> 60 on 2026-10-05: issues #12 and #13 (weekly content builds)
+          # both died at "Reached maximum number of turns (15)" before opening
+          # a PR. A weekly build writes several pages plus the sitemap and blog
+          # index, and now also generates the OG cards.
+          #
+          # --allowedTools: the action only permits git commands by default.
+          # The OG-card step in each weekly issue runs a throwaway generator
+          # (pip install Pillow, python3 make_og.py, then delete it), so python3
+          # and the two cleanups it needs are allowed here. make_og.py and the
+          # .fonts/ download it may create are also gitignored, so neither can
+          # be committed and turn a content PR into a code PR.
+          claude_args: >-
+            --max-turns 60
+            --allowedTools "Bash(python3:*),Bash(ls:*),Bash(rm make_og.py),Bash(rm -f make_og.py),Bash(rm -rf .fonts)"

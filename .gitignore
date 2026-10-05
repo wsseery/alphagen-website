@@ -8,3 +8,6 @@ alphagen-wp-export.json
 __pycache__/
 Thumbs.db
 .DS_Store
+# OG card generator: run on the Actions runner, never committed (GLOBAL §8a)
+make_og.py
+.fonts/
