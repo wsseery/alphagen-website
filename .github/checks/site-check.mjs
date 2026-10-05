@@ -41,8 +41,20 @@ const browser = await chromium.launch({
 });
 const linkCache = new Map();
 
+// External hosts that have already timed out once in this run. flsenate.gov
+// drops every request from the runner; Week 04 cites eight of its pages, and
+// waiting 40 s on each cost five minutes a run. One full wait per host is
+// enough evidence; later links on that host go straight to the timeout note.
+const timedOutHosts = new Set();
+
 async function checkLink(request, href, external) {
   if (linkCache.has(href)) return linkCache.get(href);
+  const host = external ? new URL(href).host : null;
+  if (host && timedOutHosts.has(host)) {
+    const skipped = `unreachable (Timeout: ${host} already timed out in this run)`;
+    linkCache.set(href, skipped);
+    return skipped;
+  }
   let result;
   try {
     // Some hosts (flsenate.gov, 2026-10-05) never answer a HEAD from the
@@ -56,6 +68,7 @@ async function checkLink(request, href, external) {
     result = res.status();
   } catch (e) {
     result = external ? `unreachable (${e.message.split('\n')[0]})` : 'unreachable';
+    if (host && /timeout/i.test(e.message)) timedOutHosts.add(host);
   }
   linkCache.set(href, result);
   return result;
