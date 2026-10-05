@@ -45,8 +45,14 @@ async function checkLink(request, href, external) {
   if (linkCache.has(href)) return linkCache.get(href);
   let result;
   try {
-    let res = await request.head(href, { timeout: 20000, maxRedirects: 10 });
-    if (res.status() >= 400) res = await request.get(href, { timeout: 20000, maxRedirects: 10 });
+    // Some hosts (flsenate.gov, 2026-10-05) never answer a HEAD from the
+    // Actions runner, so a HEAD that throws falls back to GET exactly as a
+    // HEAD that returns 4xx/5xx does.
+    let res = null;
+    try {
+      res = await request.head(href, { timeout: 20000, maxRedirects: 10 });
+    } catch {}
+    if (!res || res.status() >= 400) res = await request.get(href, { timeout: 20000, maxRedirects: 10 });
     result = res.status();
   } catch (e) {
     result = external ? `unreachable (${e.message.split('\n')[0]})` : 'unreachable';
@@ -115,6 +121,10 @@ for (const path of pages) {
         if (typeof status === 'number' && status < 400) continue;
         if (!internal && BOT_WALL.has(status)) {
           notes.push(`\`${path}\`: ${url} answered ${status} to an automated request — check it by hand`);
+        } else if (!internal && typeof status === 'string' && /timeout/i.test(status)) {
+          // A host that drops the runner's requests instead of refusing them
+          // is a bot wall too; a timeout is not evidence the page is gone.
+          notes.push(`\`${path}\`: ${url} did not answer an automated request (timeout) — check it by hand`);
         } else {
           fail(path, `broken link ${url} (${status})`);
         }
