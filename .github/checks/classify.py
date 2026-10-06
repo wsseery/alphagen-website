@@ -136,7 +136,10 @@ def classify(src):
         base = src.base_text(path) if status != "added" else None
         problems = []
 
-        novel = [b for b in S.active_blocks(head) if b not in corpus]
+        # A pure FAQPage JSON-LD block is content (GLOBAL §8a FAQ amendment,
+        # 2026-10-05); sitelib.is_faq_jsonld holds the exact shape allowed.
+        novel = [b for b in S.active_blocks(head)
+                 if b not in corpus and not S.is_faq_jsonld(b)]
         for b in novel:
             problems.append("new script/form/schema/tracking block not already on the site: "
                             f"`{b[:90]}`")

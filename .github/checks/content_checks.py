@@ -120,7 +120,12 @@ def sourced_figures(body):
     if not table:
         return set(), False
     header = [c.lower() for c in table[0]]
-    cols = [i for i, h in enumerate(header) if "figure" in h] or range(1, len(header))
+    # Figure AND Source: a statute or CFR section cited on the page
+    # ("§440.02(17)(b)", "49 C.F.R. part 387") is the source of a figure, and it
+    # lives in the Source column. Reading Figure alone failed Week 04 (#20) on
+    # every citation. Link and Used-in columns stay out.
+    cols = ([i for i, h in enumerate(header) if "figure" in h or "source" in h]
+            or range(1, len(header)))
     figs = set()
     for row in table[2:]:  # skip header and the |---| row
         for i in cols:
