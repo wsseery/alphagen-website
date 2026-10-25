@@ -38,11 +38,17 @@ Pages. Rebuilt from WordPress/Bluehost in Sep 2026 on the same stack as `savings
 - One stylesheet `assets/css/site.css`, one script `assets/js/site.js`. No framework, no build
   step, no node_modules. Header and footer are plain markup repeated in every page.
 - Quote pages carry the native `.ag-form` (2026-09-29), posting to `/api/quote` — a Cloudflare Worker
-  guarded by Turnstile — with a hidden `line` value per form (ten forms on nine pages; the relocation
-  page has a personal and a business form). The submit handler lives in `assets/js/site.js` and uses
+  guarded by Turnstile — with a hidden `line` value per form (sixteen forms on fifteen pages as of
+  2026-10-25, the two ebook gates included; the relocation page has a personal and a business form, and
+  the homepage, `/get-a-quote/`, `/contact/` and `/general-inquiry/` carry `line=general-inquiry`). No
+  page uses JotForm any more. The submit handler lives in `assets/js/site.js` and uses
   `window.agTrack`. The `/thank-you/` page keeps its `?line=` handling and fires `generate_lead` only
   when the URL lacks `src=ag`, because the form already fired it on submit — change one end without the
-  other and every lead double-counts. The two ebook gates still use their JotForm embeds.
+  other and every lead double-counts.
+- The Worker (source: `01_AlphaGen/quote-api/worker.js` on Drive) stores only `name`, `company`,
+  `email`, `phone`, `notes` and `page`, and **silently drops any other field**. That is why the
+  general-inquiry line dropdown (`interest`) is folded into `notes` by `site.js` before the POST. A new
+  form field needs the same treatment or a Worker change, or its value is lost.
 - `redirects.csv` is the Cloudflare Bulk Redirects import; each old path also has a meta-refresh
   stub so redirects work before the Cloudflare list is enabled.
 - **No `CNAME` file until cutover.** Adding it (and enabling the Pages custom domain) is Bill's
