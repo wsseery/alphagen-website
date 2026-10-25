@@ -121,6 +121,16 @@
 
         var data = new FormData(form);
         data.append('page', location.pathname);
+
+        // The Worker stores only name/company/email/phone/notes/page, so the
+        // general-inquiry line dropdown rides inside notes instead of being dropped.
+        var interest = form.querySelector('select[name="interest"]');
+        data.delete('interest');
+        if (interest && interest.value) {
+          var notes = (data.get('notes') || '').toString().trim();
+          data.set('notes', 'Line of interest: ' + interest.options[interest.selectedIndex].text +
+            (notes ? '\n\n' + notes : ''));
+        }
         var line = (data.get('line') || '').toString();
 
         fetch(form.getAttribute('action'), {

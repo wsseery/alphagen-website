@@ -273,6 +273,7 @@ section, .band { padding: clamp(3rem, 6vw, 5rem) 0; }
 .ag-form input[type="text"],
 .ag-form input[type="email"],
 .ag-form input[type="tel"],
+.ag-form select,
 .ag-form textarea {
   width: 100%; padding: 0.7rem 0.85rem;
   font-family: var(--font-body);
@@ -283,6 +284,7 @@ section, .band { padding: clamp(3rem, 6vw, 5rem) 0; }
 }
 .ag-form textarea { resize: vertical; min-height: 6.5rem; }
 .ag-form input:focus-visible,
+.ag-form select:focus-visible,
 .ag-form textarea:focus-visible {
   outline: none; border-color: var(--teal);
   box-shadow: 0 0 0 3px rgba(44, 92, 122, 0.2);
@@ -313,7 +315,7 @@ section, .band { padding: clamp(3rem, 6vw, 5rem) 0; }
 
 @media (max-width: 480px) { .ag-form { padding: 1.25rem; border-radius: 10px; } }
 @media (prefers-reduced-motion: reduce) {
-  .ag-form input, .ag-form textarea { transition: none; }
+  .ag-form input, .ag-form select, .ag-form textarea { transition: none; }
 }
 
 /* Ebook / guide cover image on the two gate pages */
