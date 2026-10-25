@@ -109,66 +109,92 @@
     if (!forms.length) return;
 
     Array.prototype.forEach.call(forms, function (form) {
+      // Counts visitors who begin a form, so abandonment shows against
+      // generate_lead. Not called form_start: GA4's enhanced measurement already
+      // sends an event by that name, and the two would merge.
+      var lineInput = form.querySelector('input[name="line"]');
+      form.addEventListener('focusin', function onStart() {
+        form.removeEventListener('focusin', onStart);
+        if (typeof window.agTrack === 'function') {
+          window.agTrack('ag_form_start', { form_line: lineInput ? lineInput.value : '' });
+        }
+      });
+
       form.addEventListener('submit', function (event) {
         event.preventDefault();
         if (form.getAttribute('data-busy') === '1') return;
 
         clearMessages(form);
 
+        // Catch empty and malformed fields here. A server round trip for a typo
+        // also spends the single-use Turnstile token and makes the visitor wait
+        // for a new one.
+        var problems = checkFields(form);
+        if (Object.keys(problems).length) {
+          showMessages(form, problems);
+          return;
+        }
+
         var button = form.querySelector('button[type="submit"]');
         var label = button ? button.textContent : '';
         busy(form, button, true, 'Sending…');
 
-        var data = new FormData(form);
-        data.append('page', location.pathname);
-
-        // The Worker stores only name/company/email/phone/notes/page, so the
-        // general-inquiry line dropdown rides inside notes instead of being dropped.
-        var interest = form.querySelector('select[name="interest"]');
-        data.delete('interest');
-        if (interest && interest.value) {
-          var notes = (data.get('notes') || '').toString().trim();
-          data.set('notes', 'Line of interest: ' + interest.options[interest.selectedIndex].text +
-            (notes ? '\n\n' + notes : ''));
-        }
-        var line = (data.get('line') || '').toString();
-
-        fetch(form.getAttribute('action'), {
-          method: 'POST',
-          body: data,
-          headers: { 'Accept': 'application/json' },
-          credentials: 'same-origin'
-        })
-          .then(function (res) {
-            return res.json().then(function (b) { return b; }, function () { return null; });
-          })
-          .then(function (body) {
-            if (body && body.ok) {
-              // Fire the conversion here, while we still control the page.
-              if (typeof window.agTrack === 'function') {
-                window.agTrack('generate_lead', { currency: 'USD', value: 1.0, form_line: line });
-              }
-              var to = body.redirect || ('/thank-you/?line=' + encodeURIComponent(line));
-              to += (to.indexOf('?') === -1 ? '?' : '&') + 'src=ag';
-              // Give the analytics beacon a moment before navigating.
-              setTimeout(function () { location.href = to; }, 250);
-              return;
-            }
-            showMessages(form, (body && body.errors) || {
-              form: 'Something went wrong. Please try again, or call (561) 220-0402.'
-            });
-            resetTurnstile(form);
-            busy(form, button, false, label);
-          })
-          .catch(function () {
-            showMessages(form, {
-              form: 'We could not reach the server. Please check your connection, or call (561) 220-0402.'
-            });
-            resetTurnstile(form);
-            busy(form, button, false, label);
-          });
+        // Interaction-only Turnstile hands over its token a moment after the page
+        // loads. A visitor who submits first waits for it instead of being refused.
+        waitForToken(form, 8000).then(function () { send(form, button, label); });
       });
     });
+
+    function send(form, button, label) {
+      var data = new FormData(form);
+      data.append('page', location.pathname);
+
+      // The Worker stores only name/company/email/phone/notes/page, so the
+      // general-inquiry line dropdown rides inside notes instead of being dropped.
+      var interest = form.querySelector('select[name="interest"]');
+      data.delete('interest');
+      if (interest && interest.value) {
+        var notes = (data.get('notes') || '').toString().trim();
+        data.set('notes', 'Line of interest: ' + interest.options[interest.selectedIndex].text +
+          (notes ? '\n\n' + notes : ''));
+      }
+      var line = (data.get('line') || '').toString();
+
+      fetch(form.getAttribute('action'), {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' },
+        credentials: 'same-origin'
+      })
+        .then(function (res) {
+          return res.json().then(function (b) { return b; }, function () { return null; });
+        })
+        .then(function (body) {
+          if (body && body.ok) {
+            // Fire the conversion here, while we still control the page.
+            if (typeof window.agTrack === 'function') {
+              window.agTrack('generate_lead', { currency: 'USD', value: 1.0, form_line: line });
+            }
+            var to = body.redirect || ('/thank-you/?line=' + encodeURIComponent(line));
+            to += (to.indexOf('?') === -1 ? '?' : '&') + 'src=ag';
+            // Give the analytics beacon a moment before navigating.
+            setTimeout(function () { location.href = to; }, 250);
+            return;
+          }
+          showMessages(form, (body && body.errors) || {
+            form: 'Something went wrong. Please try again, or call (561) 220-0402.'
+          });
+          resetTurnstile(form);
+          busy(form, button, false, label);
+        })
+        .catch(function () {
+          showMessages(form, {
+            form: 'We could not reach the server. Please check your connection, or call (561) 220-0402.'
+          });
+          resetTurnstile(form);
+          busy(form, button, false, label);
+        });
+    }
 
     function busy(form, button, on, label) {
       form.setAttribute('data-busy', on ? '1' : '0');
@@ -218,6 +244,36 @@
 
       if (first && typeof first.focus === 'function') first.focus();
       else if (first && first.scrollIntoView) first.scrollIntoView({ block: 'center' });
+    }
+
+    // Same tests and wording as the Worker, so the browser and the server never
+    // disagree about what counts as a valid entry.
+    var EMAIL_RE = /^[^@\s]+@[^@\s.]+\.[^@\s]{2,}$/;
+
+    function checkFields(form) {
+      var errors = {};
+      form.querySelectorAll('[required]').forEach(function (el) {
+        if (!el.value.trim()) errors[el.name] = 'Required.';
+      });
+      var email = form.querySelector('[name="email"]');
+      if (email && email.value.trim() && !EMAIL_RE.test(email.value.trim())) {
+        errors.email = 'That does not look like an email address.';
+      }
+      return errors;
+    }
+
+    // Resolves once Turnstile has filled its hidden token input, or after `ms`
+    // either way; the Worker still makes the final call on a missing token.
+    function waitForToken(form, ms) {
+      return new Promise(function (resolve) {
+        if (!form.querySelector('.cf-turnstile')) { resolve(); return; }
+        var start = Date.now();
+        (function poll() {
+          var token = form.querySelector('[name="cf-turnstile-response"]');
+          if ((token && token.value) || Date.now() - start >= ms) { resolve(); return; }
+          setTimeout(poll, 200);
+        })();
+      });
     }
 
     // A Turnstile token is single-use. Without this, a visitor who fixes a typo
