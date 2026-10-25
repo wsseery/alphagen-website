@@ -51,8 +51,8 @@ Pages. Rebuilt from WordPress/Bluehost in Sep 2026 on the same stack as `savings
   form field needs the same treatment or a Worker change, or its value is lost.
 - `redirects.csv` is the Cloudflare Bulk Redirects import; each old path also has a meta-refresh
   stub so redirects work before the Cloudflare list is enabled.
-- **No `CNAME` file until cutover.** Adding it (and enabling the Pages custom domain) is Bill's
-  step in the migration plan, Phase 6.
+- **The domain cutover is done.** `CNAME` (`alphageninsurance.com`, added 2026-09-28) is live and the
+  Pages custom domain is on. Never delete or edit `CNAME`: it takes the site off its domain.
 
 ## Conventions
 
