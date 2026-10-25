@@ -37,10 +37,11 @@ Pages. Rebuilt from WordPress/Bluehost in Sep 2026 on the same stack as `savings
   Links are root-relative (`/about-us/`). Do not rename or flatten these paths.
 - One stylesheet `assets/css/site.css`, one script `assets/js/site.js`. No framework, no build
   step, no node_modules. Header and footer are plain markup repeated in every page.
-- Quote pages carry the native `.ag-form` (2026-09-29), posting to `/api/quote` — a Cloudflare Worker
-  guarded by Turnstile — with a hidden `line` value per form (sixteen forms on fifteen pages as of
-  2026-10-25, the two ebook gates included; the relocation page has a personal and a business form, and
-  the homepage, `/get-a-quote/`, `/contact/` and `/general-inquiry/` carry `line=general-inquiry`). No
+- Quote pages, landing pages, blog posts, the ebook gates, the homepage, `/get-a-quote/` and
+  `/contact/` carry the native `.ag-form` (2026-09-29), posting to `/api/quote` — a Cloudflare Worker
+  guarded by Turnstile — with a hidden `line` value per form. List them with
+  `grep -rl 'class="ag-form' --include=index.html .` rather than trusting a count here. The relocation
+  page has a personal and a business form; the general-inquiry forms carry a line dropdown. No
   page uses JotForm any more. The submit handler lives in `assets/js/site.js` and uses
   `window.agTrack`. The `/thank-you/` page keeps its `?line=` handling and fires `generate_lead` only
   when the URL lacks `src=ag`, because the form already fired it on submit — change one end without the
