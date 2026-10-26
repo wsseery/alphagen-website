@@ -50,8 +50,11 @@ Pages. Rebuilt from WordPress/Bluehost in Sep 2026 on the same stack as `savings
   `email`, `phone`, `notes` and `page`, and **silently drops any other field**. That is why the
   general-inquiry line dropdown (`interest`) is folded into `notes` by `site.js` before the POST. A new
   form field needs the same treatment or a Worker change, or its value is lost.
-- `redirects.csv` is the Cloudflare Bulk Redirects import; each old path also has a meta-refresh
-  stub so redirects work before the Cloudflare list is enabled.
+- `redirects.csv` records the site's 301s, served by Cloudflare Redirect Rules on the
+  alphageninsurance.com zone, not Bulk Redirects. Editing the file does not change Cloudflare.
+  Each new row needs a matching rule added by hand: wildcard `https://alphageninsurance.com/<old-path>*`,
+  static target, 301, "Preserve query string" on when `?src=` tags must carry through.
+  10-rule cap (7 used). Old paths may keep a meta-refresh stub as a fallback.
 - **The domain cutover is done.** `CNAME` (`alphageninsurance.com`, added 2026-09-28) is live and the
   Pages custom domain is on. Never delete or edit `CNAME`: it takes the site off its domain.
 
