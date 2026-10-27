@@ -31,6 +31,7 @@ gtag('js',new Date());gtag('config','G-RG0E11KB0Q');
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css?v=20260928">
 <script defer src="/assets/js/site.js?v=20260928"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -182,9 +183,61 @@ gtag('js',new Date());gtag('config','G-RG0E11KB0Q');
     <p>See our <a href="/contractor-insurance-fort-lauderdale/">contractor insurance page for Fort Lauderdale</a> for how trade accounts are usually built here, Monday&#8217;s post on <a href="/blog/florida-workers-compensation-requirements-employees/">Florida workers&#8217; compensation requirements</a> for the other obligation a contract will test, and <a href="/blog/why-choose-independent-agent/">why an independent agent matters</a> for how we shop limits across markets.</p>
 
     <p><strong>Have a contract asking for a limit you do not carry? Send us the exhibit and we will read it.</strong></p>
-    <div class="btn-row">
-      <a href="/general-inquiry/" class="btn btn-primary" data-cta="post_general_inquiry">Start a general inquiry &rarr;</a>
+
+<form class="ag-form" method="POST" action="/api/quote" novalidate>
+  <input type="hidden" name="line" value="general-inquiry">
+  <fieldset>
+    <legend class="visually-hidden">Send AlphaGen Insurance a message</legend>
+
+    <div class="ag-field">
+      <label for="ag-general-inquiry-name">Full name<span class="ag-req" aria-hidden="true">*</span></label>
+      <input id="ag-general-inquiry-name" name="name" type="text" required autocomplete="name" maxlength="120" autocapitalize="words">
     </div>
+
+    <div class="ag-field">
+      <label for="ag-general-inquiry-email">Email<span class="ag-req" aria-hidden="true">*</span></label>
+      <input id="ag-general-inquiry-email" name="email" type="email" required autocomplete="email" maxlength="200" inputmode="email" spellcheck="false">
+    </div>
+
+    <div class="ag-field">
+      <label for="ag-general-inquiry-interest">Line of insurance <span class="ag-optional">(optional)</span></label>
+      <select id="ag-general-inquiry-interest" name="interest">
+        <option value="">Not sure yet</option>
+        <option value="commercial">Commercial property</option>
+        <option value="multifamily">Multifamily &amp; HOA</option>
+        <option value="homeowners">Homeowners</option>
+        <option value="personal-lines">Personal lines (auto, umbrella, boat)</option>
+        <option value="workers-comp">Workers&#8217; compensation</option>
+        <option value="general-liability">General liability</option>
+        <option value="cyber">Cyber liability</option>
+        <option value="relocation">Relocating to Florida</option>
+        <option value="other">Something else</option>
+      </select>
+    </div>
+
+    <div class="ag-field">
+      <label for="ag-general-inquiry-notes">Anything else we should know?</label>
+      <textarea id="ag-general-inquiry-notes" name="notes" rows="4" maxlength="3900"></textarea>
+      <p class="ag-hint">Tell us what you need and we will point you the right way.</p>
+    </div>
+
+    <!-- Hidden from people and from screen readers. Bots fill it; the server then
+         answers as though it succeeded and stores nothing. -->
+    <div class="ag-hp" aria-hidden="true">
+      <label for="ag-general-inquiry-website">Leave this field empty</label>
+      <input id="ag-general-inquiry-website" name="website" type="text" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAAFJE_EDJ9yD3WxUQ" data-theme="light" data-appearance="interaction-only"></div>
+
+    <button type="submit" class="btn btn-primary btn-block">Send my message</button>
+
+    <p class="ag-privacy">We use your details only to prepare your quote. See our
+      <a href="/privacy-policy/">privacy policy</a>.</p>
+  </fieldset>
+</form>
+
+<p class="form-help">Trouble with the form? Call <a href="tel:5612200402">(561) 220-0402</a> or email <a href="mailto:bill@alphageninsurance.com">bill@alphageninsurance.com</a></p>
     <p style="margin-top:2rem"><a href="/blog/">&larr; Back to the blog</a></p>
   </div>
 </section>
