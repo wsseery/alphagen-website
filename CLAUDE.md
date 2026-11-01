@@ -20,7 +20,9 @@ Pages. Rebuilt from WordPress/Bluehost in Sep 2026 on the same stack as `savings
   link to real-estate listings, or touch DialRidge product claims. savingsre.com may appear in
   exactly three places: the two real-estate redirect stubs, and the single "See our affiliate
   site" cross-marketing link on `/relocation-and-insurance-guide/` (restored 2026-09-28 at Bill's
-  direction). No other real-estate links, listings or documents. The relocation guide PDF that
+  direction). No other real-estate links, listings or documents. The one non-link exception:
+  `assets/js/site.js` names the shared Agile CRM account (the real-estate venture's subdomain) for the
+  client-side lead post (GATE C, Bill, 2026-10-31); `content_checks.py` allows that file only. The relocation guide PDF that
   gate delivers is hosted on savingsre.com, not here.
 - FL insurance licence **G164863** (2-20 General Lines) is the **only** licence that may appear
   on this site. **Never cite 3333692** (the real-estate licence) anywhere in this repo.
@@ -50,6 +52,12 @@ Pages. Rebuilt from WordPress/Bluehost in Sep 2026 on the same stack as `savings
   `email`, `phone`, `notes` and `page`, and **silently drops any other field**. That is why the
   general-inquiry line dropdown (`interest`) is folded into `notes` by `site.js` before the POST. A new
   form field needs the same treatment or a Worker change, or its value is lost.
+- **Agile CRM (2026-10-31).** After the Worker answers ok, `window.agAgile` in `site.js` sends the
+  lead to the Agile web form "AlphaGen Website Lead" (form id 4901019659730944) in the background (GET, `no-cors`, `keepalive`)
+  with tags `INS-Contact`, `INS-Role-Client`, `INS-Src-Website`, `ins-dial-list`, `ins-web-lead`
+  (welcome-campaign trigger), `INS-Aud-Client-<Commercial|Personal>` and `INS-Line-<tag>`. Risk pages
+  set the last two with `data-agile-group`/`data-agile-line` on the form (from `agile_tag` in
+  `data/risk-pages.json`); other forms fall back to their `line`. It never blocks the redirect.
 - `redirects.csv` records the site's 301s, served by Cloudflare Redirect Rules on the
   alphageninsurance.com zone, not Bulk Redirects. Editing the file does not change Cloudflare.
   Each new row needs a matching rule added by hand: wildcard `https://alphageninsurance.com/<old-path>*`,
