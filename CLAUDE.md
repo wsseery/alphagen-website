@@ -21,7 +21,7 @@ Pages. Rebuilt from WordPress/Bluehost in Sep 2026 on the same stack as `savings
   exactly three places: the two real-estate redirect stubs, and the single "See our affiliate
   site" cross-marketing link on `/relocation-and-insurance-guide/` (restored 2026-09-28 at Bill's
   direction). No other real-estate links, listings or documents. The one non-link exception:
-  `assets/js/site.js` names the shared Agile CRM account `savingsre.agilecrm.com` for the
+  `assets/js/site.js` names the shared Agile CRM account (the real-estate venture's subdomain) for the
   client-side lead post (GATE C, Bill, 2026-10-31); `content_checks.py` allows that file only. The relocation guide PDF that
   gate delivers is hosted on savingsre.com, not here.
 - FL insurance licence **G164863** (2-20 General Lines) is the **only** licence that may appear
