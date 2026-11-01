@@ -183,6 +183,7 @@
       "application_forms": "Application forms: most insurers start from the industry-standard ACORD 125 Commercial Insurance Application and ACORD 160 Business Owners Section; many also use their own application or supplement.",
       "pricing": null,
       "last_reviewed": "2026-10-31",
+      "agile_tag": "BOP",
       "related_labels": {}
     },
     {
@@ -297,7 +298,8 @@
       ],
       "application_forms": "Application forms: most insurers start from the industry-standard ACORD 125 Commercial Insurance Application and ACORD 126 Commercial General Liability Section; many also use their own application or supplement.",
       "pricing": null,
-      "last_reviewed": "2026-10-31"
+      "last_reviewed": "2026-10-31",
+      "agile_tag": "General-Liability"
     },
     {
       "slug": "workers-compensation-insurance-florida",
@@ -410,7 +412,8 @@
       ],
       "application_forms": "Application forms: most insurers start from the industry-standard ACORD 125 Commercial Insurance Application and the ACORD 130 FL Florida Workers Compensation Application; many also use their own application or supplement.",
       "pricing": null,
-      "last_reviewed": "2026-10-31"
+      "last_reviewed": "2026-10-31",
+      "agile_tag": "Workers-Comp"
     },
     {
       "slug": "commercial-property-insurance-florida",
@@ -519,7 +522,8 @@
       ],
       "application_forms": "Application forms: most insurers start from the industry-standard ACORD 125 Commercial Insurance Application and ACORD 140 Property Section, with an ACORD 139 Statement of Values for several locations; many also use their own application or supplement.",
       "pricing": null,
-      "last_reviewed": "2026-10-31"
+      "last_reviewed": "2026-10-31",
+      "agile_tag": "Commercial-Property"
     },
     {
       "slug": "landlord-insurance-florida",
@@ -625,6 +629,7 @@
       "application_forms": "Application forms: most insurers start from the industry-standard ACORD 84 Dwelling Fire Application for one- to four-family homes, or the ACORD 125 and ACORD 140 for larger buildings; many also use their own application or supplement.",
       "pricing": null,
       "last_reviewed": "2026-10-31",
+      "agile_tag": "Habitational",
       "related_labels": {}
     },
     {
@@ -742,7 +747,8 @@
       ],
       "application_forms": "Application forms: most insurers start from the industry-standard ACORD 125 Commercial Insurance Application, ACORD 126 Commercial General Liability Section and, for workers' compensation, the ACORD 130 FL; many also use their own application or supplement.",
       "pricing": null,
-      "last_reviewed": "2026-10-31"
+      "last_reviewed": "2026-10-31",
+      "agile_tag": "Contractors"
     },
     {
       "slug": "restaurant-insurance-florida",
@@ -875,7 +881,8 @@
       ],
       "application_forms": "Application forms: most insurers start from the industry-standard ACORD 125 Commercial Insurance Application with the ACORD 126 and ACORD 140 sections (or the ACORD 160 for a business owner's policy) and the ACORD 803 Liquor Liability Section; many also use their own application or supplement.",
       "pricing": null,
-      "last_reviewed": "2026-10-31"
+      "last_reviewed": "2026-10-31",
+      "agile_tag": "Restaurants"
     },
     {
       "slug": "cyber-insurance-florida",
@@ -989,6 +996,7 @@
       "application_forms": "Application forms: most insurers start from the industry-standard ACORD 834 Cyber and Privacy Coverage section; many also use their own application or supplement.",
       "pricing": null,
       "last_reviewed": "2026-10-31",
+      "agile_tag": "Cyber",
       "related_labels": {}
     },
     {
@@ -1096,6 +1104,7 @@
       "application_forms": "Application forms: most insurers start from the industry-standard ACORD 825 Professional/Specialty Insurance Application, often with the ACORD 187 Professional Liability Supplement; many also use their own application or supplement.",
       "pricing": null,
       "last_reviewed": "2026-10-31",
+      "agile_tag": "Professional-Liability",
       "related_labels": {}
     },
     {
@@ -1199,7 +1208,8 @@
       ],
       "application_forms": "Application forms: most insurers start from the industry-standard ACORD 125 Commercial Insurance Application and ACORD 131 Umbrella/Excess Section; many also use their own application or supplement.",
       "pricing": null,
-      "last_reviewed": "2026-10-31"
+      "last_reviewed": "2026-10-31",
+      "agile_tag": "Commercial-Umbrella"
     },
     {
       "slug": "builders-risk-insurance-florida",
@@ -1289,6 +1299,7 @@
       "application_forms": "Application forms: most insurers start from the industry-standard ACORD 147 Installation/Builders Risk Section; many also use their own application or supplement.",
       "pricing": null,
       "last_reviewed": "2026-10-31",
+      "agile_tag": "Builders-Risk",
       "related_labels": {}
     },
     {
@@ -1387,6 +1398,7 @@
       "application_forms": "Application forms: there is no common industry form for events; insurers use their own short applications.",
       "pricing": null,
       "last_reviewed": "2026-10-31",
+      "agile_tag": "Events",
       "related_labels": {}
     },
     {
@@ -1494,7 +1506,8 @@
       ],
       "application_forms": "Application forms: most insurers start from the industry-standard ACORD 807 Directors and Officers Liability Section; most insurers also use their own application; many also use their own application or supplement.",
       "pricing": null,
-      "last_reviewed": "2026-10-31"
+      "last_reviewed": "2026-10-31",
+      "agile_tag": "D-And-O"
     },
     {
       "slug": "commercial-auto-insurance-florida",
@@ -1613,7 +1626,8 @@
       ],
       "application_forms": "Application forms: most insurers start from the industry-standard ACORD 125 Commercial Insurance Application, ACORD 127 Business Auto Section and ACORD 129 Vehicle Schedule, with the Florida ACORD 137 FL state section; some also use the ACORD 163 Commercial Auto Driver Information Schedule; many also use their own application or supplement.",
       "pricing": null,
-      "last_reviewed": "2026-10-31"
+      "last_reviewed": "2026-10-31",
+      "agile_tag": "Commercial-Auto"
     },
     {
       "slug": "trucking-insurance-florida",
@@ -1743,6 +1757,7 @@
       "application_forms": "Application forms: most insurers start from the industry-standard ACORD 125 Commercial Insurance Application, ACORD 129 Vehicle Schedule and ACORD 132 Truckers/Motor Carriers Section, with the ACORD 143 Transportation Section for cargo; many truck insurers use their own application; many also use their own application or supplement.",
       "pricing": null,
       "last_reviewed": "2026-10-31",
+      "agile_tag": "Trucking",
       "related_labels": {}
     },
     {
@@ -1855,6 +1870,7 @@
       "application_forms": "Application forms: most insurers start from the industry-standard ACORD 125 Commercial Insurance Application and ACORD 152 Commercial Inland Marine Section; many insurers add their own equipment schedule; many also use their own application or supplement.",
       "pricing": null,
       "last_reviewed": "2026-10-31",
+      "agile_tag": "Inland-Marine",
       "related_labels": {}
     },
     {
@@ -1957,6 +1973,7 @@
       "application_forms": "Application forms: there is no common ACORD form for surety bonds; each surety company uses its own application, and contract bonds also need financial statements.",
       "pricing": null,
       "last_reviewed": "2026-10-31",
+      "agile_tag": "Surety",
       "related_labels": {}
     },
     {
@@ -2065,6 +2082,7 @@
       "application_forms": "Application forms: most insurers start from the industry-standard ACORD 827 Employment Practices Liability Insurance Section; most insurers also use their own application; many also use their own application or supplement.",
       "pricing": null,
       "last_reviewed": "2026-10-31",
+      "agile_tag": "EPLI",
       "related_labels": {}
     },
     {
@@ -2168,7 +2186,8 @@
       ],
       "application_forms": "Application forms: most insurers start from the industry-standard ACORD 80 Homeowner Application; many also use their own application or supplement.",
       "pricing": null,
-      "last_reviewed": "2026-10-31"
+      "last_reviewed": "2026-10-31",
+      "agile_tag": "Homeowners"
     },
     {
       "slug": "condo-insurance-florida",
@@ -2268,6 +2287,7 @@
       "application_forms": "Application forms: most insurers start from the industry-standard ACORD 80 Homeowner Application; many also use their own application or supplement.",
       "pricing": null,
       "last_reviewed": "2026-10-31",
+      "agile_tag": "Condo",
       "related_labels": {}
     },
     {
@@ -2355,7 +2375,8 @@
       ],
       "application_forms": "Application forms: private flood insurers use their own applications.",
       "pricing": null,
-      "last_reviewed": "2026-10-31"
+      "last_reviewed": "2026-10-31",
+      "agile_tag": "Flood"
     }
   ]
 }

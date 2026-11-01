@@ -72,6 +72,9 @@ SAVINGSRE_ALLOWED = {
     "relocation-and-insurance-guide/index.html",
     "thank-you/index.html",
     "redirects.csv",
+    # GATE C (Bill, 2026-10-31): the client-side Agile CRM post names the shared
+    # Agile account, savingsre.agilecrm.com. This file only; never a page.
+    "assets/js/site.js",
 }
 
 TEXT_EXT = re.compile(r"\.(html?|xml|txt|csv|json|md|svg|js|css)$", re.I)

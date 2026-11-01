@@ -159,7 +159,8 @@ def form(page, cfg, interest_options=None):
     rows.append(field("phone", "Phone", "tel", "tel", 40, ' inputmode="tel" placeholder="(561) 555-0100"'))
     risk = ""
     if interest_options:
-        opts = "\n".join(f'        <option value="{e(o)}">{e(o)}</option>' for o in interest_options)
+        opts = "\n".join(f'        <option value="{e(o)}"' + (f' data-agile-line="{e(t)}" data-agile-group="{g}"' if t else "")
+                         + f'>{e(o)}</option>' for o, t, g in interest_options)
         risk = (f'    <div class="ag-field">\n'
                 f'      <label for="ag-{fid}-interest">What do you need to insure?</label>\n'
                 f'      <select id="ag-{fid}-interest" name="interest">\n'
@@ -169,7 +170,12 @@ def form(page, cfg, interest_options=None):
         risk = f'  <input type="hidden" name="risk" value="{e(page["risk_label"])}">\n'
     hidden_risk = risk if not interest_options else ""
     shown_risk = risk if interest_options else ""
-    return f"""<form class="ag-form" method="POST" action="/api/quote" novalidate>
+    # Agile CRM tags (GATE C, 2026-10-31): site.js reads these to tag the contact
+    # INS-Aud-Client-<group> and INS-Line-<tag>. The hub sets the line per option instead.
+    agile = "" if interest_options else f' data-agile-group="{"Personal" if personal else "Commercial"}"'
+    if page.get("agile_tag"):
+        agile += f' data-agile-line="{e(page["agile_tag"])}"'
+    return f"""<form class="ag-form" method="POST" action="/api/quote" novalidate{agile}>
   <input type="hidden" name="line" value="{line}">
 {hidden_risk}  <fieldset>
     <legend class="visually-hidden">{e(page.get('form_legend', 'Request an insurance quote'))}</legend>
@@ -333,7 +339,7 @@ def hub_page(data, parts):
     <h2 id="quote">{e(hub['form_heading'])}</h2>
     <p>{hub['form_intro']}</p>
 
-{form(page, cfg, interest_options=[p['risk_label'] for p in pages] + ['Something else'])}
+{form(page, cfg, interest_options=[(p['risk_label'], p['agile_tag'], p['group'].title()) for p in pages] + [('Something else', '', '')])}
     </div>
   </div>
 </section>
@@ -437,6 +443,8 @@ def validate(data, built):
     for p in data["pages"]:
         if p["line"] not in LINE_FIELDS:
             errs.append(f"{p['slug']}: line {p['line']} is not a Worker line")
+        if p.get("slug") != HUB_SLUG and not re.fullmatch(r"[A-Z][A-Za-z0-9]*(-[A-Z][A-Za-z0-9]*)*", p.get("agile_tag", "")):
+            errs.append(f"{p['slug']}: agile_tag must be Title-Case-With-Hyphens (INS-Line-<tag>)")
         if not 4 <= len(p["faqs"]) <= 6:
             errs.append(f"{p['slug']}: needs 4-6 FAQs")
         page_html = built[f"{p['slug']}/index.html"]

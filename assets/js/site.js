@@ -196,6 +196,7 @@
               }
               window.agTrack('generate_lead', params);
             }
+            if (typeof window.agAgile === 'function') window.agAgile(form, data);
             var to = body.redirect || ('/thank-you/?line=' + encodeURIComponent(line));
             to += (to.indexOf('?') === -1 ? '?' : '&') + 'src=ag';
             // Give the analytics beacon a moment before navigating.
@@ -357,5 +358,78 @@
     if (r.referrer) { bits.push('referrer=' + r.referrer); params.lead_referrer = r.referrer; }
     if (!bits.length) return null;
     return { line: '[utm] ' + bits.join('; '), params: params };
+  };
+})();
+
+// Agile CRM (GATE C, Bill 2026-10-31: client-side). After the Worker accepts a lead,
+// the same details go to the agency's Agile web form in the background, tagged per the
+// insurance tag plan. The domain and key are Agile's public web-form tracking values
+// (Agile embeds them in every website form). It runs only after the Worker said ok, it
+// never blocks or delays the thank-you redirect, and any failure is ignored: the Worker
+// copy and its notification email stay the record of the lead.
+(function () {
+  var AGILE = {
+    domain: 'savingsre',
+    api: 'o8d0am3m1ras18l8f0r0qai4hq',
+    formName: 'AlphaGen Website Lead',
+    formId: '',
+    // Every website lead. ins-web-lead is the trigger tag for the welcome campaign.
+    tags: ['INS-Contact', 'INS-Role-Client', 'INS-Src-Website', 'ins-dial-list', 'ins-web-lead']
+  };
+  // Forms that are not risk pages carry no data-agile-* attributes; their Worker
+  // line decides the audience and, where it names one, the line tag.
+  var BY_LINE = {
+    'general-liability': ['Commercial', 'General-Liability'],
+    'workers-comp': ['Commercial', 'Workers-Comp'],
+    'commercial': ['Commercial', ''],
+    'cyber': ['Commercial', 'Cyber'],
+    'commercial-ebook': ['Commercial', ''],
+    'relocation-business': ['Commercial', ''],
+    'homeowners': ['Personal', 'Homeowners'],
+    'personal-lines': ['Personal', ''],
+    'relocation': ['Personal', ''],
+    'relocation-guide': ['Personal', '']
+  };
+
+  window.agAgile = function (form, data) {
+    try {
+      if (!AGILE.formName || !window.fetch || !window.URLSearchParams) return;
+      var line = (data.get('line') || '').toString();
+      var group = form.getAttribute('data-agile-group') || '';
+      var tag = form.getAttribute('data-agile-line') || '';
+      var sel = form.querySelector('select[name="interest"]');
+      var opt = sel && sel.selectedIndex > -1 ? sel.options[sel.selectedIndex] : null;
+      if (opt && opt.getAttribute('data-agile-line')) {
+        tag = opt.getAttribute('data-agile-line');
+        group = opt.getAttribute('data-agile-group') || group;
+      }
+      if (!group && BY_LINE[line]) group = BY_LINE[line][0];
+      if (!tag && BY_LINE[line]) tag = BY_LINE[line][1];
+      var tags = AGILE.tags.slice();
+      if (group) tags.push('INS-Aud-Client-' + group);
+      if (tag) tags.push('INS-Line-' + tag);
+
+      var name = (data.get('name') || '').toString().trim().split(/\s+/);
+      var q = new URLSearchParams();
+      q.set('_agile_form_name', AGILE.formName);
+      q.set('_agile_domain', AGILE.domain);
+      q.set('_agile_api', AGILE.api);
+      q.set('_agile_form_id', AGILE.formId);
+      q.set('_agile_redirect_url', location.origin + '/thank-you/');
+      q.set('_agile_document_url', location.href.split('?')[0]);
+      q.set('_agile_confirmation_msg', 'Thanks.');
+      q.set('tags', tags.join(','));
+      q.set('first_name', name.shift() || '');
+      q.set('last_name', name.join(' '));
+      ['email', 'phone', 'company'].forEach(function (f) {
+        var v = (data.get(f) || '').toString().trim();
+        if (v) q.set(f, v);
+      });
+      q.set('note', ((data.get('notes') || '').toString().trim() + '\n\nPage: ' + location.pathname +
+        (line ? '\nForm line: ' + line : '')).trim());
+      fetch('https://' + AGILE.domain + '.agilecrm.com/formsubmit?' + q.toString(),
+        { method: 'GET', mode: 'no-cors', credentials: 'omit', keepalive: true })
+        .catch(function () { /* the Worker already has the lead */ });
+    } catch (e) { /* never block the visitor */ }
   };
 })();
