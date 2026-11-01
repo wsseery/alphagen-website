@@ -2146,7 +2146,7 @@
             },
             {
               "text": "Roof type, age and condition, and the year of the last full replacement",
-              "why": "Florida law limits refusing a policy on roof age alone for roofs under fifteen years old, and an inspection can show remaining life on older roofs"
+              "why": "Florida law (Florida Statutes section 627.7011) limits refusing or non-renewing a policy on roof age alone for newer roofs, and an inspection can show remaining life on older roofs"
             },
             {
               "text": "Updates to wiring, plumbing and heating and cooling"
@@ -2168,7 +2168,7 @@
             },
             {
               "text": "A four-point inspection for older homes, and a roof inspection where asked",
-              "why": "Citizens, for example, requires a four-point inspection on homes more than twenty years old"
+              "why": "many insurers ask for one on older homes, and some will not quote without it"
             },
             {
               "text": "Your flood zone and, if you have one, an elevation certificate"
