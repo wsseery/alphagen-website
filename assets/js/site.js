@@ -158,6 +158,21 @@
         data.set('notes', 'Line of interest: ' + interest.options[interest.selectedIndex].text +
           (notes ? '\n\n' + notes : ''));
       }
+      // Risk pages (2026-11-01) carry a hidden "risk" input naming the page's
+      // risk type. Same treatment as interest: the Worker would drop it.
+      var risk = (data.get('risk') || '').toString().trim();
+      data.delete('risk');
+      if (risk) {
+        var n2 = (data.get('notes') || '').toString().trim();
+        data.set('notes', 'Risk page: ' + risk + (n2 ? '\n\n' + n2 : ''));
+      }
+      // Attribution: the first-touch UTMs captured on landing (see agAttribution
+      // below) ride in notes as one tagged line, for the same reason.
+      var attr = window.agAttribution ? window.agAttribution() : null;
+      if (attr && attr.line) {
+        var n3 = (data.get('notes') || '').toString().trim();
+        data.set('notes', (n3 ? n3 + '\n\n' : '') + attr.line);
+      }
       var line = (data.get('line') || '').toString();
 
       fetch(form.getAttribute('action'), {
@@ -173,7 +188,13 @@
           if (body && body.ok) {
             // Fire the conversion here, while we still control the page.
             if (typeof window.agTrack === 'function') {
-              window.agTrack('generate_lead', { currency: 'USD', value: 1.0, form_line: line });
+              var params = { currency: 'USD', value: 1.0, form_line: line };
+              if (attr && attr.params) {
+                for (var k in attr.params) {
+                  if (Object.prototype.hasOwnProperty.call(attr.params, k)) params[k] = attr.params[k];
+                }
+              }
+              window.agTrack('generate_lead', params);
             }
             var to = body.redirect || ('/thank-you/?line=' + encodeURIComponent(line));
             to += (to.indexOf('?') === -1 ? '?' : '&') + 'src=ag';
@@ -285,4 +306,56 @@
       }
     }
   });
+})();
+
+/* ── First-touch attribution (added 2026-11-01, risk landing pages) ────
+   On landing, keep the visit's UTM tags, click IDs, first landing page and
+   referrer in sessionStorage, so the form a visitor submits three pages later
+   still knows where they came from. The Worker keeps only name, company, email,
+   phone, notes and page, so site.js folds this into notes as one tagged line
+   ("[utm] source=…; medium=…") and sends it with generate_lead as GA4 event
+   parameters. First touch wins within a session; nothing is stored across
+   sessions. Every storage access is wrapped: private windows can throw.
+   ──────────────────────────────────────────────────────────────────── */
+(function () {
+  'use strict';
+  var KEY = 'ag_attr';
+  var FIELDS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'fbclid'];
+
+  function read() {
+    try { return JSON.parse(sessionStorage.getItem(KEY) || 'null'); } catch (e) { return null; }
+  }
+
+  function clean(v) {
+    return String(v || '').replace(/[\r\n;=]/g, ' ').slice(0, 120).trim();
+  }
+
+  try {
+    if (!read()) {
+      var q = new URLSearchParams(location.search);
+      var rec = { landing: location.pathname, referrer: '' };
+      FIELDS.forEach(function (f) { if (q.get(f)) rec[f] = clean(q.get(f)); });
+      try {
+        var ref = document.referrer ? new URL(document.referrer) : null;
+        if (ref && ref.hostname !== location.hostname) rec.referrer = clean(ref.hostname);
+      } catch (e) { /* malformed referrer: ignore */ }
+      sessionStorage.setItem(KEY, JSON.stringify(rec));
+    }
+  } catch (e) { /* storage unavailable: attribution is simply absent */ }
+
+  window.agAttribution = function () {
+    var r = read();
+    if (!r) return null;
+    var bits = [];
+    var params = {};
+    var map = { utm_source: 'source', utm_medium: 'medium', utm_campaign: 'campaign',
+      utm_content: 'content', utm_term: 'term', gclid: 'gclid', fbclid: 'fbclid' };
+    FIELDS.forEach(function (f) {
+      if (r[f]) { bits.push(map[f] + '=' + r[f]); params['lead_' + map[f]] = r[f]; }
+    });
+    if (r.landing) { bits.push('landing=' + r.landing); params.lead_landing = r.landing; }
+    if (r.referrer) { bits.push('referrer=' + r.referrer); params.lead_referrer = r.referrer; }
+    if (!bits.length) return null;
+    return { line: '[utm] ' + bits.join('; '), params: params };
+  };
 })();

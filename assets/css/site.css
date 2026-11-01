@@ -378,3 +378,10 @@ section, .band { padding: clamp(3rem, 6vw, 5rem) 0; }
   .site-header, .mobile-nav, .mobile-toggle { display: none !important; }
   body { padding-top: 0; }
 }
+
+/* ── Risk pages and the /insurance/ hub (2026-11-01) ───── */
+a.card { text-decoration: none; color: inherit; }
+a.card:hover h3 { text-decoration: underline; }
+.pricing-box { margin: 1rem 0 1.5rem; }
+.pricing-box ul { margin-bottom: 0.75rem; }
+.pricing-caveat { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 0; }

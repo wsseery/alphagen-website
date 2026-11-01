@@ -1,0 +1,1871 @@
+{
+  "_note": "Edit this file, then run: python3 scripts/build_risk_pages.py. Pricing blocks only from figures Bill approved at GATE B2 (2026-11-01); re-check every quarter (runbook).",
+  "config": {
+    "_note": "Site-wide wording for scripts/build_risk_pages.py. Pricing figures appear only where approved by Bill at GATE B2 (2026-11-01).",
+    "agency_line": "AlphaGen Insurance Agency is an independent agency in Boca Raton, licensed in Florida, that compares several insurers for Florida businesses and households.",
+    "coverage_caveat": "Coverage depends on the policy. Nothing on this page describes what a specific policy will do: eligibility, underwriting and the terms, conditions and exclusions of the policy actually issued decide that.",
+    "asks_intro": "To quote this line, an underwriter needs a picture of the risk. These are the items most insurers ask for. Not every insurer asks for every item, and some ask for more.",
+    "asks_ready": "Having your loss runs, inspections and current declarations ready usually speeds up a quote, because the underwriter can price from documents instead of waiting on follow-up questions.",
+    "form_heading": "Ask for a quote",
+    "form_intro": "Tell us a little about what you need to insure. We will reply the same business day with what we need from you.",
+    "form_hint": "What the business does, current insurer, renewal date — whatever helps us quote accurately."
+  },
+  "hub": {
+    "title": "Business & Home Insurance in Florida | AlphaGen",
+    "description": "The insurance lines AlphaGen places for Florida businesses and homeowners, what each one is for, and what insurers ask for to quote it.",
+    "h1": "Insurance we place in Florida",
+    "intro": "Every page below explains one kind of insurance in plain English: who it is for, what it can include, what an underwriter will ask you for, and where a reliable published source exists, what businesses or homeowners have historically paid.",
+    "held_note": "Need something not listed here, such as commercial auto or life insurance? Ask us with the form below and we will tell you whether we can place it.",
+    "form_heading": "Not sure which page fits?",
+    "form_intro": "Tell us what you need to insure and we will point you to the right coverage. We reply the same business day.",
+    "button": "Send my question",
+    "form_legend": "Ask AlphaGen about insurance coverage",
+    "local_pages": [
+      [
+        "/restaurant-insurance-boca-raton/",
+        "Restaurant insurance in Boca Raton"
+      ],
+      [
+        "/contractor-insurance-fort-lauderdale/",
+        "Contractor insurance in Fort Lauderdale"
+      ],
+      [
+        "/flood-insurance-boca-raton/",
+        "Flood insurance in Boca Raton"
+      ]
+    ],
+    "faqs": [
+      {
+        "q": "Is AlphaGen an insurance company?",
+        "a": "No. AlphaGen Insurance Agency is an independent agency licensed in Florida. We compare insurers and place your coverage with the one that fits; the policy itself is issued by the insurer.",
+        "a_plain": "No. AlphaGen Insurance Agency is an independent agency licensed in Florida. We compare insurers and place your coverage with the one that fits; the policy itself is issued by the insurer."
+      },
+      {
+        "q": "Do you quote businesses outside South Florida?",
+        "a": "Yes. We are based in Boca Raton and quote Florida risks statewide, subject to each insurer's appetite.",
+        "a_plain": "Yes. We are based in Boca Raton and quote Florida risks statewide, subject to each insurer's appetite."
+      },
+      {
+        "q": "What should I have ready before I ask for a quote?",
+        "a": "Your current declarations page, a few years of loss runs from your current insurer, and, for property, any recent inspections. Each page lists what insurers ask for on that line.",
+        "a_plain": "Your current declarations page, a few years of loss runs from your current insurer, and, for property, any recent inspections. Each page lists what insurers ask for on that line."
+      },
+      {
+        "q": "Can you tell me what my insurance will cost?",
+        "a": "Only after an insurer has seen your details. Some pages show historical, third-party published figures for context, but they are not a quote and not what you will pay.",
+        "a_plain": "Only after an insurer has seen your details. Some pages show historical, third-party published figures for context, but they are not a quote and not what you will pay."
+      }
+    ],
+    "last_reviewed": "2026-10-31"
+  },
+  "pages": [
+    {
+      "slug": "business-owners-policy-insurance-florida",
+      "group": "commercial",
+      "line": "general-inquiry",
+      "risk_label": "Business owner's policy (BOP)",
+      "h1": "Business owner's policy (BOP) insurance in Florida",
+      "title": "BOP Insurance in Florida: Business Owner's Policy | AlphaGen",
+      "description": "What a BOP bundles for a small Florida business, who qualifies, and what insurers ask for before they quote one.",
+      "card_title": "Business owner's policy (BOP)",
+      "card_text": "Property and liability packaged together for smaller businesses.",
+      "intro": "A business owner's policy packages commercial property and general liability into one policy for smaller businesses that fit an insurer's eligibility rules. It is often the simplest starting point for an office, a shop or a service business.",
+      "who": [
+        "Small and mid-sized businesses with a modest building or contents value and a lower-hazard operation: offices, retail shops, many service businesses, some restaurants and some contractors.",
+        "Insurers set eligibility by class of business, revenue, square footage and building size, so a business that outgrows those limits usually moves to separate property and liability policies."
+      ],
+      "includes": [
+        "<strong>Property</strong> — the building if you own it, and your business personal property (furniture, equipment, inventory).",
+        "<strong>General liability</strong> — third-party bodily injury and property damage arising from your premises and operations.",
+        "<strong>Business income</strong> — lost income while you cannot operate after a covered property loss, on many forms.",
+        "<strong>Optional endorsements</strong> — such as equipment breakdown, cyber, hired and non-owned auto, or employment practices, depending on the insurer."
+      ],
+      "faqs": [
+        {
+          "q": "Is a BOP the same as general liability insurance?",
+          "a": "No. A BOP includes general liability, but it also includes property insurance for the building and contents, so it is broader than a general liability policy on its own.",
+          "a_plain": "No. A BOP includes general liability, but it also includes property insurance for the building and contents, so it is broader than a general liability policy on its own."
+        },
+        {
+          "q": "Does a BOP include workers' compensation?",
+          "a": "No. Workers' compensation is always a separate policy. A BOP does not insure injuries to your own employees.",
+          "a_plain": "No. Workers' compensation is always a separate policy. A BOP does not insure injuries to your own employees."
+        },
+        {
+          "q": "Does a BOP include flood?",
+          "a": "Usually not. Flood is commonly excluded from commercial property forms, including BOPs, and is placed on a separate flood policy.",
+          "a_plain": "Usually not. Flood is commonly excluded from commercial property forms, including BOPs, and is placed on a separate flood policy."
+        },
+        {
+          "q": "How much does a BOP cost in Florida?",
+          "a": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business.",
+          "a_plain": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business."
+        }
+      ],
+      "related": [
+        "general-liability-insurance-florida",
+        "commercial-property-insurance-florida",
+        "cyber-insurance-florida"
+      ],
+      "insurer_requests": [
+        {
+          "group": "Business basics",
+          "items": [
+            {
+              "text": "Legal name, entity type and FEIN"
+            },
+            {
+              "text": "Years in business and a description of operations"
+            },
+            {
+              "text": "Locations and, where relevant, the class code that best describes the business",
+              "why": "the class code sets which rating base and rate an underwriter uses"
+            }
+          ]
+        },
+        {
+          "group": "Exposure",
+          "items": [
+            {
+              "text": "Annual revenue, number of employees and square footage occupied"
+            }
+          ]
+        },
+        {
+          "group": "Property details",
+          "items": [
+            {
+              "text": "Construction type, year built, square footage and number of stories"
+            },
+            {
+              "text": "Roof type and age, and updates to the roof, wiring, plumbing and heating and cooling"
+            },
+            {
+              "text": "Fire protection: sprinklers, alarms and the local protection class"
+            },
+            {
+              "text": "Wind-mitigation features such as roof-to-wall connections and opening protection",
+              "why": "in Florida these drive much of the wind premium, and Florida requires insurers to offer credits for them"
+            },
+            {
+              "text": "Flood zone"
+            },
+            {
+              "text": "Building value (if you own it), business personal property value and a business income limit"
+            }
+          ]
+        },
+        {
+          "group": "Operations",
+          "items": [
+            {
+              "text": "Hazardous materials, hours of operation and any subcontracted work"
+            },
+            {
+              "text": "Certificates of insurance from subcontractors",
+              "why": "an uninsured subcontractor's claim can land on your own policy"
+            }
+          ]
+        },
+        {
+          "group": "History",
+          "items": [
+            {
+              "text": "Three to five years of currently valued loss runs from your current and prior insurers",
+              "why": "they show claims the insurer would otherwise only learn about later"
+            },
+            {
+              "text": "Your current insurer, current premium and expiration date"
+            }
+          ]
+        }
+      ],
+      "application_forms": "Application forms: most insurers start from the industry-standard ACORD 125 Commercial Insurance Application and ACORD 160 Business Owners Section; many also use their own application or supplement.",
+      "pricing": null,
+      "last_reviewed": "2026-10-31",
+      "related_labels": {}
+    },
+    {
+      "slug": "general-liability-insurance-florida",
+      "group": "commercial",
+      "line": "general-liability",
+      "risk_label": "General liability",
+      "h1": "General liability insurance in Florida",
+      "title": "General Liability Insurance in Florida | AlphaGen",
+      "description": "What commercial general liability is built for, who needs it in Florida, and what an underwriter asks for to quote it.",
+      "card_title": "General liability",
+      "card_text": "Third-party injury and property-damage claims against your business.",
+      "intro": "Commercial general liability (CGL) responds to claims that your business caused bodily injury or property damage to someone else, or certain personal and advertising injury. It is the policy landlords, clients and general contractors most often ask to see a certificate for.",
+      "who": [
+        "Almost every business that deals with the public, works at a customer's site, or signs a contract or lease that requires proof of insurance.",
+        "Contractors, retailers, restaurants, property owners and service businesses are the most frequent buyers; the class of business shapes the price more than anything else."
+      ],
+      "includes": [
+        "<strong>Premises and operations</strong> — injuries or damage at your location or caused by your work.",
+        "<strong>Products and completed operations</strong> — claims arising from what you sold or work you finished.",
+        "<strong>Personal and advertising injury</strong> — such as certain defamation or copyright claims in your advertising.",
+        "<strong>Defense costs</strong> — most forms fund the defense of a covered claim; whether that reduces your limit depends on the form."
+      ],
+      "faqs": [
+        {
+          "q": "Is general liability required in Florida?",
+          "a": "Florida law does not require every business to carry it, but many leases, contracts, licensing bodies and general contractors require proof of it before you can start work.",
+          "a_plain": "Florida law does not require every business to carry it, but many leases, contracts, licensing bodies and general contractors require proof of it before you can start work."
+        },
+        {
+          "q": "Does general liability cover my employees' injuries?",
+          "a": "No. Injuries to your own employees are a workers' compensation matter, not a general liability matter.",
+          "a_plain": "No. Injuries to your own employees are a workers' compensation matter, not a general liability matter."
+        },
+        {
+          "q": "What is a certificate of insurance?",
+          "a": "A one-page summary, usually on a standard ACORD certificate form, that shows a third party which policies you carry and their limits. It does not change the policy itself.",
+          "a_plain": "A one-page summary, usually on a standard ACORD certificate form, that shows a third party which policies you carry and their limits. It does not change the policy itself."
+        },
+        {
+          "q": "How much does general liability cost in Florida?",
+          "a": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business.",
+          "a_plain": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business."
+        }
+      ],
+      "related": [
+        "business-owners-policy-insurance-florida",
+        "contractor-insurance-florida",
+        "commercial-umbrella-insurance-florida",
+        "/blog/general-liability-insurance-plain-english/"
+      ],
+      "related_labels": {
+        "/blog/general-liability-insurance-plain-english/": "General liability in plain English (blog)"
+      },
+      "insurer_requests": [
+        {
+          "group": "Business basics",
+          "items": [
+            {
+              "text": "Legal name, entity type and FEIN"
+            },
+            {
+              "text": "Years in business and a description of operations"
+            },
+            {
+              "text": "Locations and, where relevant, the class code that best describes the business",
+              "why": "the class code sets which rating base and rate an underwriter uses"
+            }
+          ]
+        },
+        {
+          "group": "Exposure",
+          "items": [
+            {
+              "text": "Annual revenue or payroll, depending on the class of business"
+            },
+            {
+              "text": "The cost of work you subcontract"
+            }
+          ]
+        },
+        {
+          "group": "Line-specific",
+          "items": [
+            {
+              "text": "Products you make or sell and work you complete for others"
+            },
+            {
+              "text": "Contracts you sign that require additional insured status or specific limits",
+              "why": "contracts can shift someone else's liability onto your policy"
+            },
+            {
+              "text": "Certificates of insurance from your subcontractors and vendors"
+            },
+            {
+              "text": "Any safety program"
+            }
+          ]
+        },
+        {
+          "group": "History",
+          "items": [
+            {
+              "text": "Three to five years of currently valued loss runs from your current and prior insurers",
+              "why": "they show claims the insurer would otherwise only learn about later"
+            },
+            {
+              "text": "Your current insurer, current premium and expiration date"
+            }
+          ]
+        }
+      ],
+      "application_forms": "Application forms: most insurers start from the industry-standard ACORD 125 Commercial Insurance Application and ACORD 126 Commercial General Liability Section; many also use their own application or supplement.",
+      "pricing": null,
+      "last_reviewed": "2026-10-31"
+    },
+    {
+      "slug": "workers-compensation-insurance-florida",
+      "group": "commercial",
+      "line": "workers-comp",
+      "risk_label": "Workers' compensation",
+      "h1": "Workers' compensation insurance in Florida",
+      "title": "Workers' Compensation Insurance in Florida | AlphaGen",
+      "description": "Who must carry workers' comp in Florida, how premium is built from payroll and class codes, and what insurers ask for.",
+      "card_title": "Workers' compensation",
+      "card_text": "Medical care and wage benefits for employees hurt on the job.",
+      "intro": "Workers' compensation pays medical care and lost-wage benefits to employees injured on the job, under Florida's workers' compensation law, and generally limits employees' right to sue the employer for those injuries. Premium is built from payroll by job classification, not a flat price.",
+      "who": [
+        "Florida employers who meet the state's employee-count thresholds, which are lower for construction businesses than for most other industries. The thresholds and the exemptions are set out in Florida's workers' compensation law, Chapter 440.",
+        "Businesses that hire subcontractors, because a contractor can become responsible for an uninsured subcontractor's workers."
+      ],
+      "includes": [
+        "<strong>Workers' compensation (Part One)</strong> — the medical and indemnity benefits Florida law requires.",
+        "<strong>Employer's liability (Part Two)</strong> — certain lawsuits by employees or others arising from a work injury that fall outside the workers' compensation system.",
+        "<strong>Audit-based premium</strong> — the premium is estimated at the start and adjusted after the policy year to actual payroll."
+      ],
+      "faqs": [
+        {
+          "q": "How is workers' comp premium calculated?",
+          "a": "Roughly: payroll for each job classification, divided by one hundred, multiplied by that class's rate, then adjusted by your experience modification factor and any credits or surcharges. That is why it is quoted per hundred dollars of payroll rather than as a flat price.",
+          "a_plain": "Roughly: payroll for each job classification, divided by one hundred, multiplied by that class's rate, then adjusted by your experience modification factor and any credits or surcharges. That is why it is quoted per hundred dollars of payroll rather than as a flat price."
+        },
+        {
+          "q": "What is an experience mod?",
+          "a": "An experience modification factor compares your past claims with what is expected for businesses of your size and type. A mod below one lowers premium; a mod above one raises it. Insurers ask for your current mod worksheet if you have one.",
+          "a_plain": "An experience modification factor compares your past claims with what is expected for businesses of your size and type. A mod below one lowers premium; a mod above one raises it. Insurers ask for your current mod worksheet if you have one."
+        },
+        {
+          "q": "Why is there an audit at the end of the year?",
+          "a": "Because the premium is based on payroll, the insurer checks your actual payroll after the policy year and adjusts the premium up or down.",
+          "a_plain": "Because the premium is based on payroll, the insurer checks your actual payroll after the policy year and adjusts the premium up or down."
+        },
+        {
+          "q": "Does an independent subcontractor need to be covered?",
+          "a": "It depends on the facts. Florida law can make a contractor responsible for an uninsured subcontractor's workers, so insurers ask for certificates of insurance from subcontractors.",
+          "a_plain": "It depends on the facts. Florida law can make a contractor responsible for an uninsured subcontractor's workers, so insurers ask for certificates of insurance from subcontractors."
+        }
+      ],
+      "related": [
+        "contractor-insurance-florida",
+        "general-liability-insurance-florida",
+        "/blog/florida-workers-compensation-requirements-employees/"
+      ],
+      "related_labels": {
+        "/blog/florida-workers-compensation-requirements-employees/": "Florida workers' comp requirements (blog)"
+      },
+      "insurer_requests": [
+        {
+          "group": "Business basics",
+          "items": [
+            {
+              "text": "Legal name, entity type and FEIN"
+            },
+            {
+              "text": "Years in business and a description of operations"
+            },
+            {
+              "text": "Locations and, where relevant, the class code that best describes the business",
+              "why": "the class code sets which rating base and rate an underwriter uses"
+            }
+          ]
+        },
+        {
+          "group": "Exposure",
+          "items": [
+            {
+              "text": "Payroll by job classification code, and number of full- and part-time employees",
+              "why": "workers' comp is rated per hundred dollars of payroll in each class"
+            },
+            {
+              "text": "Owners and officers, and whether each is included or excluded"
+            },
+            {
+              "text": "The cost of subcontracted work and whether each subcontractor carries its own coverage",
+              "why": "an uninsured subcontractor's payroll can be added to yours at audit"
+            }
+          ]
+        },
+        {
+          "group": "Line-specific",
+          "items": [
+            {
+              "text": "Your experience modification worksheet, if you have one"
+            },
+            {
+              "text": "Safety and return-to-work programs"
+            },
+            {
+              "text": "Any leased or temporary workers"
+            }
+          ]
+        },
+        {
+          "group": "History",
+          "items": [
+            {
+              "text": "Three to five years of currently valued loss runs from your current and prior insurers",
+              "why": "they show claims the insurer would otherwise only learn about later"
+            },
+            {
+              "text": "Your current insurer, current premium and expiration date"
+            }
+          ]
+        }
+      ],
+      "application_forms": "Application forms: most insurers start from the industry-standard ACORD 125 Commercial Insurance Application and the ACORD 130 FL Florida Workers Compensation Application; many also use their own application or supplement.",
+      "pricing": {
+        "heading": "How Florida workers' comp rates have moved",
+        "summary": "Workers' compensation is priced per hundred dollars of payroll for each job classification, so there is no single price to show. What regulators publish is the overall average change in rates.",
+        "figures": [
+          {
+            "text": "The Florida Office of Insurance Regulation approved a 6.9% overall average statewide rate decrease for new and renewal policies effective January 1, 2026, the ninth consecutive yearly decrease",
+            "source": "Florida Office of Insurance Regulation",
+            "period": "approved November 2025",
+            "basis": "average statewide rate-level change",
+            "url": "https://floir.gov/home/2025/11/17/commissioner-mike-yaworsky-approves-6.9--rate-decrease-for-florida-workers--compensation-policies--marking-9th-consecutive-year-of-decreases"
+          },
+          {
+            "text": "The year before, it approved a 1.0% overall average statewide decrease for policies effective January 1, 2025",
+            "source": "Florida Office of Insurance Regulation",
+            "period": "approved November 2024",
+            "basis": "average statewide rate-level change",
+            "url": "https://floir.gov/home/2024/11/18/oir-approves-further-reduction-in-workers'-compensation-insurance-rates-for-eighth-consecutive-year"
+          }
+        ],
+        "caveat": "These figures are historical, third-party estimates for Florida workers' compensation rate changes, published by the Florida Office of Insurance Regulation for policies effective January 1, 2025 and January 1, 2026. They are not a quote or an offer of coverage, and they are not what you will pay. Premiums depend on your business or property, location, coverage limits, deductibles, claims history, underwriting and market conditions, and Florida rates have changed significantly in recent years. Coverage is subject to the terms, conditions and exclusions of the policy issued. Ask us for a quote based on your own details.",
+        "as_of": "October 31, 2026",
+        "approved_gate_b2": "2026-11-01"
+      },
+      "last_reviewed": "2026-10-31"
+    },
+    {
+      "slug": "commercial-property-insurance-florida",
+      "group": "commercial",
+      "line": "commercial",
+      "risk_label": "Commercial property",
+      "h1": "Commercial property insurance in Florida",
+      "title": "Commercial Property Insurance in Florida | AlphaGen",
+      "description": "Commercial property insurance for Florida buildings and contents: wind, valuation, deductibles, and what underwriters ask.",
+      "card_title": "Commercial property",
+      "card_text": "Buildings, equipment and inventory, including Florida wind questions.",
+      "intro": "Commercial property insurance responds to physical loss or damage to the buildings you own and the property your business uses, subject to the causes of loss the policy lists and the ones it excludes. In Florida, how wind and hurricane are handled is usually the biggest question.",
+      "who": [
+        "Business owners who own their building, landlords of commercial space, and tenants who need to insure improvements, equipment and inventory.",
+        "Lenders usually require it on a financed building, with the lender named on the policy."
+      ],
+      "includes": [
+        "<strong>Building</strong> — the structure, if you own it or your lease makes you responsible for it.",
+        "<strong>Business personal property</strong> — furniture, fixtures, equipment and stock.",
+        "<strong>Business income and extra expense</strong> — on many forms, lost income and extra costs after a covered loss.",
+        "<strong>Wind and hurricane</strong> — included, written with a separate deductible, or excluded and placed elsewhere, depending on the insurer and the location."
+      ],
+      "faqs": [
+        {
+          "q": "What is a named-storm or hurricane deductible?",
+          "a": "A separate deductible that applies to wind damage from a named storm or hurricane. In Florida it is often a percentage of the insured value rather than a flat dollar amount, so read it before renewal.",
+          "a_plain": "A separate deductible that applies to wind damage from a named storm or hurricane. In Florida it is often a percentage of the insured value rather than a flat dollar amount, so read it before renewal."
+        },
+        {
+          "q": "Replacement cost or actual cash value?",
+          "a": "Replacement cost pays to repair or replace without deducting for depreciation; actual cash value deducts it. The choice changes both the premium and what a claim pays.",
+          "a_plain": "Replacement cost pays to repair or replace without deducting for depreciation; actual cash value deducts it. The choice changes both the premium and what a claim pays."
+        },
+        {
+          "q": "Is flood included?",
+          "a": "Usually not. Flood is commonly excluded from commercial property forms and placed on a separate commercial flood policy.",
+          "a_plain": "Usually not. Flood is commonly excluded from commercial property forms and placed on a separate commercial flood policy."
+        },
+        {
+          "q": "How much does commercial property insurance cost in Florida?",
+          "a": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business.",
+          "a_plain": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business."
+        }
+      ],
+      "related": [
+        "business-owners-policy-insurance-florida",
+        "landlord-insurance-florida",
+        "builders-risk-insurance-florida",
+        "/blog/debris-removal-coverage-commercial-property/"
+      ],
+      "related_labels": {
+        "/blog/debris-removal-coverage-commercial-property/": "Debris removal, the sub-limit nobody reads (blog)"
+      },
+      "insurer_requests": [
+        {
+          "group": "Business basics",
+          "items": [
+            {
+              "text": "Legal name, entity type and FEIN"
+            },
+            {
+              "text": "Years in business and a description of operations"
+            },
+            {
+              "text": "Locations and, where relevant, the class code that best describes the business",
+              "why": "the class code sets which rating base and rate an underwriter uses"
+            }
+          ]
+        },
+        {
+          "group": "Property details",
+          "items": [
+            {
+              "text": "Construction type, year built, square footage and number of stories"
+            },
+            {
+              "text": "Roof type and age, and updates to the roof, wiring, plumbing and heating and cooling"
+            },
+            {
+              "text": "Fire protection: sprinklers, alarms and the local protection class"
+            },
+            {
+              "text": "Wind-mitigation features such as roof-to-wall connections and opening protection",
+              "why": "in Florida these drive much of the wind premium, and Florida requires insurers to offer credits for them"
+            },
+            {
+              "text": "Flood zone"
+            },
+            {
+              "text": "Building value, business personal property value and business income limit, or a statement of values for several locations"
+            }
+          ]
+        },
+        {
+          "group": "History",
+          "items": [
+            {
+              "text": "Three to five years of currently valued loss runs from your current and prior insurers",
+              "why": "they show claims the insurer would otherwise only learn about later"
+            },
+            {
+              "text": "Your current insurer, current premium and expiration date"
+            }
+          ]
+        }
+      ],
+      "application_forms": "Application forms: most insurers start from the industry-standard ACORD 125 Commercial Insurance Application and ACORD 140 Property Section, with an ACORD 139 Statement of Values for several locations; many also use their own application or supplement.",
+      "pricing": null,
+      "last_reviewed": "2026-10-31"
+    },
+    {
+      "slug": "landlord-insurance-florida",
+      "group": "commercial",
+      "line": "general-inquiry",
+      "risk_label": "Landlord and small apartment buildings",
+      "h1": "Landlord and small apartment building insurance in Florida",
+      "title": "Landlord & Small Apartment Insurance in Florida | AlphaGen",
+      "description": "Insurance for Florida rental homes, condos and small apartment buildings: dwelling fire forms, liability and what insurers ask.",
+      "card_title": "Landlord and small apartments",
+      "card_text": "Rental homes, condos and small multifamily buildings.",
+      "intro": "A rental property needs a landlord policy, not a homeowners policy. Single-family rentals and condos are usually written on a dwelling fire form; small apartment buildings on a commercial habitational policy. Both answer different questions from the policy on the home you live in.",
+      "who": [
+        "Owners of single-family rental homes, rented condo units, duplexes through small apartment buildings, and short-term rentals where the insurer allows them.",
+        "Owners whose lender requires proof of coverage on an investment property."
+      ],
+      "includes": [
+        "<strong>The dwelling or building</strong> — on a named-peril or broader form, depending on the policy chosen.",
+        "<strong>Loss of rents</strong> — income lost while a covered loss makes the unit unrentable, on many forms.",
+        "<strong>Landlord liability</strong> — claims by tenants or visitors arising from the property's condition.",
+        "<strong>Wind</strong> — included or written separately, depending on the insurer and location."
+      ],
+      "faqs": [
+        {
+          "q": "Can I keep my homeowners policy when I rent the house out?",
+          "a": "Usually not. A homeowners policy assumes you live there. Once the home is rented, insurers generally expect a landlord or dwelling fire policy instead.",
+          "a_plain": "Usually not. A homeowners policy assumes you live there. Once the home is rented, insurers generally expect a landlord or dwelling fire policy instead."
+        },
+        {
+          "q": "Does my tenant's renters policy protect the building?",
+          "a": "No. A renters policy insures the tenant's belongings and liability, not your building.",
+          "a_plain": "No. A renters policy insures the tenant's belongings and liability, not your building."
+        },
+        {
+          "q": "Do short-term rentals need different insurance?",
+          "a": "Often yes. Many landlord policies exclude or limit short-term rentals, so tell the insurer how the property is rented.",
+          "a_plain": "Often yes. Many landlord policies exclude or limit short-term rentals, so tell the insurer how the property is rented."
+        },
+        {
+          "q": "How much does landlord insurance cost in Florida?",
+          "a": "Published Citizens and NAIC averages are shown above under What owners have historically paid, with their sources and caveat. Your own premium depends on the property, its location, how it is rented, your limits and deductibles.",
+          "a_plain": "Published Citizens and NAIC averages are shown above under What owners have historically paid, with their sources and caveat. Your own premium depends on the property, its location, how it is rented, your limits and deductibles."
+        }
+      ],
+      "related": [
+        "commercial-property-insurance-florida",
+        "homeowners-insurance-florida",
+        "flood-insurance-florida"
+      ],
+      "insurer_requests": [
+        {
+          "group": "Owner and occupancy",
+          "items": [
+            {
+              "text": "Who owns the property (you or an entity) and how it is rented: annual leases, short-term, or vacant",
+              "why": "short-term and vacant units carry more liability and water-damage claims, and some insurers will not write them"
+            },
+            {
+              "text": "Number of units and whether you live in one of them"
+            }
+          ]
+        },
+        {
+          "group": "Property details",
+          "items": [
+            {
+              "text": "Construction type, year built, square footage and number of stories"
+            },
+            {
+              "text": "Roof type and age, and updates to the roof, wiring, plumbing and heating and cooling"
+            },
+            {
+              "text": "Fire protection: sprinklers, alarms and the local protection class"
+            },
+            {
+              "text": "Wind-mitigation features such as roof-to-wall connections and opening protection",
+              "why": "in Florida these drive much of the wind premium, and Florida requires insurers to offer credits for them"
+            },
+            {
+              "text": "Flood zone"
+            },
+            {
+              "text": "A four-point inspection for older homes, and a roof inspection where the insurer asks for one"
+            },
+            {
+              "text": "Pools, docks and other features that add liability"
+            }
+          ]
+        },
+        {
+          "group": "History",
+          "items": [
+            {
+              "text": "Three to five years of currently valued loss runs from your current and prior insurers",
+              "why": "they show claims the insurer would otherwise only learn about later"
+            },
+            {
+              "text": "Your current insurer, current premium and expiration date"
+            }
+          ]
+        }
+      ],
+      "application_forms": "Application forms: most insurers start from the industry-standard ACORD 84 Dwelling Fire Application for one- to four-family homes, or the ACORD 125 and ACORD 140 for larger buildings; many also use their own application or supplement.",
+      "pricing": {
+        "heading": "What owners have historically paid",
+        "summary": "Published figures for rental dwellings come from Citizens Property Insurance and from the National Association of Insurance Commissioners (NAIC). Neither covers commercial apartment buildings.",
+        "figures": [
+          {
+            "text": "Citizens Property Insurance's statewide average premium for its DP-1 and DP-3 dwelling policies is $2,203 under rates effective July 1, 2026, compared with $2,300 before that change; this describes Citizens policyholders only",
+            "source": "Citizens Property Insurance Corporation, 2026 rate kit",
+            "period": "rates effective July 1, 2026",
+            "basis": "average premium per Citizens policy, statewide",
+            "url": "https://www.citizensfla.com/documents/20702/39683240/Revised+2026+Rate+Kit.pdf/a4a0d261-807d-eb09-50fa-c1e0759ef9b5"
+          },
+          {
+            "text": "The NAIC's most recent report put Florida's statewide average dwelling fire premium at $950 a year, across all dwelling fire forms, using 2023 data",
+            "source": "NAIC Dwelling Fire, Homeowners Owner-Occupied, and Homeowners Tenant and Condominium/Cooperative Unit Owner's Insurance Report",
+            "period": "2023 data, published July 2026",
+            "basis": "average premium per house-year, statewide",
+            "url": "https://content.naic.org/sites/default/files/publication-hmr-zu-homeowners-report.pdf"
+          }
+        ],
+        "caveat": "These figures are historical, third-party estimates for Florida rental dwelling insurance, published by Citizens Property Insurance Corporation and the NAIC for rates effective July 1, 2026 and calendar year 2023. They are not a quote or an offer of coverage, and they are not what you will pay. Premiums depend on your business or property, location, coverage limits, deductibles, claims history, underwriting and market conditions, and Florida rates have changed significantly in recent years. Coverage is subject to the terms, conditions and exclusions of the policy issued. Ask us for a quote based on your own details.",
+        "as_of": "October 31, 2026",
+        "approved_gate_b2": "2026-11-01"
+      },
+      "last_reviewed": "2026-10-31",
+      "related_labels": {}
+    },
+    {
+      "slug": "contractor-insurance-florida",
+      "group": "commercial",
+      "line": "general-liability",
+      "risk_label": "Contractors",
+      "h1": "Contractor insurance in Florida",
+      "title": "Contractor Insurance in Florida | AlphaGen",
+      "description": "The policies Florida contractors are asked to carry, how subcontractors change the picture, and what insurers ask to quote.",
+      "card_title": "Contractors",
+      "card_text": "Liability, workers' comp, tools and projects for trades and builders.",
+      "intro": "Contractors usually carry several policies at once: general liability for the work, workers' compensation for the crew, inland marine for tools and equipment, and builder's risk while a project is under way. General contractors and owners often decide which ones you need through the contract.",
+      "who": [
+        "General contractors, specialty trades (roofing, electrical, plumbing, HVAC, carpentry), handymen and remodelers working in Florida.",
+        "Subcontractors asked by a general contractor to carry specific limits and endorsements before they can start."
+      ],
+      "includes": [
+        "<strong>General liability</strong> — including completed operations, which matters long after a job is finished.",
+        "<strong>Workers' compensation</strong> — required at Florida's construction-industry thresholds.",
+        "<strong>Inland marine</strong> — tools and equipment that travel to the job.",
+        "<strong>Additional insured and waiver endorsements</strong> — the items contracts most often require."
+      ],
+      "faqs": [
+        {
+          "q": "Why does every general contractor ask for a certificate?",
+          "a": "Because a contractor can be held responsible for an uninsured subcontractor's injuries and damage. The certificate shows them your coverage before you start.",
+          "a_plain": "Because a contractor can be held responsible for an uninsured subcontractor's injuries and damage. The certificate shows them your coverage before you start."
+        },
+        {
+          "q": "What is additional insured status?",
+          "a": "An endorsement that extends some of your policy's protection to another party, such as a general contractor or owner, usually because the contract requires it.",
+          "a_plain": "An endorsement that extends some of your policy's protection to another party, such as a general contractor or owner, usually because the contract requires it."
+        },
+        {
+          "q": "Does my policy cover faulty work?",
+          "a": "Not as such. Liability policies generally respond to damage your work causes, not the cost of redoing the work itself. The exact answer depends on the policy wording.",
+          "a_plain": "Not as such. Liability policies generally respond to damage your work causes, not the cost of redoing the work itself. The exact answer depends on the policy wording."
+        },
+        {
+          "q": "How much does contractor insurance cost in Florida?",
+          "a": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business.",
+          "a_plain": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business."
+        }
+      ],
+      "related": [
+        "general-liability-insurance-florida",
+        "workers-compensation-insurance-florida",
+        "builders-risk-insurance-florida",
+        "/contractor-insurance-fort-lauderdale/"
+      ],
+      "related_labels": {
+        "/contractor-insurance-fort-lauderdale/": "Contractor insurance in Fort Lauderdale"
+      },
+      "insurer_requests": [
+        {
+          "group": "Business basics",
+          "items": [
+            {
+              "text": "Legal name, entity type and FEIN"
+            },
+            {
+              "text": "Years in business and a description of operations"
+            },
+            {
+              "text": "Locations and, where relevant, the class code that best describes the business",
+              "why": "the class code sets which rating base and rate an underwriter uses"
+            }
+          ]
+        },
+        {
+          "group": "Exposure",
+          "items": [
+            {
+              "text": "Revenue and payroll by trade classification"
+            },
+            {
+              "text": "The cost of subcontracted work, and your split of residential, commercial and new construction",
+              "why": "new residential construction is priced very differently from commercial remodeling"
+            }
+          ]
+        },
+        {
+          "group": "Line-specific",
+          "items": [
+            {
+              "text": "Sample contracts, including hold-harmless and additional insured requirements",
+              "why": "contracts show whether you are taking on liability that belongs to someone else"
+            },
+            {
+              "text": "Certificates of insurance from your subcontractors"
+            },
+            {
+              "text": "A list of recent completed projects and current backlog"
+            },
+            {
+              "text": "Your safety manual and any fleet safety program"
+            }
+          ]
+        },
+        {
+          "group": "History",
+          "items": [
+            {
+              "text": "Three to five years of currently valued loss runs from your current and prior insurers",
+              "why": "they show claims the insurer would otherwise only learn about later"
+            },
+            {
+              "text": "Your current insurer, current premium and expiration date"
+            }
+          ]
+        }
+      ],
+      "application_forms": "Application forms: most insurers start from the industry-standard ACORD 125 Commercial Insurance Application, ACORD 126 Commercial General Liability Section and, for workers' compensation, the ACORD 130 FL; many also use their own application or supplement.",
+      "pricing": null,
+      "last_reviewed": "2026-10-31"
+    },
+    {
+      "slug": "restaurant-insurance-florida",
+      "group": "commercial",
+      "line": "general-liability",
+      "risk_label": "Restaurants",
+      "h1": "Restaurant insurance in Florida",
+      "title": "Restaurant Insurance in Florida | AlphaGen",
+      "description": "The policies a Florida restaurant typically combines — liability, liquor, property, workers' comp — and what insurers ask.",
+      "card_title": "Restaurants",
+      "card_text": "Liability, liquor, property and spoilage questions for food and drink businesses.",
+      "intro": "A restaurant's insurance is usually several policies working together: general liability, liquor liability if you serve alcohol, property and business income, and workers' compensation. Most of the hard questions sit in the gaps between them.",
+      "who": [
+        "Full-service and quick-service restaurants, cafes, bars, bakeries, food trucks and caterers in Florida.",
+        "Owners who serve alcohol, because liquor liability is usually separate from general liability."
+      ],
+      "includes": [
+        "<strong>General liability</strong> — slips, falls and foodborne-illness claims from guests.",
+        "<strong>Liquor liability</strong> — typically a separate policy for businesses that serve alcohol.",
+        "<strong>Property, spoilage and equipment breakdown</strong> — the kitchen, stock and refrigeration, often through endorsements.",
+        "<strong>Business income</strong> — lost income while you cannot trade after a covered loss."
+      ],
+      "faqs": [
+        {
+          "q": "Does general liability include liquor liability?",
+          "a": "Usually not for a business that sells or serves alcohol. Most general liability forms exclude it for those businesses, so it is bought separately.",
+          "a_plain": "Usually not for a business that sells or serves alcohol. Most general liability forms exclude it for those businesses, so it is bought separately."
+        },
+        {
+          "q": "Is food spoilage covered?",
+          "a": "Often only by endorsement. Spoilage and equipment breakdown are frequently not in a base property form.",
+          "a_plain": "Often only by endorsement. Spoilage and equipment breakdown are frequently not in a base property form."
+        },
+        {
+          "q": "Do I need workers' comp for part-time staff?",
+          "a": "Part-time employees generally count toward Florida's employee thresholds. Insurers will ask for your full and part-time headcount and payroll.",
+          "a_plain": "Part-time employees generally count toward Florida's employee thresholds. Insurers will ask for your full and part-time headcount and payroll."
+        },
+        {
+          "q": "How much does restaurant insurance cost in Florida?",
+          "a": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business.",
+          "a_plain": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business."
+        }
+      ],
+      "related": [
+        "general-liability-insurance-florida",
+        "commercial-property-insurance-florida",
+        "workers-compensation-insurance-florida",
+        "/restaurant-insurance-boca-raton/"
+      ],
+      "related_labels": {
+        "/restaurant-insurance-boca-raton/": "Restaurant insurance in Boca Raton"
+      },
+      "insurer_requests": [
+        {
+          "group": "Business basics",
+          "items": [
+            {
+              "text": "Legal name, entity type and FEIN"
+            },
+            {
+              "text": "Years in business and a description of operations"
+            },
+            {
+              "text": "Locations and, where relevant, the class code that best describes the business",
+              "why": "the class code sets which rating base and rate an underwriter uses"
+            }
+          ]
+        },
+        {
+          "group": "Exposure",
+          "items": [
+            {
+              "text": "Annual food sales and liquor sales, shown separately",
+              "why": "a higher share of alcohol sales means more exposure to claims about serving intoxicated guests"
+            },
+            {
+              "text": "Seating capacity, hours and square footage"
+            }
+          ]
+        },
+        {
+          "group": "Property details",
+          "items": [
+            {
+              "text": "Construction type, year built, square footage and number of stories"
+            },
+            {
+              "text": "Roof type and age, and updates to the roof, wiring, plumbing and heating and cooling"
+            },
+            {
+              "text": "Fire protection: sprinklers, alarms and the local protection class"
+            },
+            {
+              "text": "Wind-mitigation features such as roof-to-wall connections and opening protection",
+              "why": "in Florida these drive much of the wind premium, and Florida requires insurers to offer credits for them"
+            },
+            {
+              "text": "Flood zone"
+            },
+            {
+              "text": "Automatic fire suppression over the cooking line, its maintenance contract, and how often the hood and ducts are cleaned",
+              "why": "grease build-up in hoods and ducts is a leading cause of kitchen fires"
+            }
+          ]
+        },
+        {
+          "group": "Line-specific",
+          "items": [
+            {
+              "text": "Entertainment, dancing or security staff"
+            },
+            {
+              "text": "Alcohol-service training and your liquor license history"
+            }
+          ]
+        },
+        {
+          "group": "History",
+          "items": [
+            {
+              "text": "Three to five years of currently valued loss runs from your current and prior insurers",
+              "why": "they show claims the insurer would otherwise only learn about later"
+            },
+            {
+              "text": "Your current insurer, current premium and expiration date"
+            }
+          ]
+        }
+      ],
+      "application_forms": "Application forms: most insurers start from the industry-standard ACORD 125 Commercial Insurance Application with the ACORD 126 and ACORD 140 sections (or the ACORD 160 for a business owner's policy) and the ACORD 803 Liquor Liability Section; many also use their own application or supplement.",
+      "pricing": null,
+      "last_reviewed": "2026-10-31"
+    },
+    {
+      "slug": "cyber-insurance-florida",
+      "group": "commercial",
+      "line": "cyber",
+      "risk_label": "Cyber liability",
+      "h1": "Cyber liability insurance in Florida",
+      "title": "Cyber Liability Insurance in Florida | AlphaGen",
+      "description": "Cyber insurance for Florida small businesses: breach response, liability and the security controls insurers now ask about.",
+      "card_title": "Cyber liability",
+      "card_text": "Breach response, ransomware and data-privacy liability.",
+      "intro": "Cyber insurance responds to data breaches, ransomware and other network events, both the costs of responding and claims from people whose data was exposed. Insurers now price it largely on the security controls you already have in place.",
+      "who": [
+        "Any business that holds customer, patient or employee data, takes card payments, or depends on email and computers to operate.",
+        "Florida businesses subject to the state's data-breach notification law, Fla. Stat. section 501.171."
+      ],
+      "includes": [
+        "<strong>First-party response costs</strong> — forensics, notification, credit monitoring and legal advice after a breach.",
+        "<strong>Business interruption</strong> — income lost while systems are down, on many forms.",
+        "<strong>Cyber extortion</strong> — ransomware response, subject to the policy's terms.",
+        "<strong>Third-party liability</strong> — claims and some regulatory proceedings arising from a breach."
+      ],
+      "faqs": [
+        {
+          "q": "Doesn't my general liability policy cover a data breach?",
+          "a": "Generally not. Most general liability forms exclude or limit data-breach claims, which is why cyber is written as its own policy.",
+          "a_plain": "Generally not. Most general liability forms exclude or limit data-breach claims, which is why cyber is written as its own policy."
+        },
+        {
+          "q": "Why do insurers ask about multi-factor authentication?",
+          "a": "Because stolen passwords are a common way into a business's systems. Many insurers will not quote, or will limit coverage, without MFA on email and remote access.",
+          "a_plain": "Because stolen passwords are a common way into a business's systems. Many insurers will not quote, or will limit coverage, without MFA on email and remote access."
+        },
+        {
+          "q": "Does cyber insurance pay a ransom?",
+          "a": "Some policies include cyber-extortion coverage, subject to their terms, exclusions and applicable law. Read the specific policy.",
+          "a_plain": "Some policies include cyber-extortion coverage, subject to their terms, exclusions and applicable law. Read the specific policy."
+        },
+        {
+          "q": "How much does cyber insurance cost in Florida?",
+          "a": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business.",
+          "a_plain": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business."
+        }
+      ],
+      "related": [
+        "professional-liability-insurance-florida",
+        "business-owners-policy-insurance-florida",
+        "directors-and-officers-insurance-florida"
+      ],
+      "insurer_requests": [
+        {
+          "group": "Business basics",
+          "items": [
+            {
+              "text": "Legal name, entity type and FEIN"
+            },
+            {
+              "text": "Years in business and a description of operations"
+            },
+            {
+              "text": "Locations and, where relevant, the class code that best describes the business",
+              "why": "the class code sets which rating base and rate an underwriter uses"
+            }
+          ]
+        },
+        {
+          "group": "Exposure",
+          "items": [
+            {
+              "text": "Annual revenue"
+            },
+            {
+              "text": "Roughly how many people's sensitive records you hold, and what kind: card data, health information, Social Security numbers"
+            }
+          ]
+        },
+        {
+          "group": "Security controls",
+          "items": [
+            {
+              "text": "Multi-factor authentication on email and remote access",
+              "why": "insurers rely on it heavily against stolen-password attacks"
+            },
+            {
+              "text": "Backups kept offline or separate from your network, and whether restores are tested",
+              "why": "they decide whether a ransomware attack becomes a long shutdown"
+            },
+            {
+              "text": "Endpoint detection and response software, and phishing training for staff"
+            },
+            {
+              "text": "A second-person check before wiring money"
+            },
+            {
+              "text": "An incident-response or business-continuity plan"
+            }
+          ]
+        },
+        {
+          "group": "History",
+          "items": [
+            {
+              "text": "Past cyber incidents, claims or known circumstances"
+            },
+            {
+              "text": "Your current insurer and expiration date, if any"
+            }
+          ]
+        }
+      ],
+      "application_forms": "Application forms: most insurers start from the industry-standard ACORD 834 Cyber and Privacy Coverage section; many also use their own application or supplement.",
+      "pricing": null,
+      "last_reviewed": "2026-10-31",
+      "related_labels": {}
+    },
+    {
+      "slug": "professional-liability-insurance-florida",
+      "group": "commercial",
+      "line": "general-inquiry",
+      "risk_label": "Professional liability (E&O)",
+      "h1": "Professional liability (E&O) insurance in Florida",
+      "title": "Professional Liability (E&O) Insurance in Florida | AlphaGen",
+      "description": "Errors and omissions insurance for Florida firms that give advice or services: claims-made forms, retro dates, what to expect.",
+      "card_title": "Professional liability (E&O)",
+      "card_text": "Claims that your advice or services caused a client a financial loss.",
+      "intro": "Professional liability, also called errors and omissions (E&O), responds to claims that a mistake, oversight or failure in your professional services caused a client a financial loss. It fills a gap general liability does not reach.",
+      "who": [
+        "Consultants, accountants, designers, technology firms, real estate and insurance professionals, marketing agencies and other firms paid for advice or expertise.",
+        "Businesses whose client contracts require it."
+      ],
+      "includes": [
+        "<strong>Defense costs</strong> — often the largest part of a professional claim; whether they reduce the limit depends on the form.",
+        "<strong>Settlements and judgments</strong> — for covered claims, up to the policy limit.",
+        "<strong>Prior acts</strong> — back to the retroactive date shown on the policy.",
+        "<strong>Extended reporting</strong> — an option to report claims after the policy ends, on claims-made forms."
+      ],
+      "faqs": [
+        {
+          "q": "What does claims-made mean?",
+          "a": "Most E&O policies respond to claims first made during the policy period, for work done after the retroactive date. Letting coverage lapse can leave earlier work uninsured.",
+          "a_plain": "Most E&O policies respond to claims first made during the policy period, for work done after the retroactive date. Letting coverage lapse can leave earlier work uninsured."
+        },
+        {
+          "q": "Why does the retroactive date matter?",
+          "a": "Work done before the retroactive date is not covered. When you change insurers, keep the original retro date if you can.",
+          "a_plain": "Work done before the retroactive date is not covered. When you change insurers, keep the original retro date if you can."
+        },
+        {
+          "q": "Is E&O the same as general liability?",
+          "a": "No. General liability responds to bodily injury and property damage; E&O responds to financial loss caused by your professional services.",
+          "a_plain": "No. General liability responds to bodily injury and property damage; E&O responds to financial loss caused by your professional services."
+        },
+        {
+          "q": "How much does professional liability insurance cost in Florida?",
+          "a": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business.",
+          "a_plain": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business."
+        }
+      ],
+      "related": [
+        "cyber-insurance-florida",
+        "directors-and-officers-insurance-florida",
+        "general-liability-insurance-florida"
+      ],
+      "insurer_requests": [
+        {
+          "group": "Business basics",
+          "items": [
+            {
+              "text": "Legal name, entity type and FEIN"
+            },
+            {
+              "text": "Years in business and a description of operations"
+            },
+            {
+              "text": "Locations and, where relevant, the class code that best describes the business",
+              "why": "the class code sets which rating base and rate an underwriter uses"
+            }
+          ]
+        },
+        {
+          "group": "Exposure",
+          "items": [
+            {
+              "text": "Annual revenue and how it splits across the services you provide",
+              "why": "the split shows how much of your work is in higher-risk services"
+            },
+            {
+              "text": "Number of professionals and your largest clients"
+            }
+          ]
+        },
+        {
+          "group": "Line-specific",
+          "items": [
+            {
+              "text": "Your standard client contract, including any limitation-of-liability clause"
+            },
+            {
+              "text": "Licenses and credentials"
+            },
+            {
+              "text": "Your quality-control process"
+            },
+            {
+              "text": "Prior professional liability coverage and its retroactive date"
+            }
+          ]
+        },
+        {
+          "group": "History",
+          "items": [
+            {
+              "text": "Past claims and any circumstances that could become a claim"
+            }
+          ]
+        }
+      ],
+      "application_forms": "Application forms: most insurers start from the industry-standard ACORD 825 Professional/Specialty Insurance Application, often with the ACORD 187 Professional Liability Supplement; many also use their own application or supplement.",
+      "pricing": null,
+      "last_reviewed": "2026-10-31",
+      "related_labels": {}
+    },
+    {
+      "slug": "commercial-umbrella-insurance-florida",
+      "group": "commercial",
+      "line": "general-inquiry",
+      "risk_label": "Commercial umbrella",
+      "h1": "Commercial umbrella insurance in Florida",
+      "title": "Commercial Umbrella Insurance in Florida | AlphaGen",
+      "description": "How a commercial umbrella sits over your liability policies, when contracts require one, and what insurers ask to quote it.",
+      "card_title": "Commercial umbrella",
+      "card_text": "Extra liability limits above your underlying policies.",
+      "intro": "A commercial umbrella adds liability limits above your general liability, auto liability and employer's liability policies. It is usually bought because a contract, lease or lender asks for higher limits than the underlying policies carry.",
+      "who": [
+        "Businesses whose contracts require higher liability limits than a primary policy provides.",
+        "Businesses with vehicles, public foot traffic or larger operations, where one serious claim could exceed the primary limit."
+      ],
+      "includes": [
+        "<strong>Excess limits</strong> — above the scheduled underlying policies once their limits are used.",
+        "<strong>Drop-down coverage</strong> — on some umbrella forms, for certain claims the underlying policies do not cover.",
+        "<strong>Defense</strong> — terms vary by form."
+      ],
+      "faqs": [
+        {
+          "q": "What is the difference between an umbrella and an excess policy?",
+          "a": "An excess policy usually follows the terms of the policy beneath it. An umbrella can be broader, sometimes covering claims the underlying policies do not. The wording decides.",
+          "a_plain": "An excess policy usually follows the terms of the policy beneath it. An umbrella can be broader, sometimes covering claims the underlying policies do not. The wording decides."
+        },
+        {
+          "q": "Do I need specific underlying limits?",
+          "a": "Yes. The umbrella insurer will require minimum limits on the underlying policies and will ask for their declarations pages.",
+          "a_plain": "Yes. The umbrella insurer will require minimum limits on the underlying policies and will ask for their declarations pages."
+        },
+        {
+          "q": "Does an umbrella cover professional liability?",
+          "a": "Usually not. Professional liability is normally excluded and handled on its own policy.",
+          "a_plain": "Usually not. Professional liability is normally excluded and handled on its own policy."
+        },
+        {
+          "q": "How much does a commercial umbrella cost in Florida?",
+          "a": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business.",
+          "a_plain": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business."
+        }
+      ],
+      "related": [
+        "general-liability-insurance-florida",
+        "contractor-insurance-florida",
+        "/blog/commercial-umbrella-insurance-when-needed/"
+      ],
+      "related_labels": {
+        "/blog/commercial-umbrella-insurance-when-needed/": "When an umbrella is actually needed (blog)"
+      },
+      "insurer_requests": [
+        {
+          "group": "Business basics",
+          "items": [
+            {
+              "text": "Legal name, entity type and FEIN"
+            },
+            {
+              "text": "Years in business and a description of operations"
+            },
+            {
+              "text": "Locations and, where relevant, the class code that best describes the business",
+              "why": "the class code sets which rating base and rate an underwriter uses"
+            }
+          ]
+        },
+        {
+          "group": "Underlying policies",
+          "items": [
+            {
+              "text": "A schedule of the policies the umbrella sits over: general liability, auto liability and employer's liability, with insurers, limits and dates",
+              "why": "the umbrella only starts where those limits end, so any gap becomes your own cost"
+            },
+            {
+              "text": "Declarations pages for each underlying policy"
+            }
+          ]
+        },
+        {
+          "group": "Exposure",
+          "items": [
+            {
+              "text": "Number of vehicles and drivers"
+            },
+            {
+              "text": "Any hazardous operations"
+            }
+          ]
+        },
+        {
+          "group": "History",
+          "items": [
+            {
+              "text": "Loss runs for every underlying line"
+            }
+          ]
+        }
+      ],
+      "application_forms": "Application forms: most insurers start from the industry-standard ACORD 125 Commercial Insurance Application and ACORD 131 Umbrella/Excess Section; many also use their own application or supplement.",
+      "pricing": null,
+      "last_reviewed": "2026-10-31"
+    },
+    {
+      "slug": "builders-risk-insurance-florida",
+      "group": "commercial",
+      "line": "general-inquiry",
+      "risk_label": "Builder's risk",
+      "h1": "Builder's risk insurance in Florida",
+      "title": "Builder's Risk Insurance in Florida | AlphaGen",
+      "description": "Builder's risk for Florida construction and renovation projects: who buys it, what it can include, and what insurers ask.",
+      "card_title": "Builder's risk",
+      "card_text": "A building and its materials while construction is under way.",
+      "intro": "Builder's risk insures a building while it is being built or renovated: the structure, and usually the materials on site or in transit. It is written for the length of the project and ends when the building is completed or occupied.",
+      "who": [
+        "Property owners, developers and general contractors on new construction and major renovation projects in Florida.",
+        "Whoever the construction contract makes responsible for insuring the work."
+      ],
+      "includes": [
+        "<strong>The project</strong> — the building under construction, up to its completed value.",
+        "<strong>Materials</strong> — on site, in transit and in temporary storage, on many forms.",
+        "<strong>Soft costs</strong> — some forms add delay-related costs by endorsement.",
+        "<strong>Wind and flood</strong> — often subject to separate deductibles or exclusions in Florida."
+      ],
+      "faqs": [
+        {
+          "q": "Who should buy builder's risk, the owner or the contractor?",
+          "a": "Whoever the construction contract says. Read the insurance section of the contract before you buy.",
+          "a_plain": "Whoever the construction contract says. Read the insurance section of the contract before you buy."
+        },
+        {
+          "q": "Does builder's risk include liability?",
+          "a": "No. It is property insurance for the project. Liability for the work is a general liability matter.",
+          "a_plain": "No. It is property insurance for the project. Liability for the work is a general liability matter."
+        },
+        {
+          "q": "When does the policy end?",
+          "a": "Usually at completion, occupancy or the policy's expiration date, whichever comes first. Tell the insurer if the project runs long.",
+          "a_plain": "Usually at completion, occupancy or the policy's expiration date, whichever comes first. Tell the insurer if the project runs long."
+        },
+        {
+          "q": "How much does builder's risk cost in Florida?",
+          "a": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business.",
+          "a_plain": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business."
+        }
+      ],
+      "related": [
+        "contractor-insurance-florida",
+        "commercial-property-insurance-florida",
+        "general-liability-insurance-florida"
+      ],
+      "insurer_requests": [
+        {
+          "group": "Project basics",
+          "items": [
+            {
+              "text": "Who owns the project and who the general contractor is, with the contractor's experience"
+            },
+            {
+              "text": "New construction or renovation, construction type and number of stories"
+            }
+          ]
+        },
+        {
+          "group": "Values and dates",
+          "items": [
+            {
+              "text": "The completed value of the project, split between hard and soft costs"
+            },
+            {
+              "text": "Start date and expected completion date",
+              "why": "theft and weather losses depend heavily on how long a site stays open"
+            }
+          ]
+        },
+        {
+          "group": "Site",
+          "items": [
+            {
+              "text": "Site security: fencing, lighting, cameras or guards"
+            },
+            {
+              "text": "Distance from the coast and the flood zone"
+            }
+          ]
+        }
+      ],
+      "application_forms": "Application forms: most insurers start from the industry-standard ACORD 147 Installation/Builders Risk Section; many also use their own application or supplement.",
+      "pricing": null,
+      "last_reviewed": "2026-10-31",
+      "related_labels": {}
+    },
+    {
+      "slug": "event-insurance-florida",
+      "group": "commercial",
+      "line": "general-inquiry",
+      "risk_label": "Special events and entertainment",
+      "h1": "Special event and entertainment insurance in Florida",
+      "title": "Special Event Insurance in Florida | AlphaGen",
+      "description": "Liability insurance for Florida events, festivals and productions: what venues ask for and what insurers need to quote.",
+      "card_title": "Special events and entertainment",
+      "card_text": "Liability for one-time events, festivals and productions.",
+      "intro": "Special event insurance provides liability coverage for a single event or a series of events, such as a festival, concert, conference, wedding or production. Venues commonly require it, along with a certificate naming them.",
+      "who": [
+        "Event organizers, promoters, nonprofits, production companies and individuals holding an event at a venue that requires proof of insurance.",
+        "Vendors and exhibitors asked by an organizer to carry their own coverage."
+      ],
+      "includes": [
+        "<strong>Event general liability</strong> — injuries and property damage to others during the event.",
+        "<strong>Liquor liability</strong> — when alcohol is served or sold, subject to the policy.",
+        "<strong>Additional insured status</strong> — for the venue, as many venues require.",
+        "<strong>Cancellation and equipment</strong> — available from some insurers as separate coverage."
+      ],
+      "faqs": [
+        {
+          "q": "Does my venue's insurance cover my event?",
+          "a": "Not usually for your own liability. Venues commonly require the organizer to carry its own policy and name the venue as an additional insured.",
+          "a_plain": "Not usually for your own liability. Venues commonly require the organizer to carry its own policy and name the venue as an additional insured."
+        },
+        {
+          "q": "Is alcohol a problem?",
+          "a": "It changes the questions, not always the answer. Insurers ask whether alcohol is served or sold and by whom.",
+          "a_plain": "It changes the questions, not always the answer. Insurers ask whether alcohol is served or sold and by whom."
+        },
+        {
+          "q": "How far ahead should I ask for a quote?",
+          "a": "As early as you can, since some events need underwriter review.",
+          "a_plain": "As early as you can, since some events need underwriter review."
+        },
+        {
+          "q": "How much does event insurance cost in Florida?",
+          "a": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business.",
+          "a_plain": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business."
+        }
+      ],
+      "related": [
+        "general-liability-insurance-florida",
+        "commercial-umbrella-insurance-florida",
+        "restaurant-insurance-florida"
+      ],
+      "insurer_requests": [
+        {
+          "group": "Event basics",
+          "items": [
+            {
+              "text": "Type of event, dates and number of days"
+            },
+            {
+              "text": "Expected attendance per day, and whether it is indoors or outdoors"
+            },
+            {
+              "text": "Your role: organizer, sponsor, vendor or host"
+            }
+          ]
+        },
+        {
+          "group": "Line-specific",
+          "items": [
+            {
+              "text": "Whether alcohol is served or sold, and by whom",
+              "why": "alcohol is the single biggest change to an event's liability"
+            },
+            {
+              "text": "Vendors and the certificates and hold-harmless agreements you collect from them"
+            },
+            {
+              "text": "Rides, fireworks or other higher-risk activities"
+            },
+            {
+              "text": "Security, crowd control and an emergency plan"
+            },
+            {
+              "text": "The venue's insurance requirements"
+            }
+          ]
+        },
+        {
+          "group": "History",
+          "items": [
+            {
+              "text": "Prior years of the same event and any claims"
+            }
+          ]
+        }
+      ],
+      "application_forms": "Application forms: there is no common industry form for events; insurers use their own short applications.",
+      "pricing": null,
+      "last_reviewed": "2026-10-31",
+      "related_labels": {}
+    },
+    {
+      "slug": "directors-and-officers-insurance-florida",
+      "group": "commercial",
+      "line": "general-inquiry",
+      "risk_label": "Directors and officers (D&O)",
+      "h1": "Directors and officers (D&O) insurance in Florida",
+      "title": "Directors & Officers (D&O) Insurance in Florida | AlphaGen",
+      "description": "D&O insurance for Florida private companies, nonprofits and associations: the insuring agreements and what insurers ask.",
+      "card_title": "Directors and officers (D&O)",
+      "card_text": "Claims against a board or its officers for management decisions.",
+      "intro": "Directors and officers (D&O) insurance responds to claims that the people running an organization made wrongful management decisions. It protects the individuals, and on most forms the organization too.",
+      "who": [
+        "Private companies with a board or outside investors, nonprofits, and condominium and homeowners associations in Florida.",
+        "Founders raising capital, because investors often ask for it before joining a board."
+      ],
+      "includes": [
+        "<strong>Side A</strong> — the directors and officers personally, when the organization cannot indemnify them.",
+        "<strong>Side B</strong> — reimbursement to the organization when it indemnifies them.",
+        "<strong>Side C</strong> — the organization itself, for certain claims, on many private-company forms.",
+        "<strong>Employment practices and fiduciary</strong> — sometimes packaged alongside D&O."
+      ],
+      "faqs": [
+        {
+          "q": "Does a small private company need D&O?",
+          "a": "It depends on who could bring a claim: investors, lenders, competitors, regulators or employees. Many small companies buy it when they add outside investors or board members.",
+          "a_plain": "It depends on who could bring a claim: investors, lenders, competitors, regulators or employees. Many small companies buy it when they add outside investors or board members."
+        },
+        {
+          "q": "Is D&O claims-made?",
+          "a": "Generally yes, so continuity and the retroactive or prior-acts date matter when you change insurers.",
+          "a_plain": "Generally yes, so continuity and the retroactive or prior-acts date matter when you change insurers."
+        },
+        {
+          "q": "Does D&O cover bodily injury?",
+          "a": "Generally no. Bodily injury and property damage are usually excluded and handled by general liability.",
+          "a_plain": "Generally no. Bodily injury and property damage are usually excluded and handled by general liability."
+        },
+        {
+          "q": "How much does D&O insurance cost in Florida?",
+          "a": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business.",
+          "a_plain": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business."
+        }
+      ],
+      "related": [
+        "professional-liability-insurance-florida",
+        "cyber-insurance-florida",
+        "/blog/d-and-o-insurance-small-company-three-directors/"
+      ],
+      "related_labels": {
+        "/blog/d-and-o-insurance-small-company-three-directors/": "D&O for a small company with three directors (blog)"
+      },
+      "insurer_requests": [
+        {
+          "group": "Business basics",
+          "items": [
+            {
+              "text": "Legal name, entity type and FEIN"
+            },
+            {
+              "text": "Years in business and a description of operations"
+            },
+            {
+              "text": "Locations and, where relevant, the class code that best describes the business",
+              "why": "the class code sets which rating base and rate an underwriter uses"
+            }
+          ]
+        },
+        {
+          "group": "Financials and ownership",
+          "items": [
+            {
+              "text": "Recent financial statements: assets, revenue, net income and debt",
+              "why": "financial stress is one of the main triggers of claims against a board"
+            },
+            {
+              "text": "Ownership, including any large shareholders, and the make-up of the board"
+            }
+          ]
+        },
+        {
+          "group": "Line-specific",
+          "items": [
+            {
+              "text": "Mergers, acquisitions, layoffs or financings in the past year or planned for the next"
+            },
+            {
+              "text": "Changes in the chief executive or chief financial officer"
+            }
+          ]
+        },
+        {
+          "group": "History",
+          "items": [
+            {
+              "text": "Prior and pending litigation or investigations"
+            },
+            {
+              "text": "Your current D&O insurer and its prior or pending litigation date"
+            }
+          ]
+        }
+      ],
+      "application_forms": "Application forms: most insurers start from the industry-standard ACORD 807 Directors and Officers Liability Section; most insurers also use their own application; many also use their own application or supplement.",
+      "pricing": null,
+      "last_reviewed": "2026-10-31"
+    },
+    {
+      "slug": "homeowners-insurance-florida",
+      "group": "personal",
+      "line": "homeowners",
+      "risk_label": "Homeowners",
+      "h1": "Homeowners insurance in Florida",
+      "title": "Homeowners Insurance in Florida | AlphaGen",
+      "description": "Florida homeowners insurance explained: wind and hurricane deductibles, roof and wind-mitigation questions, and what insurers ask.",
+      "card_title": "Homeowners",
+      "card_text": "Primary homes and high-value homes, including wind questions.",
+      "intro": "A homeowners policy insures the home you live in, your belongings and your personal liability. In Florida the answers that matter most are about wind: the hurricane deductible, the roof, and the wind-mitigation features the inspector records.",
+      "who": [
+        "Owners of a single-family home they live in, from a starter home to a high-value or coastal property.",
+        "Buyers who need proof of coverage before closing, since lenders require it."
+      ],
+      "includes": [
+        "<strong>Dwelling and other structures</strong> — the house, plus detached structures such as a fence or shed.",
+        "<strong>Personal property</strong> — your belongings, with special limits on certain items such as jewelry.",
+        "<strong>Loss of use</strong> — extra living costs while the home cannot be lived in after a covered loss.",
+        "<strong>Personal liability</strong> — claims that you injured someone or damaged their property."
+      ],
+      "faqs": [
+        {
+          "q": "Is flood part of homeowners insurance?",
+          "a": "No. Flood is excluded from standard homeowners policies and is written on a separate flood policy.",
+          "a_plain": "No. Flood is excluded from standard homeowners policies and is written on a separate flood policy."
+        },
+        {
+          "q": "What is a hurricane deductible?",
+          "a": "A separate deductible for hurricane wind damage, often a percentage of the dwelling limit. In Florida it generally applies once per calendar season rather than once per storm.",
+          "a_plain": "A separate deductible for hurricane wind damage, often a percentage of the dwelling limit. In Florida it generally applies once per calendar season rather than once per storm."
+        },
+        {
+          "q": "Why does the insurer want a wind-mitigation inspection?",
+          "a": "Florida requires insurers to offer premium discounts for features that reduce wind damage, such as roof-to-wall connections and opening protection. The inspection documents those features.",
+          "a_plain": "Florida requires insurers to offer premium discounts for features that reduce wind damage, such as roof-to-wall connections and opening protection. The inspection documents those features."
+        },
+        {
+          "q": "How much does homeowners insurance cost in Florida?",
+          "a": "It varies widely by county and by home. State-reported averages for Palm Beach, Broward and Miami-Dade are shown above under What homeowners have historically paid, with their source and caveat. Your own premium depends on the home's location, age, roof, wind-mitigation features, limits, deductibles and claims history.",
+          "a_plain": "It varies widely by county and by home. State-reported averages for Palm Beach, Broward and Miami-Dade are shown above under What homeowners have historically paid, with their source and caveat. Your own premium depends on the home's location, age, roof, wind-mitigation features, limits, deductibles and claims history."
+        }
+      ],
+      "related": [
+        "condo-insurance-florida",
+        "flood-insurance-florida",
+        "landlord-insurance-florida",
+        "/blog/florida-hurricane-deductible-percentage-annual/"
+      ],
+      "related_labels": {
+        "/blog/florida-hurricane-deductible-percentage-annual/": "How Florida's hurricane deductible works (blog)"
+      },
+      "insurer_requests": [
+        {
+          "group": "The home",
+          "items": [
+            {
+              "text": "Year built, construction, square footage and number of stories"
+            },
+            {
+              "text": "Roof type, age and condition, and the year of the last full replacement",
+              "why": "Florida law limits refusing a policy on roof age alone for roofs under fifteen years old, and an inspection can show remaining life on older roofs"
+            },
+            {
+              "text": "Updates to wiring, plumbing and heating and cooling"
+            },
+            {
+              "text": "Pools, docks and other features"
+            },
+            {
+              "text": "For high-value homes, a replacement-cost estimate, scheduled jewelry, art or collections, and central-station alarms"
+            }
+          ]
+        },
+        {
+          "group": "Florida documents",
+          "items": [
+            {
+              "text": "A wind-mitigation inspection on Florida's OIR-B1-1802 form",
+              "why": "the features it records earn premium credits Florida requires insurers to offer"
+            },
+            {
+              "text": "A four-point inspection for older homes, and a roof inspection where asked",
+              "why": "Citizens, for example, requires a four-point inspection on homes more than twenty years old"
+            },
+            {
+              "text": "Your flood zone and, if you have one, an elevation certificate"
+            }
+          ]
+        },
+        {
+          "group": "History",
+          "items": [
+            {
+              "text": "Claims in the past five years, your current insurer and your renewal date"
+            }
+          ]
+        }
+      ],
+      "application_forms": "Application forms: most insurers start from the industry-standard ACORD 80 Homeowner Application; many also use their own application or supplement.",
+      "pricing": {
+        "summary": "Florida's insurance regulator publishes the average homeowners premium per policy by county. Citizens Property Insurance, the state-created insurer, publishes its own averages when its rates change.",
+        "figures": [
+          {
+            "text": "Average homeowners premium per policy, including wind coverage, as reported to the state as of March 31, 2026: Palm Beach County $6,323, Broward County $6,136, Miami-Dade County $5,975",
+            "source": "Florida Office of Insurance Regulation, Property Insurance Stability Report",
+            "period": "July 2026 report",
+            "basis": "average premium per policy, by county",
+            "url": "https://floir.gov/docs-sf/default-source/property-and-casualty/stability-unit-reports/july-2026-isu-report.pdf"
+          },
+          {
+            "text": "Citizens Property Insurance's statewide average premium for its HO-3 homeowners policies is $3,202 under rates effective July 1, 2026, compared with $3,506 before that change; this describes Citizens policyholders only",
+            "source": "Citizens Property Insurance Corporation, 2026 rate kit",
+            "period": "rates effective July 1, 2026",
+            "basis": "average premium per Citizens policy, statewide",
+            "url": "https://www.citizensfla.com/documents/20702/39683240/Revised+2026+Rate+Kit.pdf/a4a0d261-807d-eb09-50fa-c1e0759ef9b5"
+          }
+        ],
+        "caveat": "These figures are historical, third-party estimates for Florida homeowners insurance, published by the Florida Office of Insurance Regulation and Citizens Property Insurance Corporation for data as of March 31, 2026 and rates effective July 1, 2026. They are not a quote or an offer of coverage, and they are not what you will pay. Premiums depend on your business or property, location, coverage limits, deductibles, claims history, underwriting and market conditions, and Florida rates have changed significantly in recent years. Coverage is subject to the terms, conditions and exclusions of the policy issued. Ask us for a quote based on your own details.",
+        "as_of": "October 31, 2026",
+        "approved_gate_b2": "2026-11-01"
+      },
+      "last_reviewed": "2026-10-31"
+    },
+    {
+      "slug": "condo-insurance-florida",
+      "group": "personal",
+      "line": "general-inquiry",
+      "risk_label": "Condo unit owners (HO-6)",
+      "h1": "Condo insurance (HO-6) in Florida",
+      "title": "Condo Insurance (HO-6) in Florida | AlphaGen",
+      "description": "What a Florida condo unit-owner (HO-6) policy is for, how it fits the association's master policy, and what insurers ask.",
+      "card_title": "Condo (HO-6)",
+      "card_text": "Unit-owner coverage that fits around the association's master policy.",
+      "intro": "A condo unit-owner policy, usually called an HO-6, insures what the association's master policy does not: your belongings, the parts of the unit your declaration makes your responsibility, your liability, and often loss assessments.",
+      "who": [
+        "Owners of a condominium unit they live in, and owners who rent their unit out (who need a policy written for rentals).",
+        "Buyers whose lender requires an HO-6 before closing."
+      ],
+      "includes": [
+        "<strong>Unit improvements and fixtures</strong> — the parts of the unit your condo documents make the owner's responsibility.",
+        "<strong>Personal property</strong> — your belongings inside the unit.",
+        "<strong>Loss assessment</strong> — your share of a special assessment after a covered loss, on many forms.",
+        "<strong>Personal liability and loss of use</strong>."
+      ],
+      "faqs": [
+        {
+          "q": "Doesn't the association insure my unit?",
+          "a": "Partly. Florida's condominium law divides what the association insures from what the unit owner insures, and your declaration fills in the details. The HO-6 covers your side of that line.",
+          "a_plain": "Partly. Florida's condominium law divides what the association insures from what the unit owner insures, and your declaration fills in the details. The HO-6 covers your side of that line."
+        },
+        {
+          "q": "What documents will the insurer ask for?",
+          "a": "Often your declarations page from the master policy or the association's insurance summary, and details of any upgrades you made to the unit.",
+          "a_plain": "Often your declarations page from the master policy or the association's insurance summary, and details of any upgrades you made to the unit."
+        },
+        {
+          "q": "Do I need flood insurance in a condo?",
+          "a": "Possibly. The master policy may or may not carry flood, and it will not cover your belongings. Ask for a separate unit-owner flood quote.",
+          "a_plain": "Possibly. The master policy may or may not carry flood, and it will not cover your belongings. Ask for a separate unit-owner flood quote."
+        },
+        {
+          "q": "How much does condo insurance cost in Florida?",
+          "a": "State-reported county averages and Citizens' statewide average are shown above under What homeowners have historically paid, with their sources and caveat. Your own premium depends on the building, the unit, the master policy, your limits and deductibles.",
+          "a_plain": "State-reported county averages and Citizens' statewide average are shown above under What homeowners have historically paid, with their sources and caveat. Your own premium depends on the building, the unit, the master policy, your limits and deductibles."
+        }
+      ],
+      "related": [
+        "homeowners-insurance-florida",
+        "flood-insurance-florida",
+        "landlord-insurance-florida"
+      ],
+      "insurer_requests": [
+        {
+          "group": "The association",
+          "items": [
+            {
+              "text": "The association's master-policy summary: what it insures inside the unit and its deductibles",
+              "why": "the master policy decides where your unit coverage has to start"
+            }
+          ]
+        },
+        {
+          "group": "The unit",
+          "items": [
+            {
+              "text": "Improvements and upgrades you have made"
+            },
+            {
+              "text": "The floor the unit is on, the building's year built and its updates"
+            },
+            {
+              "text": "The loss-assessment limit you want"
+            },
+            {
+              "text": "Whether you live in the unit or rent it out"
+            }
+          ]
+        },
+        {
+          "group": "Florida documents",
+          "items": [
+            {
+              "text": "A wind-mitigation report for the building, if the association has one"
+            },
+            {
+              "text": "Your flood zone"
+            }
+          ]
+        },
+        {
+          "group": "History",
+          "items": [
+            {
+              "text": "Claims in the past five years and your current insurer"
+            }
+          ]
+        }
+      ],
+      "application_forms": "Application forms: most insurers start from the industry-standard ACORD 80 Homeowner Application; many also use their own application or supplement.",
+      "pricing": {
+        "summary": "The same two public sources publish condo unit-owner averages.",
+        "figures": [
+          {
+            "text": "Average condo unit-owner premium per policy, including wind coverage, as reported to the state as of March 31, 2026: Palm Beach County $2,311, Broward County $1,816, Miami-Dade County $2,801",
+            "source": "Florida Office of Insurance Regulation, Property Insurance Stability Report",
+            "period": "July 2026 report",
+            "basis": "average premium per policy, by county",
+            "url": "https://floir.gov/docs-sf/default-source/property-and-casualty/stability-unit-reports/july-2026-isu-report.pdf"
+          },
+          {
+            "text": "Citizens Property Insurance's statewide average premium for its HO-6 condo unit-owner policies is $1,272 under rates effective July 1, 2026, compared with $1,420 before that change; this describes Citizens policyholders only",
+            "source": "Citizens Property Insurance Corporation, 2026 rate kit",
+            "period": "rates effective July 1, 2026",
+            "basis": "average premium per Citizens policy, statewide",
+            "url": "https://www.citizensfla.com/documents/20702/39683240/Revised+2026+Rate+Kit.pdf/a4a0d261-807d-eb09-50fa-c1e0759ef9b5"
+          }
+        ],
+        "caveat": "These figures are historical, third-party estimates for Florida condo unit-owner insurance, published by the Florida Office of Insurance Regulation and Citizens Property Insurance Corporation for data as of March 31, 2026 and rates effective July 1, 2026. They are not a quote or an offer of coverage, and they are not what you will pay. Premiums depend on your business or property, location, coverage limits, deductibles, claims history, underwriting and market conditions, and Florida rates have changed significantly in recent years. Coverage is subject to the terms, conditions and exclusions of the policy issued. Ask us for a quote based on your own details.",
+        "as_of": "October 31, 2026",
+        "approved_gate_b2": "2026-11-01"
+      },
+      "last_reviewed": "2026-10-31",
+      "related_labels": {}
+    },
+    {
+      "slug": "flood-insurance-florida",
+      "group": "personal",
+      "line": "general-inquiry",
+      "risk_label": "Flood (private market)",
+      "h1": "Private flood insurance in Florida",
+      "title": "Private Flood Insurance in Florida | AlphaGen",
+      "description": "Private flood insurance in Florida: how it differs from NFIP flood, what an elevation certificate does, and what insurers ask.",
+      "card_title": "Private flood",
+      "card_text": "Flood coverage from private insurers for homes and businesses.",
+      "intro": "Flood is excluded from homeowners, condo and most commercial property policies. Private flood insurers write it as a separate policy, often with different limits, waiting periods and terms from the federal National Flood Insurance Program (NFIP).",
+      "who": [
+        "Florida homeowners, condo owners and businesses in or near a flood zone, and anyone whose lender requires flood coverage.",
+        "Owners who need higher limits or different terms than a federal flood policy offers."
+      ],
+      "includes": [
+        "<strong>Building</strong> — the structure, up to the limit chosen.",
+        "<strong>Contents</strong> — usually a separate limit you choose.",
+        "<strong>Loss of use or business income</strong> — on some private forms.",
+        "<strong>Replacement cost</strong> — available on some private forms; terms vary widely."
+      ],
+      "faqs": [
+        {
+          "q": "Will my lender accept a private flood policy?",
+          "a": "Federal rules require regulated lenders to accept private flood policies that meet set criteria. Ask your lender to confirm before you switch.",
+          "a_plain": "Federal rules require regulated lenders to accept private flood policies that meet set criteria. Ask your lender to confirm before you switch."
+        },
+        {
+          "q": "What is an elevation certificate?",
+          "a": "A FEMA form completed by a surveyor or engineer that records the building's elevation relative to expected flood levels. Many insurers use it to price flood.",
+          "a_plain": "A FEMA form completed by a surveyor or engineer that records the building's elevation relative to expected flood levels. Many insurers use it to price flood."
+        },
+        {
+          "q": "Is there a waiting period?",
+          "a": "Most flood policies have one before coverage begins, though some private policies differ. Check the specific policy, especially during hurricane season.",
+          "a_plain": "Most flood policies have one before coverage begins, though some private policies differ. Check the specific policy, especially during hurricane season."
+        },
+        {
+          "q": "How much does private flood insurance cost in Florida?",
+          "a": "What drives the price is the property itself: its location and flood zone, its age, roof and construction, its wind-mitigation features, the coverage limits and deductibles chosen, and its claims history.",
+          "a_plain": "What drives the price is the property itself: its location and flood zone, its age, roof and construction, its wind-mitigation features, the coverage limits and deductibles chosen, and its claims history."
+        }
+      ],
+      "related": [
+        "homeowners-insurance-florida",
+        "condo-insurance-florida",
+        "commercial-property-insurance-florida",
+        "/flood-insurance-boca-raton/"
+      ],
+      "related_labels": {
+        "/flood-insurance-boca-raton/": "Flood insurance in Boca Raton"
+      },
+      "insurer_requests": [
+        {
+          "group": "Location and building",
+          "items": [
+            {
+              "text": "Flood zone"
+            },
+            {
+              "text": "An elevation certificate (FEMA Form FF-206-FY-22-152) if one exists",
+              "why": "it records the building's elevation and can change the premium considerably"
+            },
+            {
+              "text": "Foundation type, height of the first floor above ground and any flood openings"
+            },
+            {
+              "text": "Whether utilities such as the air handler and water heater are raised"
+            }
+          ]
+        },
+        {
+          "group": "Coverage and history",
+          "items": [
+            {
+              "text": "The building and contents limits you want"
+            },
+            {
+              "text": "Prior flood claims and any current flood policy, including whether coverage has been continuous"
+            }
+          ]
+        }
+      ],
+      "application_forms": "Application forms: private flood insurers use their own applications.",
+      "pricing": null,
+      "last_reviewed": "2026-10-31"
+    }
+  ]
+}
