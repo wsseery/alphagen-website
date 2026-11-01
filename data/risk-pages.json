@@ -14,8 +14,8 @@
     "title": "Business & Home Insurance in Florida | AlphaGen",
     "description": "The insurance lines AlphaGen places for Florida businesses and homeowners, what each one is for, and what insurers ask for to quote it.",
     "h1": "Insurance we place in Florida",
-    "intro": "Every page below explains one kind of insurance in plain English: who it is for, what it can include, what an underwriter will ask you for, and where a reliable published source exists, what businesses or homeowners have historically paid.",
-    "held_note": "Need something not listed here, such as commercial auto or life insurance? Ask us with the form below and we will tell you whether we can place it.",
+    "intro": "Every page below explains one kind of insurance in plain English: who it is for, what it can include, what an underwriter will ask you for, and what drives the price.",
+    "held_note": "Need something not listed here, such as personal auto or life insurance? Ask us with the form below and we will tell you whether we can place it.",
     "form_heading": "Not sure which page fits?",
     "form_intro": "Tell us what you need to insure and we will point you to the right coverage. We reply the same business day.",
     "button": "Send my question",
@@ -52,8 +52,8 @@
       },
       {
         "q": "Can you tell me what my insurance will cost?",
-        "a": "Only after an insurer has seen your details. Some pages show historical, third-party published figures for context, but they are not a quote and not what you will pay.",
-        "a_plain": "Only after an insurer has seen your details. Some pages show historical, third-party published figures for context, but they are not a quote and not what you will pay."
+        "a": "Only after an insurer has seen your details. Each page explains what drives the price for that line, but the premium itself depends on your own business or property.",
+        "a_plain": "Only after an insurer has seen your details. Each page explains what drives the price for that line, but the premium itself depends on your own business or property."
       }
     ],
     "last_reviewed": "2026-10-31"
@@ -409,29 +409,7 @@
         }
       ],
       "application_forms": "Application forms: most insurers start from the industry-standard ACORD 125 Commercial Insurance Application and the ACORD 130 FL Florida Workers Compensation Application; many also use their own application or supplement.",
-      "pricing": {
-        "heading": "How Florida workers' comp rates have moved",
-        "summary": "Workers' compensation is priced per hundred dollars of payroll for each job classification, so there is no single price to show. What regulators publish is the overall average change in rates.",
-        "figures": [
-          {
-            "text": "The Florida Office of Insurance Regulation approved a 6.9% overall average statewide rate decrease for new and renewal policies effective January 1, 2026, the ninth consecutive yearly decrease",
-            "source": "Florida Office of Insurance Regulation",
-            "period": "approved November 2025",
-            "basis": "average statewide rate-level change",
-            "url": "https://floir.gov/home/2025/11/17/commissioner-mike-yaworsky-approves-6.9--rate-decrease-for-florida-workers--compensation-policies--marking-9th-consecutive-year-of-decreases"
-          },
-          {
-            "text": "The year before, it approved a 1.0% overall average statewide decrease for policies effective January 1, 2025",
-            "source": "Florida Office of Insurance Regulation",
-            "period": "approved November 2024",
-            "basis": "average statewide rate-level change",
-            "url": "https://floir.gov/home/2024/11/18/oir-approves-further-reduction-in-workers'-compensation-insurance-rates-for-eighth-consecutive-year"
-          }
-        ],
-        "caveat": "These figures are historical, third-party estimates for Florida workers' compensation rate changes, published by the Florida Office of Insurance Regulation for policies effective January 1, 2025 and January 1, 2026. They are not a quote or an offer of coverage, and they are not what you will pay. Premiums depend on your business or property, location, coverage limits, deductibles, claims history, underwriting and market conditions, and Florida rates have changed significantly in recent years. Coverage is subject to the terms, conditions and exclusions of the policy issued. Ask us for a quote based on your own details.",
-        "as_of": "October 31, 2026",
-        "approved_gate_b2": "2026-11-01"
-      },
+      "pricing": null,
       "last_reviewed": "2026-10-31"
     },
     {
@@ -582,8 +560,8 @@
         },
         {
           "q": "How much does landlord insurance cost in Florida?",
-          "a": "Published Citizens and NAIC averages are shown above under What owners have historically paid, with their sources and caveat. Your own premium depends on the property, its location, how it is rented, your limits and deductibles.",
-          "a_plain": "Published Citizens and NAIC averages are shown above under What owners have historically paid, with their sources and caveat. Your own premium depends on the property, its location, how it is rented, your limits and deductibles."
+          "a": "What drives the price is the property itself: its location and flood zone, its age, roof and construction, its wind-mitigation features, the coverage limits and deductibles chosen, and its claims history.",
+          "a_plain": "What drives the price is the property itself: its location and flood zone, its age, roof and construction, its wind-mitigation features, the coverage limits and deductibles chosen, and its claims history."
         }
       ],
       "related": [
@@ -645,29 +623,7 @@
         }
       ],
       "application_forms": "Application forms: most insurers start from the industry-standard ACORD 84 Dwelling Fire Application for one- to four-family homes, or the ACORD 125 and ACORD 140 for larger buildings; many also use their own application or supplement.",
-      "pricing": {
-        "heading": "What owners have historically paid",
-        "summary": "Published figures for rental dwellings come from Citizens Property Insurance and from the National Association of Insurance Commissioners (NAIC). Neither covers commercial apartment buildings.",
-        "figures": [
-          {
-            "text": "Citizens Property Insurance's statewide average premium for its DP-1 and DP-3 dwelling policies is $2,203 under rates effective July 1, 2026, compared with $2,300 before that change; this describes Citizens policyholders only",
-            "source": "Citizens Property Insurance Corporation, 2026 rate kit",
-            "period": "rates effective July 1, 2026",
-            "basis": "average premium per Citizens policy, statewide",
-            "url": "https://www.citizensfla.com/documents/20702/39683240/Revised+2026+Rate+Kit.pdf/a4a0d261-807d-eb09-50fa-c1e0759ef9b5"
-          },
-          {
-            "text": "The NAIC's most recent report put Florida's statewide average dwelling fire premium at $950 a year, across all dwelling fire forms, using 2023 data",
-            "source": "NAIC Dwelling Fire, Homeowners Owner-Occupied, and Homeowners Tenant and Condominium/Cooperative Unit Owner's Insurance Report",
-            "period": "2023 data, published July 2026",
-            "basis": "average premium per house-year, statewide",
-            "url": "https://content.naic.org/sites/default/files/publication-hmr-zu-homeowners-report.pdf"
-          }
-        ],
-        "caveat": "These figures are historical, third-party estimates for Florida rental dwelling insurance, published by Citizens Property Insurance Corporation and the NAIC for rates effective July 1, 2026 and calendar year 2023. They are not a quote or an offer of coverage, and they are not what you will pay. Premiums depend on your business or property, location, coverage limits, deductibles, claims history, underwriting and market conditions, and Florida rates have changed significantly in recent years. Coverage is subject to the terms, conditions and exclusions of the policy issued. Ask us for a quote based on your own details.",
-        "as_of": "October 31, 2026",
-        "approved_gate_b2": "2026-11-01"
-      },
+      "pricing": null,
       "last_reviewed": "2026-10-31",
       "related_labels": {}
     },
@@ -718,6 +674,8 @@
         "general-liability-insurance-florida",
         "workers-compensation-insurance-florida",
         "builders-risk-insurance-florida",
+        "inland-marine-insurance-florida",
+        "surety-bonds-florida",
         "/contractor-insurance-fort-lauderdale/"
       ],
       "related_labels": {
@@ -1185,6 +1143,7 @@
       "related": [
         "general-liability-insurance-florida",
         "contractor-insurance-florida",
+        "commercial-auto-insurance-florida",
         "/blog/commercial-umbrella-insurance-when-needed/"
       ],
       "related_labels": {
@@ -1288,7 +1247,8 @@
       "related": [
         "contractor-insurance-florida",
         "commercial-property-insurance-florida",
-        "general-liability-insurance-florida"
+        "general-liability-insurance-florida",
+        "inland-marine-insurance-florida"
       ],
       "insurer_requests": [
         {
@@ -1475,6 +1435,7 @@
       "related": [
         "professional-liability-insurance-florida",
         "cyber-insurance-florida",
+        "employment-practices-liability-insurance-florida",
         "/blog/d-and-o-insurance-small-company-three-directors/"
       ],
       "related_labels": {
@@ -1536,6 +1497,577 @@
       "last_reviewed": "2026-10-31"
     },
     {
+      "slug": "commercial-auto-insurance-florida",
+      "group": "commercial",
+      "line": "general-inquiry",
+      "risk_label": "Commercial auto",
+      "h1": "Commercial auto insurance in Florida",
+      "title": "Commercial Auto Insurance in Florida | AlphaGen",
+      "description": "Commercial auto for Florida business vehicles: liability, PIP, physical damage, hired and non-owned auto, and what insurers ask.",
+      "card_title": "Commercial auto",
+      "card_text": "Cars, vans and trucks your business owns, leases or uses.",
+      "intro": "Commercial auto insurance covers the vehicles your business owns, leases or uses: liability for injuries and damage you cause to others and, if you choose, damage to the vehicles themselves. A personal auto policy often will not respond when a vehicle is titled to the business or used mainly for work.",
+      "who": [
+        "Businesses that own or lease cars, vans, pickups or box trucks: contractors, delivery and service businesses, landscapers, caterers and sales teams.",
+        "Businesses with no vehicles of their own whose employees drive their own or rented cars on business, which is what hired and non-owned auto coverage is for.",
+        "Florida's no-fault law requires most vehicles registered in the state to carry personal injury protection (Florida Statutes section 627.733), so a Florida business vehicle needs it too."
+      ],
+      "includes": [
+        "<strong>Auto liability</strong> — bodily injury and property damage to others arising from your business vehicles.",
+        "<strong>Personal injury protection (PIP)</strong> — the no-fault medical and wage benefits Florida law requires.",
+        "<strong>Uninsured and underinsured motorist</strong> — injuries caused by a driver with too little or no insurance, where you choose it.",
+        "<strong>Physical damage</strong> — comprehensive and collision coverage for the vehicles themselves.",
+        "<strong>Hired and non-owned auto</strong> — liability when employees use rented vehicles or their own cars on business."
+      ],
+      "faqs": [
+        {
+          "q": "Can I use my personal auto policy for my work truck?",
+          "a": "Often not. When a vehicle is titled to the business or used mainly for business, many personal policies limit or exclude coverage, and insurers generally expect a commercial auto policy instead. Tell the insurer exactly how the vehicle is used.",
+          "a_plain": "Often not. When a vehicle is titled to the business or used mainly for business, many personal policies limit or exclude coverage, and insurers generally expect a commercial auto policy instead. Tell the insurer exactly how the vehicle is used."
+        },
+        {
+          "q": "What is hired and non-owned auto coverage?",
+          "a": "Liability coverage for your business when an employee drives a rented vehicle, or their own car, on company business. It protects the business; it does not repair the employee's car.",
+          "a_plain": "Liability coverage for your business when an employee drives a rented vehicle, or their own car, on company business. It protects the business; it does not repair the employee's car."
+        },
+        {
+          "q": "Do I have to list every driver?",
+          "a": "Most insurers ask for a driver list and check each driver's motor vehicle record. A driver with serious violations can change the price or be excluded from the policy.",
+          "a_plain": "Most insurers ask for a driver list and check each driver's motor vehicle record. A driver with serious violations can change the price or be excluded from the policy."
+        },
+        {
+          "q": "How much does commercial auto insurance cost in Florida?",
+          "a": "What drives the price is the vehicles and the people driving them: the type and value of each vehicle, how it is used and how far it travels, where it is garaged, the drivers' records, the business's claims history, and the limits and deductibles chosen.",
+          "a_plain": "What drives the price is the vehicles and the people driving them: the type and value of each vehicle, how it is used and how far it travels, where it is garaged, the drivers' records, the business's claims history, and the limits and deductibles chosen."
+        }
+      ],
+      "related": [
+        "trucking-insurance-florida",
+        "commercial-umbrella-insurance-florida",
+        "general-liability-insurance-florida",
+        "/blog/commercial-auto-insurance-work-vehicle-florida/",
+        "/blog/hired-and-non-owned-auto-insurance-business-no-vehicles/"
+      ],
+      "related_labels": {
+        "/blog/commercial-auto-insurance-work-vehicle-florida/": "Commercial auto for a work vehicle (blog)",
+        "/blog/hired-and-non-owned-auto-insurance-business-no-vehicles/": "Hired and non-owned auto when you own no vehicles (blog)"
+      },
+      "insurer_requests": [
+        {
+          "group": "Business basics",
+          "items": [
+            {
+              "text": "Legal name, entity type and FEIN"
+            },
+            {
+              "text": "Years in business and a description of operations"
+            },
+            {
+              "text": "Locations and, where relevant, the class code that best describes the business",
+              "why": "the class code sets which rating base and rate an underwriter uses"
+            }
+          ]
+        },
+        {
+          "group": "Vehicles",
+          "items": [
+            {
+              "text": "A vehicle schedule: year, make, model, VIN, cost new or stated value, and where each vehicle is garaged",
+              "why": "the garaging address and the type of vehicle set much of the base rate"
+            },
+            {
+              "text": "How each vehicle is used and how far it usually travels from its base"
+            },
+            {
+              "text": "Any lienholders or lessors to be named on the policy"
+            }
+          ]
+        },
+        {
+          "group": "Drivers",
+          "items": [
+            {
+              "text": "A driver list with license numbers, dates of birth and years of driving experience",
+              "why": "insurers order a motor vehicle record for every listed driver"
+            },
+            {
+              "text": "Your hiring standards and how often you check drivers' records"
+            },
+            {
+              "text": "Any fleet safety program, dash cameras or telematics"
+            }
+          ]
+        },
+        {
+          "group": "History",
+          "items": [
+            {
+              "text": "Three to five years of currently valued loss runs from your current and prior insurers",
+              "why": "they show claims the insurer would otherwise only learn about later"
+            },
+            {
+              "text": "Your current insurer, current premium and expiration date"
+            }
+          ]
+        }
+      ],
+      "application_forms": "Application forms: most insurers start from the industry-standard ACORD 125 Commercial Insurance Application, ACORD 127 Business Auto Section and ACORD 129 Vehicle Schedule, with the Florida ACORD 137 FL state section; some also use the ACORD 163 Commercial Auto Driver Information Schedule; many also use their own application or supplement.",
+      "pricing": null,
+      "last_reviewed": "2026-10-31"
+    },
+    {
+      "slug": "trucking-insurance-florida",
+      "group": "commercial",
+      "line": "general-inquiry",
+      "risk_label": "Trucking and motor carriers",
+      "h1": "Trucking insurance in Florida",
+      "title": "Trucking Insurance in Florida: Motor Carriers | AlphaGen",
+      "description": "Insurance for Florida motor carriers and owner-operators: liability, cargo, physical damage, federal filings and what insurers ask.",
+      "card_title": "Trucking and motor carriers",
+      "card_text": "Liability, cargo and physical damage for trucks and trailers.",
+      "intro": "Trucking insurance is commercial auto written for motor carriers: businesses that haul freight for others, or their own goods, in heavy trucks. Beyond auto liability it usually adds cargo and physical damage coverage and, for carriers with federal operating authority, the filings that prove the coverage is in place.",
+      "who": [
+        "For-hire motor carriers with their own operating authority, from a single owner-operator to a fleet.",
+        "Owner-operators leased to another carrier, who often need physical damage and non-trucking liability rather than primary liability.",
+        "Businesses that haul their own goods in heavy trucks, such as building-supply, landscape and equipment companies."
+      ],
+      "includes": [
+        "<strong>Primary auto liability</strong> — injuries and damage to others caused by your trucks.",
+        "<strong>Motor truck cargo</strong> — the freight you haul, up to the cargo limit chosen.",
+        "<strong>Physical damage</strong> — your tractors, trucks and trailers.",
+        "<strong>Non-trucking liability</strong> — for an owner-operator's truck when it is not being used in a motor carrier's business.",
+        "<strong>Trailer interchange and truckers general liability</strong> — someone else's trailer in your care, and liability from operations away from the truck."
+      ],
+      "faqs": [
+        {
+          "q": "What are the federal insurance filings?",
+          "a": "A carrier applying for operating authority from the Federal Motor Carrier Safety Administration needs its insurer to file proof of liability coverage, usually on the BMC-91 or BMC-91X filing, before the authority is granted. Policies for for-hire and interstate carriers also carry the MCS-90 endorsement.",
+          "a_plain": "A carrier applying for operating authority from the Federal Motor Carrier Safety Administration needs its insurer to file proof of liability coverage, usually on the BMC-91 or BMC-91X filing, before the authority is granted. Policies for for-hire and interstate carriers also carry the MCS-90 endorsement."
+        },
+        {
+          "q": "What is non-trucking liability?",
+          "a": "Coverage for an owner-operator leased to a motor carrier, for times the truck is used outside that carrier's business. While the truck is under the carrier's dispatch, the carrier's own liability policy usually responds instead.",
+          "a_plain": "Coverage for an owner-operator leased to a motor carrier, for times the truck is used outside that carrier's business. While the truck is under the carrier's dispatch, the carrier's own liability policy usually responds instead."
+        },
+        {
+          "q": "Is it harder to insure a new trucking company?",
+          "a": "Usually. Fewer insurers write carriers with new authority, so driver experience, the equipment and what you haul carry more weight in the quote.",
+          "a_plain": "Usually. Fewer insurers write carriers with new authority, so driver experience, the equipment and what you haul carry more weight in the quote."
+        },
+        {
+          "q": "Why does what I haul matter?",
+          "a": "Cargo and liability are both priced by commodity. Hazardous materials, refrigerated loads and high-value freight raise the exposure, and some insurers will not write certain commodities at all.",
+          "a_plain": "Cargo and liability are both priced by commodity. Hazardous materials, refrigerated loads and high-value freight raise the exposure, and some insurers will not write certain commodities at all."
+        },
+        {
+          "q": "How much does trucking insurance cost in Florida?",
+          "a": "What drives the price is the vehicles and the people driving them: the type and value of each vehicle, how it is used and how far it travels, where it is garaged, the drivers' records, the business's claims history, and the limits and deductibles chosen.",
+          "a_plain": "What drives the price is the vehicles and the people driving them: the type and value of each vehicle, how it is used and how far it travels, where it is garaged, the drivers' records, the business's claims history, and the limits and deductibles chosen."
+        }
+      ],
+      "related": [
+        "commercial-auto-insurance-florida",
+        "workers-compensation-insurance-florida",
+        "commercial-umbrella-insurance-florida"
+      ],
+      "insurer_requests": [
+        {
+          "group": "Business basics",
+          "items": [
+            {
+              "text": "Legal name, entity type and FEIN"
+            },
+            {
+              "text": "Years in business and a description of operations"
+            },
+            {
+              "text": "Locations and, where relevant, the class code that best describes the business",
+              "why": "the class code sets which rating base and rate an underwriter uses"
+            }
+          ]
+        },
+        {
+          "group": "Operating authority",
+          "items": [
+            {
+              "text": "Your USDOT number and, if you have one, your MC number, and how long you have operated under that authority",
+              "why": "insurers read your safety record in the federal regulator's public data from that number"
+            },
+            {
+              "text": "Whether you haul for hire, run as an owner-operator leased to another carrier, or haul your own goods"
+            }
+          ]
+        },
+        {
+          "group": "Operations",
+          "items": [
+            {
+              "text": "What you haul, roughly what share of your loads each commodity makes up, and the cargo limit you need",
+              "why": "commodity drives both the cargo and the liability price"
+            },
+            {
+              "text": "The radius you run and the states you operate in"
+            },
+            {
+              "text": "Owner-operators or other carriers you use, and any trailer interchange agreements"
+            }
+          ]
+        },
+        {
+          "group": "Equipment and drivers",
+          "items": [
+            {
+              "text": "A schedule of tractors, trucks and trailers with year, make, VIN and value"
+            },
+            {
+              "text": "A driver list with license numbers, dates of birth, years of commercial driving experience and motor vehicle records"
+            },
+            {
+              "text": "Your driver hiring standards and safety program, including any dash cameras or telematics"
+            }
+          ]
+        },
+        {
+          "group": "History",
+          "items": [
+            {
+              "text": "Three to five years of currently valued loss runs from your current and prior insurers",
+              "why": "they show claims the insurer would otherwise only learn about later"
+            },
+            {
+              "text": "Your current insurer, current premium and expiration date"
+            }
+          ]
+        }
+      ],
+      "application_forms": "Application forms: most insurers start from the industry-standard ACORD 125 Commercial Insurance Application, ACORD 129 Vehicle Schedule and ACORD 132 Truckers/Motor Carriers Section, with the ACORD 143 Transportation Section for cargo; many truck insurers use their own application; many also use their own application or supplement.",
+      "pricing": null,
+      "last_reviewed": "2026-10-31",
+      "related_labels": {}
+    },
+    {
+      "slug": "inland-marine-insurance-florida",
+      "group": "commercial",
+      "line": "general-inquiry",
+      "risk_label": "Inland marine and contractor's equipment",
+      "h1": "Inland marine and contractor's equipment insurance in Florida",
+      "title": "Inland Marine & Equipment Insurance in Florida | AlphaGen",
+      "description": "Inland marine for Florida businesses: contractor's equipment, tools, installation and goods in transit, and what insurers ask.",
+      "card_title": "Inland marine and equipment",
+      "card_text": "Tools, equipment and goods away from your premises.",
+      "intro": "Inland marine insurance covers property that moves or sits away from your premises: a contractor's tools and equipment, materials waiting to be installed, and goods in transit. Many commercial property policies limit or exclude property while it is off site, and that is the gap inland marine fills.",
+      "who": [
+        "Contractors with tools and heavy equipment that travel between job sites.",
+        "Installers, such as electrical, plumbing and air-conditioning contractors, whose materials sit on a job site before they are installed.",
+        "Businesses that carry valuable equipment to customers, or ship goods in their own trucks."
+      ],
+      "includes": [
+        "<strong>Contractor's equipment</strong> — scheduled items listed one by one with their values, and a blanket limit for smaller tools.",
+        "<strong>Rented or leased equipment</strong> — equipment you rent, where your rental agreement makes you responsible for it.",
+        "<strong>Installation</strong> — materials and equipment you are installing, until the work is accepted.",
+        "<strong>Goods in transit</strong> — your own property while it is being shipped or carried in your vehicles."
+      ],
+      "faqs": [
+        {
+          "q": "Doesn't my property policy cover my tools?",
+          "a": "Often only at your own premises, or with a small limit away from them. Tools on a job site or in a truck usually need an inland marine policy or endorsement.",
+          "a_plain": "Often only at your own premises, or with a small limit away from them. Tools on a job site or in a truck usually need an inland marine policy or endorsement."
+        },
+        {
+          "q": "What is the difference between scheduled and unscheduled equipment?",
+          "a": "Scheduled equipment is listed item by item with a value for each. Unscheduled coverage is a blanket limit for smaller tools, usually with a cap on any single item.",
+          "a_plain": "Scheduled equipment is listed item by item with a value for each. Unscheduled coverage is a blanket limit for smaller tools, usually with a cap on any single item."
+        },
+        {
+          "q": "Is theft from a job site covered?",
+          "a": "Theft is usually a covered cause of loss, but many insurers set conditions, such as locked storage, or a separate theft deductible. Check the specific policy.",
+          "a_plain": "Theft is usually a covered cause of loss, but many insurers set conditions, such as locked storage, or a separate theft deductible. Check the specific policy."
+        },
+        {
+          "q": "How much does inland marine insurance cost in Florida?",
+          "a": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business.",
+          "a_plain": "What drives the price is the business itself: what it does, its revenue or payroll, its location, its claims history, the limits and deductibles chosen, and the insurer's appetite for that class of business."
+        }
+      ],
+      "related": [
+        "contractor-insurance-florida",
+        "builders-risk-insurance-florida",
+        "commercial-property-insurance-florida"
+      ],
+      "insurer_requests": [
+        {
+          "group": "Business basics",
+          "items": [
+            {
+              "text": "Legal name, entity type and FEIN"
+            },
+            {
+              "text": "Years in business and a description of operations"
+            },
+            {
+              "text": "Locations and, where relevant, the class code that best describes the business",
+              "why": "the class code sets which rating base and rate an underwriter uses"
+            }
+          ]
+        },
+        {
+          "group": "Equipment",
+          "items": [
+            {
+              "text": "A schedule of equipment above the insurer's per-item threshold: description, year, make, model, serial number and value"
+            },
+            {
+              "text": "The total value of smaller unscheduled tools, and the most valuable single tool"
+            },
+            {
+              "text": "Equipment you rent or lease: its typical value and how long you keep it"
+            }
+          ]
+        },
+        {
+          "group": "Where it is and how it is protected",
+          "items": [
+            {
+              "text": "The largest value you have at one job site, or in one vehicle, at any one time",
+              "why": "an insurer's worst case is everything in one place on one bad day"
+            },
+            {
+              "text": "How equipment is stored and secured overnight, including fencing, locked storage or GPS tracking"
+            },
+            {
+              "text": "For installation or transit coverage, your typical and largest project or shipment values"
+            }
+          ]
+        },
+        {
+          "group": "History",
+          "items": [
+            {
+              "text": "Three to five years of currently valued loss runs from your current and prior insurers",
+              "why": "they show claims the insurer would otherwise only learn about later"
+            },
+            {
+              "text": "Your current insurer, current premium and expiration date"
+            }
+          ]
+        }
+      ],
+      "application_forms": "Application forms: most insurers start from the industry-standard ACORD 125 Commercial Insurance Application and ACORD 152 Commercial Inland Marine Section; many insurers add their own equipment schedule; many also use their own application or supplement.",
+      "pricing": null,
+      "last_reviewed": "2026-10-31",
+      "related_labels": {}
+    },
+    {
+      "slug": "surety-bonds-florida",
+      "group": "commercial",
+      "line": "general-inquiry",
+      "risk_label": "Surety bonds",
+      "h1": "Surety bonds in Florida",
+      "title": "Surety Bonds in Florida: Contract & License Bonds | AlphaGen",
+      "description": "How surety bonds work for Florida contractors and licensed businesses, the main bond types, and what a surety asks for.",
+      "card_title": "Surety bonds",
+      "card_text": "Contract, license and permit bonds.",
+      "intro": "A surety bond is a promise made by a surety company to the party that requires the bond (the obligee) that your business (the principal) will meet an obligation, such as finishing a contract or following the rules of a license. It is not insurance for your business: if the surety pays a claim, you are expected to pay it back.",
+      "who": [
+        "Contractors on public work. Florida requires a payment and performance bond on contracts to build or repair public buildings and public works (Florida Statutes section 255.05).",
+        "Contractors whose private project owners or lenders ask for bid, performance or payment bonds.",
+        "Businesses asked for a license or permit bond by a state agency or a local government."
+      ],
+      "includes": [
+        "<strong>Bid bonds</strong> — that you will sign the contract and provide the final bonds if your bid is accepted.",
+        "<strong>Performance bonds</strong> — that you will complete the contract according to its terms.",
+        "<strong>Payment bonds</strong> — that your subcontractors and suppliers will be paid.",
+        "<strong>License and permit bonds</strong> — that you will follow the laws and rules tied to a license or permit."
+      ],
+      "faqs": [
+        {
+          "q": "Is a surety bond the same as insurance?",
+          "a": "No. A bond protects the obligee, not your business. Before issuing a bond, the surety usually has the business, and often its owners, sign an indemnity agreement promising to repay any claim it pays.",
+          "a_plain": "No. A bond protects the obligee, not your business. Before issuing a bond, the surety usually has the business, and often its owners, sign an indemnity agreement promising to repay any claim it pays."
+        },
+        {
+          "q": "What is bonding capacity?",
+          "a": "The size of a single contract and the total of all bonded work a surety will support for you. It is set from your financial statements, your experience and the work you already have underway.",
+          "a_plain": "The size of a single contract and the total of all bonded work a surety will support for you. It is set from your financial statements, your experience and the work you already have underway."
+        },
+        {
+          "q": "Why does the surety want my personal financial information?",
+          "a": "For most small and mid-sized businesses, the owners personally sign the indemnity agreement, so the surety looks at their finances and credit as well as the company's.",
+          "a_plain": "For most small and mid-sized businesses, the owners personally sign the indemnity agreement, so the surety looks at their finances and credit as well as the company's."
+        },
+        {
+          "q": "How long does it take to get a bond?",
+          "a": "Many license and permit bonds can be issued quickly from a short application. Contract bonds take longer, because the surety reviews your financial statements and work in progress first.",
+          "a_plain": "Many license and permit bonds can be issued quickly from a short application. Contract bonds take longer, because the surety reviews your financial statements and work in progress first."
+        },
+        {
+          "q": "What drives the price of a bond?",
+          "a": "The type and amount of the bond, the financial strength and credit of the business and its owners, and your experience with similar work.",
+          "a_plain": "The type and amount of the bond, the financial strength and credit of the business and its owners, and your experience with similar work."
+        }
+      ],
+      "related": [
+        "contractor-insurance-florida",
+        "builders-risk-insurance-florida",
+        "general-liability-insurance-florida"
+      ],
+      "insurer_requests": [
+        {
+          "group": "The bond",
+          "items": [
+            {
+              "text": "The bond type, the bond amount and who requires it (the obligee)"
+            },
+            {
+              "text": "A copy of the bond form, or the contract, license or permit requirement that calls for the bond"
+            }
+          ]
+        },
+        {
+          "group": "Financials, for contract bonds",
+          "items": [
+            {
+              "text": "Business financial statements, prepared by a certified public accountant for larger bond programs"
+            },
+            {
+              "text": "A work-in-progress schedule: contracts underway, their value and how far along each one is",
+              "why": "it shows how much unfinished work the surety would already be backing"
+            },
+            {
+              "text": "Your bank line of credit and bank reference"
+            },
+            {
+              "text": "Owners' personal financial statements and consent to a credit check",
+              "why": "owners usually sign the indemnity agreement personally"
+            }
+          ]
+        },
+        {
+          "group": "Experience and history",
+          "items": [
+            {
+              "text": "Your largest completed projects and the experience of your key people"
+            },
+            {
+              "text": "Any past bond claims, contract defaults or unfinished projects"
+            }
+          ]
+        }
+      ],
+      "application_forms": "Application forms: there is no common ACORD form for surety bonds; each surety company uses its own application, and contract bonds also need financial statements.",
+      "pricing": null,
+      "last_reviewed": "2026-10-31",
+      "related_labels": {}
+    },
+    {
+      "slug": "employment-practices-liability-insurance-florida",
+      "group": "commercial",
+      "line": "general-inquiry",
+      "risk_label": "Employment practices liability (EPLI)",
+      "h1": "Employment practices liability insurance (EPLI) in Florida",
+      "title": "Employment Practices Liability (EPLI) in Florida | AlphaGen",
+      "description": "EPLI for Florida employers: discrimination, harassment and wrongful-termination claims, claims-made terms and what insurers ask.",
+      "card_title": "Employment practices liability (EPLI)",
+      "card_text": "Claims by employees and applicants over how they were treated.",
+      "intro": "Employment practices liability insurance responds to claims by employees, former employees and job applicants alleging wrongful employment acts, such as discrimination, harassment, wrongful termination and retaliation. General liability policies commonly exclude these claims, and workers' compensation does not address them.",
+      "who": [
+        "Any business with employees. Claims come from hiring, discipline, promotion and termination decisions, not only at large employers.",
+        "Businesses with high turnover, recent layoffs, or no dedicated human-resources staff.",
+        "Businesses whose employees deal with the public, which may want coverage for harassment claims brought by customers or other third parties."
+      ],
+      "includes": [
+        "<strong>Employment claims</strong> — discrimination, harassment, wrongful termination, retaliation and similar allegations.",
+        "<strong>Defense costs</strong> — on many forms these are paid inside the limit, so they reduce what is left for a settlement.",
+        "<strong>Third-party coverage</strong> — claims by customers or vendors, where the insurer offers it as an option.",
+        "<strong>Claims-made terms</strong> — the policy responds to claims first made while it is in force, subject to a retroactive date."
+      ],
+      "faqs": [
+        {
+          "q": "Isn't this covered by my general liability policy?",
+          "a": "Usually not. General liability policies commonly exclude employment-related claims, which is why EPLI is a separate policy or endorsement.",
+          "a_plain": "Usually not. General liability policies commonly exclude employment-related claims, which is why EPLI is a separate policy or endorsement."
+        },
+        {
+          "q": "What does claims-made mean?",
+          "a": "The policy responds to claims first made during the policy period, for acts after its retroactive date. Keeping coverage continuous protects that retroactive date when you renew or change insurers.",
+          "a_plain": "The policy responds to claims first made during the policy period, for acts after its retroactive date. Keeping coverage continuous protects that retroactive date when you renew or change insurers."
+        },
+        {
+          "q": "Are wage-and-hour claims covered?",
+          "a": "Usually not. Most EPLI policies exclude wage-and-hour claims, though some offer a limited amount for defense. Check the specific policy.",
+          "a_plain": "Usually not. Most EPLI policies exclude wage-and-hour claims, though some offer a limited amount for defense. Check the specific policy."
+        },
+        {
+          "q": "How much does EPLI cost in Florida?",
+          "a": "What drives the price is the business itself: the number of employees and where they work, turnover and recent layoffs, your written employment practices, your claims history, and the limits and retention chosen.",
+          "a_plain": "What drives the price is the business itself: the number of employees and where they work, turnover and recent layoffs, your written employment practices, your claims history, and the limits and retention chosen."
+        }
+      ],
+      "related": [
+        "directors-and-officers-insurance-florida",
+        "professional-liability-insurance-florida",
+        "workers-compensation-insurance-florida"
+      ],
+      "insurer_requests": [
+        {
+          "group": "Business basics",
+          "items": [
+            {
+              "text": "Legal name, entity type and FEIN"
+            },
+            {
+              "text": "Years in business and a description of operations"
+            },
+            {
+              "text": "Locations and, where relevant, the class code that best describes the business",
+              "why": "the class code sets which rating base and rate an underwriter uses"
+            }
+          ]
+        },
+        {
+          "group": "Employees",
+          "items": [
+            {
+              "text": "Number of full-time, part-time and seasonal employees and independent contractors, and where they work"
+            },
+            {
+              "text": "Turnover and terminations in the past year, and any layoffs made or planned",
+              "why": "terminations and layoffs are where most employment claims begin"
+            }
+          ]
+        },
+        {
+          "group": "Employment practices",
+          "items": [
+            {
+              "text": "An employee handbook with anti-harassment, complaint and discipline procedures"
+            },
+            {
+              "text": "Who handles human resources: your own staff, an outside firm or a professional employer organization"
+            },
+            {
+              "text": "Training for managers and staff"
+            }
+          ]
+        },
+        {
+          "group": "History",
+          "items": [
+            {
+              "text": "Past charges with the Equal Employment Opportunity Commission or the state, demand letters and lawsuits, and any known circumstances"
+            },
+            {
+              "text": "Your current EPLI insurer and retroactive date, if any"
+            }
+          ]
+        }
+      ],
+      "application_forms": "Application forms: most insurers start from the industry-standard ACORD 827 Employment Practices Liability Insurance Section; most insurers also use their own application; many also use their own application or supplement.",
+      "pricing": null,
+      "last_reviewed": "2026-10-31",
+      "related_labels": {}
+    },
+    {
       "slug": "homeowners-insurance-florida",
       "group": "personal",
       "line": "homeowners",
@@ -1574,8 +2106,8 @@
         },
         {
           "q": "How much does homeowners insurance cost in Florida?",
-          "a": "It varies widely by county and by home. State-reported averages for Palm Beach, Broward and Miami-Dade are shown above under What homeowners have historically paid, with their source and caveat. Your own premium depends on the home's location, age, roof, wind-mitigation features, limits, deductibles and claims history.",
-          "a_plain": "It varies widely by county and by home. State-reported averages for Palm Beach, Broward and Miami-Dade are shown above under What homeowners have historically paid, with their source and caveat. Your own premium depends on the home's location, age, roof, wind-mitigation features, limits, deductibles and claims history."
+          "a": "What drives the price is the property itself: its location and flood zone, its age, roof and construction, its wind-mitigation features, the coverage limits and deductibles chosen, and its claims history.",
+          "a_plain": "What drives the price is the property itself: its location and flood zone, its age, roof and construction, its wind-mitigation features, the coverage limits and deductibles chosen, and its claims history."
         }
       ],
       "related": [
@@ -1635,28 +2167,7 @@
         }
       ],
       "application_forms": "Application forms: most insurers start from the industry-standard ACORD 80 Homeowner Application; many also use their own application or supplement.",
-      "pricing": {
-        "summary": "Florida's insurance regulator publishes the average homeowners premium per policy by county. Citizens Property Insurance, the state-created insurer, publishes its own averages when its rates change.",
-        "figures": [
-          {
-            "text": "Average homeowners premium per policy, including wind coverage, as reported to the state as of March 31, 2026: Palm Beach County $6,323, Broward County $6,136, Miami-Dade County $5,975",
-            "source": "Florida Office of Insurance Regulation, Property Insurance Stability Report",
-            "period": "July 2026 report",
-            "basis": "average premium per policy, by county",
-            "url": "https://floir.gov/docs-sf/default-source/property-and-casualty/stability-unit-reports/july-2026-isu-report.pdf"
-          },
-          {
-            "text": "Citizens Property Insurance's statewide average premium for its HO-3 homeowners policies is $3,202 under rates effective July 1, 2026, compared with $3,506 before that change; this describes Citizens policyholders only",
-            "source": "Citizens Property Insurance Corporation, 2026 rate kit",
-            "period": "rates effective July 1, 2026",
-            "basis": "average premium per Citizens policy, statewide",
-            "url": "https://www.citizensfla.com/documents/20702/39683240/Revised+2026+Rate+Kit.pdf/a4a0d261-807d-eb09-50fa-c1e0759ef9b5"
-          }
-        ],
-        "caveat": "These figures are historical, third-party estimates for Florida homeowners insurance, published by the Florida Office of Insurance Regulation and Citizens Property Insurance Corporation for data as of March 31, 2026 and rates effective July 1, 2026. They are not a quote or an offer of coverage, and they are not what you will pay. Premiums depend on your business or property, location, coverage limits, deductibles, claims history, underwriting and market conditions, and Florida rates have changed significantly in recent years. Coverage is subject to the terms, conditions and exclusions of the policy issued. Ask us for a quote based on your own details.",
-        "as_of": "October 31, 2026",
-        "approved_gate_b2": "2026-11-01"
-      },
+      "pricing": null,
       "last_reviewed": "2026-10-31"
     },
     {
@@ -1698,8 +2209,8 @@
         },
         {
           "q": "How much does condo insurance cost in Florida?",
-          "a": "State-reported county averages and Citizens' statewide average are shown above under What homeowners have historically paid, with their sources and caveat. Your own premium depends on the building, the unit, the master policy, your limits and deductibles.",
-          "a_plain": "State-reported county averages and Citizens' statewide average are shown above under What homeowners have historically paid, with their sources and caveat. Your own premium depends on the building, the unit, the master policy, your limits and deductibles."
+          "a": "What drives the price is the property itself: its location and flood zone, its age, roof and construction, its wind-mitigation features, the coverage limits and deductibles chosen, and its claims history.",
+          "a_plain": "What drives the price is the property itself: its location and flood zone, its age, roof and construction, its wind-mitigation features, the coverage limits and deductibles chosen, and its claims history."
         }
       ],
       "related": [
@@ -1755,28 +2266,7 @@
         }
       ],
       "application_forms": "Application forms: most insurers start from the industry-standard ACORD 80 Homeowner Application; many also use their own application or supplement.",
-      "pricing": {
-        "summary": "The same two public sources publish condo unit-owner averages.",
-        "figures": [
-          {
-            "text": "Average condo unit-owner premium per policy, including wind coverage, as reported to the state as of March 31, 2026: Palm Beach County $2,311, Broward County $1,816, Miami-Dade County $2,801",
-            "source": "Florida Office of Insurance Regulation, Property Insurance Stability Report",
-            "period": "July 2026 report",
-            "basis": "average premium per policy, by county",
-            "url": "https://floir.gov/docs-sf/default-source/property-and-casualty/stability-unit-reports/july-2026-isu-report.pdf"
-          },
-          {
-            "text": "Citizens Property Insurance's statewide average premium for its HO-6 condo unit-owner policies is $1,272 under rates effective July 1, 2026, compared with $1,420 before that change; this describes Citizens policyholders only",
-            "source": "Citizens Property Insurance Corporation, 2026 rate kit",
-            "period": "rates effective July 1, 2026",
-            "basis": "average premium per Citizens policy, statewide",
-            "url": "https://www.citizensfla.com/documents/20702/39683240/Revised+2026+Rate+Kit.pdf/a4a0d261-807d-eb09-50fa-c1e0759ef9b5"
-          }
-        ],
-        "caveat": "These figures are historical, third-party estimates for Florida condo unit-owner insurance, published by the Florida Office of Insurance Regulation and Citizens Property Insurance Corporation for data as of March 31, 2026 and rates effective July 1, 2026. They are not a quote or an offer of coverage, and they are not what you will pay. Premiums depend on your business or property, location, coverage limits, deductibles, claims history, underwriting and market conditions, and Florida rates have changed significantly in recent years. Coverage is subject to the terms, conditions and exclusions of the policy issued. Ask us for a quote based on your own details.",
-        "as_of": "October 31, 2026",
-        "approved_gate_b2": "2026-11-01"
-      },
+      "pricing": null,
       "last_reviewed": "2026-10-31",
       "related_labels": {}
     },
