@@ -341,7 +341,7 @@ section, .band { padding: clamp(3rem, 6vw, 5rem) 0; }
 .footer-brand p { color: var(--on-navy-muted); font-size: 0.92rem; margin-bottom: 0.35rem; }
 .site-footer a { color: #ffffff; text-decoration: none; }
 .site-footer a:hover { color: var(--gold); text-decoration: underline; }
-.footer-col h4 { color: var(--gold); font-family: var(--font-body); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.9rem; }
+.footer-col h2, .footer-col h4 { color: var(--gold); font-family: var(--font-body); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.9rem; }
 .footer-col ul { list-style: none; padding: 0; margin: 0; }
 .footer-col li { margin-bottom: 0.45rem; font-size: 0.95rem; }
 .footer-legal {
