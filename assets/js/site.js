@@ -388,7 +388,8 @@
     'homeowners': ['Personal', 'Homeowners'],
     'personal-lines': ['Personal', ''],
     'relocation': ['Personal', ''],
-    'relocation-guide': ['Personal', '']
+    'relocation-guide': ['Personal', ''],
+    'multifamily': ['Commercial', 'Habitational']
   };
 
   window.agAgile = function (form, data) {
@@ -402,6 +403,11 @@
       if (opt && opt.getAttribute('data-agile-line')) {
         tag = opt.getAttribute('data-agile-line');
         group = opt.getAttribute('data-agile-group') || group;
+      } else if (opt && BY_LINE[opt.value]) {
+        // General-inquiry dropdown (home, /contact/, /get-a-quote/, blog posts):
+        // its option values are Worker line names, so they map the same way.
+        group = group || BY_LINE[opt.value][0];
+        tag = tag || BY_LINE[opt.value][1];
       }
       if (!group && BY_LINE[line]) group = BY_LINE[line][0];
       if (!tag && BY_LINE[line]) tag = BY_LINE[line][1];
